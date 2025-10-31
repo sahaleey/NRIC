@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FiHome, FiArrowLeft, FiSearch, FiCompass } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 
 export default function NotFoundPage() {
   const containerVariants = {
@@ -46,6 +47,15 @@ export default function NotFoundPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-emerald-50/30 to-green-50/30 dark:from-gray-900 dark:via-emerald-900/10 dark:to-green-900/10">
+      <Helmet>
+        <title>Nahjurrashad Islamic College | Not Found</title>
+        <meta
+          name="description"
+          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
+        />
+
+        <link rel="canonical" href="https://nric-chamakkala.vercel.app/*" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <motion.div
           variants={containerVariants}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FiUsers, FiAward, FiMapPin, FiTrendingUp } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 
 // --- Class-based Alumni Data ---
 const alumniClasses = [
@@ -208,6 +209,18 @@ export default function Alumni() {
 
   return (
     <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50">
+      <Helmet>
+        <title>Nahjurrashad Islamic College | Alumni</title>
+        <meta
+          name="description"
+          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
+        />
+
+        <link
+          rel="canonical"
+          href="https://nric-chamakkala.vercel.app/alumni"
+        />
+      </Helmet>
       {/* --- 1. Alumni Hero Section --- */}
       <section className="relative h-96 flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-0">

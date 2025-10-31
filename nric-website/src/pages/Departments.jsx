@@ -7,6 +7,7 @@ import {
   FiAward,
   FiTrendingUp,
 } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 
 // --- Actual Departments Data ---
 const departments = [
@@ -103,6 +104,18 @@ export default function Departments() {
 
   return (
     <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+      <Helmet>
+        <title>Nahjurrashad Islamic College | Department</title>
+        <meta
+          name="description"
+          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
+        />
+
+        <link
+          rel="canonical"
+          href="https://nric-chamakkala.vercel.app/department"
+        />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* --- 1. Page Header --- */}
         <motion.div

@@ -1,10 +1,23 @@
 // src/pages/Academics.jsx
 import { Outlet } from "react-router-dom"; // Import Outlet
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export default function Academics() {
   return (
     <div className="bg-white dark:bg-black">
+      <Helmet>
+        <title>Nahjurrashad Islamic College | Academics</title>
+        <meta
+          name="description"
+          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
+        />
+
+        <link
+          rel="canonical"
+          href="https://nric-chamakkala.vercel.app/academics"
+        />
+      </Helmet>
       {/* --- 1. Academics Hero Section --- */}
       <section className="relative h-72 flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/60 z-0">

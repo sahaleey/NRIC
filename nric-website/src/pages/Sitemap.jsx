@@ -60,6 +60,18 @@ export default function Sitemap() {
 
   return (
     <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+      <Helmet>
+        <title>Nahjurrashad Islamic College | Sitemap</title>
+        <meta
+          name="description"
+          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
+        />
+
+        <link
+          rel="canonical"
+          href="https://nric-chamakkala.vercel.app/sitemap"
+        />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.header
