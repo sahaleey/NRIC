@@ -48,7 +48,7 @@ export default function Contact() {
       icon: FiMapPin,
       title: "Visit Our Campus",
       details:
-        "Nahjurrashad Islamic College, Chamakkala, Thrissur, Kerala - 680617",
+        "Nahjurrashad Islamic College, Chamakkala, Thrissur, Kerala - 680568",
       description:
         "Located in the serene surroundings of Chamakkala, easily accessible from Thrissur city",
       color: "emerald",
@@ -56,7 +56,7 @@ export default function Contact() {
     {
       icon: FiPhone,
       title: "Call Us",
-      details: "+91 90744 83285",
+      details: "+91 00000 00000",
       description:
         "Available during office hours: 9:00 AM - 5:00 PM, Monday - Friday",
       color: "blue",
@@ -388,7 +388,7 @@ export default function Contact() {
                 </h3>
               </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.66986638053!2d76.15545807480504!3d10.67910998946658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c186086f6d63%3A0x28812c33c36c645b!2sNahjurrashad%20Islamic%20College!5e0!3m2!1sen!2sin!4v1730262699313!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Nahjurrashad%20Islamic%20College&t=&z=14&ie=UTF8&iwloc=B&output=embed"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}

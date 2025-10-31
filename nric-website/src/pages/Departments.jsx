@@ -102,7 +102,7 @@ export default function Departments() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* --- 1. Page Header --- */}
         <motion.div
@@ -118,7 +118,7 @@ export default function Departments() {
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             Our{" "}
-            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Departments
             </span>
           </h1>
@@ -264,9 +264,6 @@ export default function Departments() {
                       </span>
                     </div>
                   </div>
-
-                  {/* Hover Effect Border */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-emerald-300 dark:group-hover:border-emerald-700 transition-all duration-300 pointer-events-none"></div>
                 </div>
               </motion.div>
             );
