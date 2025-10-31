@@ -84,7 +84,7 @@ const hoverVariants = {
 
 export default function HighlightCards() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50">
+    <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900/50">
       {/* Background Decoration */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div

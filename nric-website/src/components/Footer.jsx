@@ -110,7 +110,6 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { name: "Departments", path: "/departments" },
-                { name: "Academic Programs", path: "/academics/programs" },
                 { name: "DHIU Affiliation", path: "/about/accreditation" },
                 { name: "Curriculum", path: "/academics/curriculum" },
                 { name: "Faculty", path: "/academics/faculty" },
