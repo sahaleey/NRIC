@@ -51,10 +51,15 @@ export default function Sitemap() {
       text: "text-amber-600",
       light: "bg-amber-50 dark:bg-amber-900/20",
     },
+    violet: {
+      bg: "bg-violet-500",
+      text: "text-violet-600",
+      light: "bg-violet-50 dark:bg-violet-900/20",
+    },
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.header
@@ -96,7 +101,7 @@ export default function Sitemap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mb-16"
           aria-label="Sitemap statistics"
         >
           {[
@@ -132,7 +137,7 @@ export default function Sitemap() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
           >
             {siteSections.map((section) => {
               const Icon = section.icon;

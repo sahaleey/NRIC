@@ -1,5 +1,6 @@
 // src/data/sitemapData.js
 import { FiHome, FiInfo, FiBook } from "react-icons/fi";
+import { MdReadMore } from "react-icons/md";
 
 export const siteSections = [
   {
@@ -85,6 +86,33 @@ export const siteSections = [
         name: "Faculty Directory",
         path: "/academics/faculty",
         description: "Our teaching staff and scholars",
+      },
+    ],
+  },
+  {
+    section: "Others",
+    icon: MdReadMore,
+    color: "violet",
+    pages: [
+      {
+        name: "Alumni Network",
+        path: "/alumni",
+        description: "Connect with our graduates",
+      },
+      {
+        name: "Sitemap",
+        path: "/sitemap",
+        description: "Full site structure overview",
+      },
+      {
+        name: "Privacy Policy",
+        path: "/privacy",
+        description: "Our commitment to your privacy",
+      },
+      {
+        name: "Terms",
+        path: "/terms",
+        description: "Website usage terms and conditions",
       },
     ],
   },
