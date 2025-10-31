@@ -4,7 +4,7 @@ import { HiOutlineMegaphone } from "react-icons/hi2";
 const announcements = [
   "🎓 Admissions for 2026–2027 are now open — apply early!",
   "🗓️ Download the final exam schedule for Senior Secondary.",
-  "🏆 NRIC Tech Club wins first prize at the inter-collegiate competition!",
+  "🏆 NRIC Munazara wins first prize at the inter-collegiate competition!",
 ];
 
 const tickerVariants = {
