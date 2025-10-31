@@ -9,7 +9,7 @@ export default function Academics() {
       <section className="relative h-72 flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/60 z-0">
           <img
-            src="/src/assets/acd.jpg"
+            src="/images/acd.jpg"
             alt="Students in a library"
             className="w-full h-full object-cover"
           />

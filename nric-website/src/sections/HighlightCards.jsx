@@ -9,7 +9,7 @@ const cards = [
     description:
       "Explore our comprehensive curriculum, specialized departments, and state-of-the-art learning resources.",
     link: "/academics",
-    imageUrl: "/src/assets/Nahj.jpg",
+    imageUrl: "/images/Nahj.jpg",
     icon: FiBook,
     stats: "20+ Programs",
     gradient: "from-blue-500/20 to-purple-600/20",
@@ -20,7 +20,7 @@ const cards = [
     description:
       "Discover student clubs, hostel facilities, cultural events, and spiritual activities on campus.",
     link: "/about/campus",
-    imageUrl: "/src/assets/DJI_0509.jpg",
+    imageUrl: "/images/DJI_0509.jpg",
     icon: FiUsers,
     stats: "15+ Clubs",
     gradient: "from-emerald-500/20 to-green-600/20",
@@ -31,7 +31,7 @@ const cards = [
     description:
       "Connect with our successful graduates making impacts worldwide across various industries.",
     link: "/alumni",
-    imageUrl: "/src/assets/IMG_4094.jpg",
+    imageUrl: "/images/IMG_4094.jpg",
     icon: FiAward,
     stats: "500+ Graduates",
     gradient: "from-amber-500/20 to-orange-600/20",

@@ -12,7 +12,7 @@ const allPosts = [
     slug: "tech-club-wins-competition",
     title: "NIC Tech Club Wins Inter-Collegiate Competition",
     date: "October 28, 2025",
-    imageUrl: "/src/assets/news-1.jpg",
+    imageUrl: "/images/news-1.jpg",
     category: "Campus Life",
     content: `
       <p>Our talented students from the NIC Tech Club brought home the first prize in the state-level inter-collegiate competition. The event, which saw participation from over 30 colleges, tested students on web development, competitive programming, and UI/UX design.</p>

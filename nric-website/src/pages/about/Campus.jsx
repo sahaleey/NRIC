@@ -17,7 +17,7 @@ const campusFacilities = [
     title: "Central Library",
     description:
       "Well-stocked library with extensive collections of Islamic literature, academic texts, and digital resources.",
-    image: "/src/assets/campus/library.jpg",
+    image: "/images/campus/library.jpg",
     features: [
       "10,000+ Books",
       "Digital Archives",
@@ -31,7 +31,7 @@ const campusFacilities = [
     title: "Student Hostels",
     description:
       "Comfortable accommodation with modern amenities, creating a home away from home for our students.",
-    image: "/src/assets/campus/hostel.jpg",
+    image: "/images/campus/hostel.jpg",
     features: [
       "Spacious Rooms",
       "Medical Facilities",
@@ -45,7 +45,7 @@ const campusFacilities = [
     title: "College Masjid",
     description:
       "Beautiful masjid serving as the spiritual heart of our campus, accommodating daily prayers and religious activities.",
-    image: "/src/assets/campus/masjid.jpg",
+    image: "/images/campus/masjid.jpg",
     features: [
       "Daily Prayers",
       "Jumu'ah Services",
@@ -59,7 +59,7 @@ const campusFacilities = [
     title: "Sports Beach",
     description:
       "Modern sports facilities promoting physical fitness and team spirit among students.",
-    image: "/src/assets/sports.jpg",
+    image: "/images/sports.jpg",
     features: [
       "Baseball Court",
       "Football Ground",
@@ -73,7 +73,7 @@ const campusFacilities = [
     title: "Canteen",
     description:
       "Hygienic and spacious canteen serving nutritious meals in a comfortable environment.",
-    image: "/src/assets/cafeteria.jpg",
+    image: "/images/cafeteria.jpg",
     features: ["Halal Food", "Multiple Counters", "Snack Bar", "Dining Hall"],
     color: "red",
   },
@@ -82,7 +82,7 @@ const campusFacilities = [
     title: "Digital Campus",
     description:
       "Fully Wi-Fi enabled campus with smart classrooms and computer labs for modern learning.",
-    image: "/src/assets/campus/digital.jpg",
+    image: "/images/campus/digital.jpg",
     features: ["Wi-Fi Campus", "Smart Classes", "Computer Labs", "E-Library"],
     color: "green",
   },
@@ -374,7 +374,7 @@ export default function Campus() {
             <motion.div variants={itemVariants}>
               <div className="bg-gray-200 dark:bg-gray-700 rounded-2xl aspect-video overflow-hidden shadow-lg">
                 <img
-                  src="/src/assets/hisan.jpg"
+                  src="/images/hisan.jpg"
                   alt="Hisan Student Union Event"
                   className="w-full h-full object-cover"
                 />

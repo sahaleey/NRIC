@@ -19,7 +19,7 @@ const facultyMembers = [
         experience: "20+ years",
         specialization: "Quranic Tafsir, Hadith Sciences",
         bio: "Renowned scholar with extensive research in classical Islamic texts and contemporary applications.",
-        image: "/src/assets/faculty/Principal.JPG",
+        image: "/images/faculty/Principal.jpg",
         email: "ahmed.hussain@nahjurrashad.edu",
         phone: "+91 98765 43210",
       },
@@ -30,7 +30,7 @@ const facultyMembers = [
         experience: "18 years in Hadith instruction",
         specialization: "Mustalah al-Hadith, Chain Analysis",
         bio: "Expert in Hadith authentication methods with focus on practical application in modern context.",
-        image: "/src/assets/faculty/vice-principal.jpg",
+        image: "/images/faculty/vice-principal.jpg",
         email: "fatima.rahman@nahjurrashad.edu",
         phone: "+91 98765 43211",
       },
@@ -41,7 +41,7 @@ const facultyMembers = [
         experience: "15 years in language instruction",
         specialization: "Arabic Grammar, Balagha, Literature",
         bio: "Dedicated to making Arabic language accessible and enjoyable for students at all levels.",
-        image: "/src/assets/faculty/ustadh-sameer.jpg",
+        image: "/images/faculty/ustadh-sameer.jpg",
         email: "sameer.ahmed@nahjurrashad.edu",
         phone: "+91 98765 43212",
         achievements: [
@@ -57,7 +57,7 @@ const facultyMembers = [
         experience: "22 years in language education",
         specialization: "Multilingual Studies, Literary Criticism",
         bio: "Expert in four-language curriculum development and cross-cultural communication.",
-        image: "/src/assets/faculty/prof-zainab.jpg",
+        image: "/images/faculty/prof-zainab.jpg",
         email: "zainab.ibrahim@nahjurrashad.edu",
         phone: "+91 98765 43215",
         achievements: [
@@ -73,7 +73,7 @@ const facultyMembers = [
         experience: "16 years in Urdu instruction",
         specialization: "Classical Poetry, Modern Urdu Prose",
         bio: "Dedicated to preserving and promoting Urdu literary heritage among new generations.",
-        image: "/src/assets/faculty/ustadh-salman.jpg",
+        image: "/images/faculty/ustadh-salman.jpg",
         email: "salman.farooq@nahjurrashad.edu",
         phone: "+91 98765 43216",
         achievements: [
@@ -89,7 +89,7 @@ const facultyMembers = [
         experience: "20+ years in tech education",
         specialization: "AI Ethics, Software Engineering",
         bio: "Bridging technology with Islamic ethics to create responsible future tech leaders.",
-        image: "/src/assets/faculty/dr-rahim.jpg",
+        image: "/images/faculty/dr-rahim.jpg",
         email: "rahim.khan@nahjurrashad.edu",
         phone: "+91 98765 43213",
         achievements: [
@@ -105,7 +105,7 @@ const facultyMembers = [
         experience: "12 years in data analytics",
         specialization: "Machine Learning, Big Data Analytics",
         bio: "Passionate about using data science for social good and community development.",
-        image: "/src/assets/faculty/prof-aisha.jpg",
+        image: "/images/faculty/prof-aisha.jpg",
         email: "aisha.mohammed@nahjurrashad.edu",
         phone: "+91 98765 43214",
         achievements: [

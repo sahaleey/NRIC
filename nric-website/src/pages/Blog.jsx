@@ -9,7 +9,7 @@ const allPosts = [
     slug: "tech-club-wins-competition",
     title: "NIC Tech Club Wins Inter-Collegiate Competition",
     date: "October 28, 2025",
-    imageUrl: "/src/assets/news-1.jpg",
+    imageUrl: "/images/news-1.jpg",
     category: "Campus Life",
     excerpt:
       "Our talented students from the NIC Tech Club brought home the first prize...",
@@ -19,7 +19,7 @@ const allPosts = [
     slug: "annual-sports-meet-2025",
     title: "Highlights from the Annual Sports Meet 2025",
     date: "October 25, 2025",
-    imageUrl: "/src/assets/news-2.jpg",
+    imageUrl: "/images/news-2.jpg",
     category: "Events",
     excerpt: "The grounds were alive with energy and sportsmanship...",
   },
@@ -28,7 +28,7 @@ const allPosts = [
     slug: "new-research-journal",
     title: "College Launches New Islamic Research Journal",
     date: "October 20, 2025",
-    imageUrl: "/src/assets/news-3.jpg",
+    imageUrl: "/images/news-3.jpg",
     category: "Academics",
     excerpt:
       "A new platform for our faculty and students to publish their scholarly work...",
@@ -38,7 +38,7 @@ const allPosts = [
     slug: "guest-lecture-on-leadership",
     title: "Guest Lecture on Islamic Leadership in the Modern World",
     date: "October 15, 2025",
-    imageUrl: "/src/assets/academics-hero.jpg", // ❗ Use a different image
+    imageUrl: "/images/academics-hero.jpg", // ❗ Use a different image
     category: "Events",
     excerpt:
       "We were honored to host Dr. Ahmad Al-Faruqi for an inspiring session...",

@@ -8,7 +8,7 @@ const leadershipTeam = [
     name: "Hayder Haji",
     quote:
       "Nahjurrashad was founded not merely to build careers, but to forge character. We are guided by the light of faith, illuminating a path where modern knowledge serves timeless truths.",
-    image: "/src/assets/Chairman.jpg",
+    image: "/images/Chairman.jpg",
 
     color: "emerald",
   },
@@ -17,7 +17,7 @@ const leadershipTeam = [
     name: "Muhammed Shafi Hudawi",
     quote:
       "At NRIC, we believe excellence is a form of Ihsan. Our mission is to seamlessly integrate rigorous academic inquiry with profound Islamic scholarship, creating well-rounded individuals.",
-    image: "/src/assets/Principal.jpg",
+    image: "/images/Principal.jpg",
 
     color: "blue",
   },
@@ -26,7 +26,7 @@ const leadershipTeam = [
     name: "Anwer Muhyidheen Hudawi",
     quote:
       "Our campus is more than just classrooms; it's a community. We are dedicated to the holistic development of every student—intellectually, spiritually, and personally.",
-    image: "/src/assets/vice-principal.jpg",
+    image: "/images/vice-principal.jpg",
 
     color: "amber",
   },

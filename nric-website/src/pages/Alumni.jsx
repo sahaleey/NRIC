@@ -11,21 +11,21 @@ const featuredAlumni = [
     batch: "Class of 2012",
     role: "Professor of Islamic Studies, IIUM",
     bio: "A leading researcher in contemporary Fiqh and its application in modern finance.",
-    imageUrl: "/src/assets/alumni-1.jpg", // ❗ Add placeholder image
+    imageUrl: "/images/alumni-1.jpg", // ❗ Add placeholder image
   },
   {
     name: "Saleem Abdul-Kareem",
     batch: "Class of 2015",
     role: "Full-Stack Developer, Google",
     bio: "Specializing in AI and machine learning, bridging the gap between technology and community.",
-    imageUrl: "/src/assets/alumni-2.jpg", // ❗ Add placeholder image
+    imageUrl: "/images/alumni-2.jpg", // ❗ Add placeholder image
   },
   {
     name: "Yusuf Ibrahim",
     batch: "Class of 2018",
     role: "Founder, Insaf Foundation (NGO)",
     bio: "Running a non-profit organization dedicated to providing education and resources in rural areas.",
-    imageUrl: "/src/assets/alumni-3.jpg", // ❗ Add placeholder image
+    imageUrl: "/images/alumni-3.jpg", // ❗ Add placeholder image
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Alumni() {
       <section className="relative h-72 flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/60 z-0">
           <img
-            src="/src/assets/IMG_4094.jpg" // Using the same image from your card
+            src="/images/IMG_4094.jpg" // Using the same image from your card
             alt="NIC Alumni"
             className="w-full h-full object-cover"
           />

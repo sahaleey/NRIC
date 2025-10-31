@@ -69,7 +69,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-linear-to-r from-gray-900/80 via-gray-800/60 to-gray-900/80 z-10" />
         <div className="absolute inset-0 bg-black/40 z-20" />
         <img
-          src="/src/assets/DJI_0509.jpg"
+          src="/images/DJI_0509.jpg"
           alt="Nahjurrashad Islamic College Campus"
           className="w-full h-full object-cover"
         />
