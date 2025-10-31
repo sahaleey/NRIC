@@ -114,7 +114,7 @@ export default function StatsBar() {
   };
 
   return (
-    <section className="relative py-20 md:py-28 bg-linear-to-br from-gray-700 via-gray-700 to-gray-800 overflow-hidden ">
+    <section className="relative py-20 md:py-28 bg-linear-to-b from-gray-700 via-gray-700 to-gray-900 overflow-hidden ">
       {/* Background decorative elements */}
       <div className="absolute inset-0 ">
         {/* Islamic geometric pattern overlay */}

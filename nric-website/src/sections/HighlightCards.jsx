@@ -84,15 +84,25 @@ const hoverVariants = {
 
 export default function HighlightCards() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 ">
+    <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+        <div
+          className="w-full h-full bg-repeat opacity-[0.3]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L80 20 L80 80 L50 50 L20 80 L20 20 Z' fill='%23ffffff'/%3E%3C/svg%3E")`,
+          }}
+        ></div>
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 m-8">
-        {/* Enhanced Section Header */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16 max-w-3xl mx-auto "
+          className="text-center mb-16 max-w-3xl mx-auto"
         >
           <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-emerald-200 dark:border-emerald-700">
             <FiStar className="size-4" />
@@ -110,7 +120,7 @@ export default function HighlightCards() {
           </p>
         </motion.div>
 
-        {/* Enhanced Cards Grid */}
+        {/* Cards Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           variants={containerVariants}
@@ -118,7 +128,7 @@ export default function HighlightCards() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
-          {cards.map((card, index) => {
+          {cards.map((card) => {
             const IconComponent = card.icon;
             const colorClasses = {
               blue: "text-blue-600 dark:text-blue-400",
@@ -137,14 +147,13 @@ export default function HighlightCards() {
                     className="group relative h-96 rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
                     variants={hoverVariants}
                   >
-                    {/* Background Image with Enhanced Overlay */}
+                    {/* Background Image with Overlays */}
                     <div className="absolute inset-0">
                       <img
                         src={card.imageUrl}
                         alt={card.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      {/* Multi-layer Gradient Overlay */}
                       <div
                         className={`absolute inset-0 bg-gradient-to-br ${card.gradient}`}
                       />
@@ -152,9 +161,8 @@ export default function HighlightCards() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     </div>
 
-                    {/* Content Container */}
+                    {/* Card Content */}
                     <div className="relative h-full flex flex-col justify-end p-6 lg:p-8">
-                      {/* Top Badge */}
                       <div className="flex justify-between items-start mb-4">
                         <div
                           className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-md ${
@@ -166,7 +174,6 @@ export default function HighlightCards() {
                         </div>
                       </div>
 
-                      {/* Text Content */}
                       <div className="space-y-4">
                         <h3 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight">
                           {card.title}
@@ -175,7 +182,6 @@ export default function HighlightCards() {
                           {card.description}
                         </p>
 
-                        {/* CTA Button */}
                         <motion.div
                           className="flex items-center gap-3 pt-4 border-t border-white/20"
                           initial={{ opacity: 0, x: -20 }}
@@ -194,10 +200,8 @@ export default function HighlightCards() {
                       </div>
                     </div>
 
-                    {/* Hover Effect Overlay */}
+                    {/* Hover Effects */}
                     <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                    {/* Shine Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                   </motion.div>
                 </Link>

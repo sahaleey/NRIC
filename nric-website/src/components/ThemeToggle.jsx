@@ -26,7 +26,11 @@ export default function ThemeToggle() {
           transition={{ duration: 0.2 }}
         >
           {/* Show Moon icon in light mode, Sun icon in dark mode */}
-          {theme === "light" ? <FiMoon size={18} /> : <FiSun size={18} />}
+          {theme === "light" ? (
+            <FiMoon size={18} />
+          ) : (
+            <FiSun size={18} className="text-white" />
+          )}
         </motion.div>
       </AnimatePresence>
     </motion.button>
