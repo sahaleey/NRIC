@@ -36,7 +36,7 @@ const stats = [
   },
 
   {
-    value: 96,
+    value: 98,
     label: "Graduation Success",
     suffix: "%",
     icon: HiAcademicCap,

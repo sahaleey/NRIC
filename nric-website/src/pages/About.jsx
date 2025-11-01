@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"; // Import Outlet
+import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 

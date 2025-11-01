@@ -8,9 +8,6 @@ export default function Admission() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  // This function will run when the form is submitted
-  // We'll send this to our Node.js backend
   const onSubmit = (data) => {
     console.log("Admission form data:", data);
     alert(

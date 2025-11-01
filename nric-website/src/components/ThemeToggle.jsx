@@ -8,7 +8,7 @@ export default function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      whileHover={{ scale: 1.1, rotate: 15 }} // Nice little hover effect
+      whileHover={{ scale: 1.1, rotate: 15 }}
       whileTap={{ scale: 0.9, rotate: -15 }}
       className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full text-nic-gold
                  focus:outline-none focus:ring-2 focus:ring-offset-2
@@ -17,8 +17,6 @@ export default function ThemeToggle() {
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          // We use the theme as a 'key'. When the key changes,
-          // Framer Motion re-runs the animation.
           key={theme}
           initial={{ opacity: 0, y: -10, rotate: -90 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}

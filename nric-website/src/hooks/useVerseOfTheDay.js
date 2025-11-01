@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 // --- Our list of verses ---
-// In a real app, this could come from a JSON file or an API
 const verses = [
   {
     text: "Read! In the name of your Lord who created.",
@@ -25,14 +24,12 @@ export function useVerseOfTheDay() {
   const [verse, setVerse] = useState(null);
 
   useEffect(() => {
-    // Get day of the year (0-365)
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 0);
     const diff = now - start;
     const oneDay = 1000 * 60 * 60 * 24;
     const dayOfYear = Math.floor(diff / oneDay);
 
-    // Use modulo to pick a verse for the day
     const verseIndex = dayOfYear % verses.length;
     setVerse(verses[verseIndex]);
   }, []);

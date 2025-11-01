@@ -14,7 +14,11 @@ import { facultyMembers } from "../../data/faculty";
 const facultyStats = [
   { number: "20+", label: "Qualified Faculty", icon: FiUsers },
   { number: "5+", label: "Years Average Experience", icon: FiAward },
-  { number: "2", label: "Academic Departments", icon: FiBook },
+  {
+    number: "Hadith and Related Science",
+    label: "Academic Department",
+    icon: FiBook,
+  },
   { number: "100%", label: "DHIU Certified", icon: FiStar },
 ];
 

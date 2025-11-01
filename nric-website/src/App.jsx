@@ -9,7 +9,7 @@ import Sitemap from "./pages/Sitemap";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
-// --- Import the "About" pages ---
+// --- Import "About" pages ---
 import About from "./pages/About";
 import AboutOverview from "./pages/about/AboutOverview";
 import History from "./pages/about/History";
@@ -17,7 +17,7 @@ import Leadership from "./pages/about/Leadership";
 import Campus from "./pages/about/Campus";
 import Accreditation from "./pages/about/Accreditation";
 
-// --- Import the NEW "Academics" pages ---
+// --- Import NEW "Academics" pages ---
 import Academics from "./pages/Academics";
 import Curriculum from "./pages/academics/Curriculum";
 import Faculty from "./pages/academics/Faculty";

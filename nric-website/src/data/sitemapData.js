@@ -1,4 +1,3 @@
-// src/data/sitemapData.js
 import { FiHome, FiInfo, FiBook } from "react-icons/fi";
 import { MdReadMore } from "react-icons/md";
 
