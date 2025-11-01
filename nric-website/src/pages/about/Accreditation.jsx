@@ -25,22 +25,6 @@ const affiliations = [
     ],
     color: "emerald",
   },
-  {
-    icon: FiGlobe,
-    name: "University Grants Commission",
-    shortName: "UGC",
-    description:
-      "Statutory body established by Government of India for coordination and maintenance of standards of higher education.",
-    status: "Recognized",
-    since: "2010",
-    benefits: [
-      "National Level Recognition",
-      "Quality Assurance",
-      "Academic Standards",
-      "Research Funding Eligibility",
-    ],
-    color: "blue",
-  },
 ];
 
 const accreditationFeatures = [
@@ -78,7 +62,7 @@ const recognitionStats = [
   { number: "20+", label: "Years of Excellence" },
   { number: "500+", label: "Successful Graduates" },
   { number: "20+", label: "Qualified Faculty" },
-  { number: "2", label: "Academic Departments" },
+  { number: "Hadith and Science", label: "Academic Departments" },
 ];
 
 export default function Accreditation() {
@@ -236,7 +220,7 @@ export default function Accreditation() {
             Our Prestigious Affiliations
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          <div className="flex justify-center mb-16">
             {affiliations.map((affiliation) => {
               const IconComponent = affiliation.icon;
               const colors = colorMap[affiliation.color];

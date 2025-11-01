@@ -26,7 +26,7 @@ const navItems = [
     ],
   },
   {
-    name: "Departments",
+    name: "Department",
     path: "/departments",
   },
   { name: "Contact", path: "/contact" },

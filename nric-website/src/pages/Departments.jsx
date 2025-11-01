@@ -28,23 +28,6 @@ const departments = [
     programs: ["Bachelor's in Hadith Sciences", "Advanced Research Programs"],
     color: "emerald",
   },
-  {
-    name: "Arabic Language & Literature",
-    description:
-      "Advanced Arabic studies focusing on grammar, literature, rhetoric, and professional language application in Islamic contexts.",
-
-    icon: <FiGlobe className="text-4xl text-blue-600" />,
-    features: [
-      "Advanced Nahv & Sarf (Grammar)",
-      "Balagha (Rhetoric) & Adab (Literature)",
-      "Classical & Modern Arabic Texts",
-      "Professional Translation Skills",
-      "Arabic for Islamic Scholarship",
-    ],
-    facultyCount: "6+ Language Experts",
-    programs: ["Bachelor's in Arabic Literature"],
-    color: "blue",
-  },
 ];
 
 // --- Animation Variants ---
@@ -157,10 +140,10 @@ export default function Departments() {
         >
           <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
-              2
+              Hadith and Related Science
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium">
-              Specialized Departments
+              Specialized Department
             </div>
           </div>
           <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
@@ -173,7 +156,7 @@ export default function Departments() {
           </div>
           <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">
-              4+
+              3+
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium">
               Degree Programs
@@ -183,7 +166,7 @@ export default function Departments() {
 
         {/* --- 2. Departments Grid --- */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          className="flex justify-center mb-16"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

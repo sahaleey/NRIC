@@ -10,7 +10,7 @@ import {
 // --- Enhanced stats data with icons and descriptions ---
 const stats = [
   {
-    value: 500,
+    value: 300,
     label: "Students Enrolled",
     suffix: "+",
     icon: HiUsers,
@@ -26,13 +26,15 @@ const stats = [
     color: "emerald",
   },
   {
-    value: 2,
-    label: "Academic Departments",
+    value: "Hadith and Related Science",
+    label: "Academic Department",
     suffix: "",
     icon: HiBuildingLibrary,
     description: "Comprehensive programs",
     color: "amber",
+    isText: true, // custom flag
   },
+
   {
     value: 98,
     label: "Graduation Success",
@@ -222,14 +224,33 @@ export default function StatsBar() {
                       transition={{ delay: index * 0.1 + 0.7 }}
                       className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2"
                     >
-                      <CountUp
-                        end={stat.value}
-                        suffix={stat.suffix}
-                        duration={3.5}
-                        enableScrollSpy
-                        scrollSpyOnce
-                        formattingFn={(value) => value.toLocaleString()}
-                      />
+                      <motion.h3
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 + 0.7 }}
+                        className={` font-bold text-white mb-2 ${
+                          stat.isText
+                            ? "text-2xl lg:text-3xl xl:text-3xl font-sans flex"
+                            : "text-4xl lg:text-5xl xl:text-6xl"
+                        }`}
+                      >
+                        {stat.isText ? (
+                          <span>
+                            {stat.value}
+                            {stat.suffix}
+                          </span>
+                        ) : (
+                          <CountUp
+                            end={stat.value}
+                            suffix={stat.suffix}
+                            duration={3.5}
+                            enableScrollSpy
+                            scrollSpyOnce
+                            formattingFn={(value) => value.toLocaleString()}
+                          />
+                        )}
+                      </motion.h3>
                     </motion.h3>
 
                     {/* Label */}
