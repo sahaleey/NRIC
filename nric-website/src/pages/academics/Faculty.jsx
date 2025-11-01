@@ -9,114 +9,7 @@ import {
   FiCheck,
   FiStar,
 } from "react-icons/fi";
-
-const facultyMembers = [
-  {
-    members: [
-      {
-        name: "Muhammed Shafi Hudawi",
-        position: "Principal",
-        experience: "20+ years",
-        specialization: "Quranic Tafsir, Hadith Sciences",
-        bio: "Renowned scholar with extensive research in classical Islamic texts and contemporary applications.",
-        image: "/images/faculty/Principal.jpg",
-        email: "ahmed.hussain@nahjurrashad.edu",
-        phone: "+91 98765 43210",
-      },
-      {
-        name: "Anwer Muhyidheen Hudawi",
-        position: "Vice Principal",
-        qualification: "Masters in Hadith Sciences, DHIU",
-        experience: "18 years in Hadith instruction",
-        specialization: "Mustalah al-Hadith, Chain Analysis",
-        bio: "Expert in Hadith authentication methods with focus on practical application in modern context.",
-        image: "/images/faculty/vice-principal.jpg",
-        email: "fatima.rahman@nahjurrashad.edu",
-        phone: "+91 98765 43211",
-      },
-      {
-        name: "Bahauddin Hudawi",
-        position: "Arabic Language Professor",
-        qualification: "MA Arabic Literature, University of Calicut",
-        experience: "15 years in language instruction",
-        specialization: "Arabic Grammar, Balagha, Literature",
-        bio: "Dedicated to making Arabic language accessible and enjoyable for students at all levels.",
-        image: "/images/faculty/ustadh-sameer.jpg",
-        email: "sameer.ahmed@nahjurrashad.edu",
-        phone: "+91 98765 43212",
-        achievements: [
-          "Language curriculum designer",
-          "Student mentorship programs",
-          "Cultural exchange coordinator",
-        ],
-      },
-      {
-        name: "Muhammed Hassan Hudawi",
-        position: "Head of Languages",
-        qualification: "PhD in Comparative Literature, University of Kerala",
-        experience: "22 years in language education",
-        specialization: "Multilingual Studies, Literary Criticism",
-        bio: "Expert in four-language curriculum development and cross-cultural communication.",
-        image: "/images/faculty/prof-zainab.jpg",
-        email: "zainab.ibrahim@nahjurrashad.edu",
-        phone: "+91 98765 43215",
-        achievements: [
-          "Multilingual curriculum design",
-          "Literary translation work",
-          "Cultural studies researcher",
-        ],
-      },
-      {
-        name: "Muhammed Swalih Hudawi",
-        position: "Urdu Literature Professor",
-        qualification: "MA Urdu Literature, Jamia Millia Islamia",
-        experience: "16 years in Urdu instruction",
-        specialization: "Classical Poetry, Modern Urdu Prose",
-        bio: "Dedicated to preserving and promoting Urdu literary heritage among new generations.",
-        image: "/images/faculty/ustadh-salman.jpg",
-        email: "salman.farooq@nahjurrashad.edu",
-        phone: "+91 98765 43216",
-        achievements: [
-          "Urdu literary critic",
-          "Poetry recitation expert",
-          "Cultural event organizer",
-        ],
-      },
-      {
-        name: "Muhammed Shareef hudawi",
-        position: "Head of Computer Science",
-        qualification: "PhD in Computer Science, IIT Madras",
-        experience: "20+ years in tech education",
-        specialization: "AI Ethics, Software Engineering",
-        bio: "Bridging technology with Islamic ethics to create responsible future tech leaders.",
-        image: "/images/faculty/dr-rahim.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
-        phone: "+91 98765 43213",
-        achievements: [
-          "AI ethics researcher",
-          "Tech startup mentor",
-          "Open source contributor",
-        ],
-      },
-      {
-        name: "Muhammed Shafeeq Hudawi",
-        position: "Data Science Professor",
-        qualification: "MTech in Data Science, NIT",
-        experience: "12 years in data analytics",
-        specialization: "Machine Learning, Big Data Analytics",
-        bio: "Passionate about using data science for social good and community development.",
-        image: "/images/faculty/prof-aisha.jpg",
-        email: "aisha.mohammed@nahjurrashad.edu",
-        phone: "+91 98765 43214",
-        achievements: [
-          "Data for social good projects",
-          "Women in tech advocate",
-          "Industry collaboration lead",
-        ],
-      },
-    ],
-  },
-];
+import { facultyMembers } from "../../data/faculty";
 
 const facultyStats = [
   { number: "20+", label: "Qualified Faculty", icon: FiUsers },
@@ -323,13 +216,6 @@ export default function Faculty() {
                             >
                               <FiMail className="size-3" />
                               Email
-                            </a>
-                            <a
-                              href={`tel:${faculty.phone}`}
-                              className="flex items-center gap-1 text-green-600 dark:text-green-400 hover:underline"
-                            >
-                              <FiPhone className="size-3" />
-                              Call
                             </a>
                           </div>
                         </div>

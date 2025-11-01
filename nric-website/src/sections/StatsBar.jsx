@@ -36,7 +36,7 @@ const stats = [
   },
 
   {
-    value: 98,
+    value: 96,
     label: "Graduation Success",
     suffix: "%",
     icon: HiAcademicCap,
@@ -217,41 +217,50 @@ export default function StatsBar() {
                     </motion.div>
 
                     {/* Number */}
-                    <motion.h3
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 + 0.7 }}
-                      className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2"
+                      transition={{ delay: index * 0.1 + 0.7, duration: 0.6 }}
+                      className={`flex items-baseline mb-2 gap-1 justify-start ${
+                        stat.isText ? "text-left" : "text-center"
+                      }`}
+                      key={stat.label}
                     >
-                      <motion.h3
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.7 }}
-                        className={` font-bold text-white mb-2 ${
-                          stat.isText
-                            ? "text-2xl lg:text-3xl xl:text-3xl font-sans flex"
-                            : "text-4xl lg:text-5xl xl:text-6xl"
-                        }`}
-                      >
-                        {stat.isText ? (
-                          <span>
-                            {stat.value}
-                            {stat.suffix}
-                          </span>
-                        ) : (
+                      {stat.isText ? (
+                        <span className="font-sans text-2xl lg:text-3xl xl:text-3xl font-bold text-white">
+                          {stat.value}
+                          {stat.suffix}
+                        </span>
+                      ) : (
+                        <>
                           <CountUp
+                            key={stat.value}
                             end={stat.value}
-                            suffix={stat.suffix}
                             duration={3.5}
                             enableScrollSpy
                             scrollSpyOnce
                             formattingFn={(value) => value.toLocaleString()}
-                          />
-                        )}
-                      </motion.h3>
-                    </motion.h3>
+                          >
+                            {({ countUpRef }) => (
+                              <span
+                                ref={countUpRef}
+                                className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-white"
+                              />
+                            )}
+                          </CountUp>
+                          <motion.span
+                            initial={{ opacity: 0, y: 5 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 + 1.0 }}
+                            className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-white"
+                          >
+                            {stat.suffix}
+                          </motion.span>
+                        </>
+                      )}
+                    </motion.div>
 
                     {/* Label */}
                     <motion.p
