@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function About() {
   return (
-    <div className="bg-white dark:bg-nic-dark">
+    <div className="bg-white dark:bg-black">
       <Helmet>
         <title>Nahjurrashad Islamic College | About</title>
         <meta

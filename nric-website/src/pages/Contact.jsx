@@ -112,7 +112,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28">
+    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28">
       <Helmet>
         <title>Nahjurrashad Islamic College | Contact</title>
         <meta
