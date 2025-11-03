@@ -89,10 +89,10 @@ export default function HeroSection() {
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
           variants={itemVariant}
         >
-          <span className="block text-white font-light font-serif [text-shadow:0_4px_12px_rgb(0_0_0_/50%)]">
+          <span className="block text-white font-light [text-shadow:0_4px_12px_rgb(0_0_0_/50%)]">
             Nahjurrashad
           </span>
-          <span className="block text-3xl md:text-4xl font-sans lg:text-5xl mt-2 text-green-500 font-light">
+          <span className="block text-3xl md:text-4xl font-secondary lg:text-5xl mt-2 text-green-500 font-light">
             Islamic College
           </span>
         </motion.h1>
