@@ -4,16 +4,16 @@ import { FiTarget, FiEye, FiAward, FiUsers } from "react-icons/fi";
 export default function History() {
   const timelineEvents = [
     {
-      year: "2005",
-      title: "Humble Beginnings",
+      year: "2006",
+      title: "Founded with DHIU Affiliation",
       description:
-        "Founded with a vision to integrate Islamic scholarship with modern education",
+        "Began its journey under the affiliation of Darul Huda Islamic University, with a mission to blend Islamic scholarship and modern education.",
     },
     {
-      year: "2006",
-      title: "DHIU Affiliation",
+      year: "2016",
+      title: "First Batch Graduated",
       description:
-        "Established formal affiliation with Darul Huda Islamic University",
+        "Marked a major milestone as the first batch of students successfully completed their graduation from Nahjurrashad.",
     },
     {
       year: "2015",

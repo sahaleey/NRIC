@@ -2,14 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Then optionally define theme tokens or variables */
 @theme {
-  /* default (light) theme variables */
   --color-bg: #ffffff;
   --color-text: #111111;
 }
 
-/* Override for dark theme */
 @layer theme {
   .dark {
     --color-bg: #111111;
