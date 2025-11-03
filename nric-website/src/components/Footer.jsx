@@ -19,10 +19,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-950 text-gray-300 overflow-hidden border-t border-white/5">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent"></div>
-
+    <footer className="relative bg-black text-gray-300 overflow-hidden border-t border-white/5">
+      {/* NAHJ Text */}
+      <div className="absolute bottom-0 left-0 right-0 text-[18vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100/50 via-gray-400/30 to-gray-900/10 select-none tracking-tight leading-none text-center md:text-left flex justify-center max-md:justify-start px-6 pointer-events-none">
+        NAHJ
+      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 py-12">
