@@ -40,12 +40,12 @@
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.6s infinite linear;
 
-  mask-image: url("/images/logo.png");
+  mask-image: url("/images/logo.svg");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
 
-  -webkit-mask-image: var(--logo-path, url("/images/logo.png"));
+  -webkit-mask-image: var(--logo-path, url("/images/logo.svg"));
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
