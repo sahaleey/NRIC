@@ -10,16 +10,16 @@ export default function History() {
         "Began its journey under the affiliation of Darul Huda Islamic University, with a mission to blend Islamic scholarship and modern education.",
     },
     {
-      year: "2016",
-      title: "First Batch Graduated",
-      description:
-        "Marked a major milestone as the first batch of students successfully completed their graduation from Nahjurrashad.",
-    },
-    {
       year: "2015",
       title: "Campus Expansion",
       description:
         "Expanded facilities to accommodate growing student community",
+    },
+    {
+      year: "2016",
+      title: "First Batch Graduated",
+      description:
+        "Marked a major milestone as the first batch of students successfully completed their graduation from Nahjurrashad.",
     },
     {
       year: "2023",

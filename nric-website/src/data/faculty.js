@@ -38,13 +38,14 @@ export const facultyMembers = [
         email: "sameer.ahmed@nahjurrashad.edu",
       },
       {
-        name: "Muhammed Hassan Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/prof-zainab.jpg",
-        email: "zainab.ibrahim@nahjurrashad.edu",
+        name: "Hassan Hudawi",
+        position: "Language & Literature Lecturer",
+        experience: "12 years of experience",
+        specialization:
+          "A passionate educator in language and literature with a deep understanding of Islamic law",
+        bio: "A dedicated lecturer with a passion for language, literature, and Islamic jurisprudence, committed to fostering critical thinking and effective communication as a leader.",
+        image: "/images/faculty/hassan.jpg",
+        email: "hasanplpd@gmail.com",
       },
       {
         name: "Muhammed Swalih Hudawi",
@@ -57,12 +58,13 @@ export const facultyMembers = [
       },
       {
         name: "Muhammed Shareef Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/dr-rahim.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        position: "Malayalam Language & Literature Lecturer",
+        experience: "8 years experience",
+        specialization:
+          "An expert in Malayalam language and literature with strong engagement in social work and community development.",
+        bio: "A dedicated lecturer combining expertise in Malayalam language, literature, and social work, committed to nurturing cultural awareness, empathy, and social responsibility among students.",
+        image: "/images/faculty/shareef.webp",
+        email: "muhammedshareefkm1994@gmail.com",
       },
       {
         name: "Muhammed Shafeeq Hudawi",

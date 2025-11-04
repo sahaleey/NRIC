@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./PageLoader.css";
 
 const PageLoader = ({ loading }) => {
@@ -16,6 +17,10 @@ const PageLoader = ({ loading }) => {
       </div>
     </div>
   );
+};
+
+PageLoader.propTypes = {
+  loading: PropTypes.bool.isRequired,
 };
 
 export default PageLoader;

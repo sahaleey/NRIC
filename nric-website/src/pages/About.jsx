@@ -18,7 +18,7 @@ export default function About() {
       <section className="relative h-72 flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/60 z-0">
           <img
-            src="/images/DJI_0509.jpg"
+            src="/images/dji-hero-desktop.jpg"
             alt="NIC Campus"
             className="w-full h-full object-cover"
           />

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // --- Quran Verses (30 total) ---
 const verses = [
@@ -100,20 +100,20 @@ const verses = [
   },
 ];
 
+function getVerseForToday() {
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 0);
+  const diff = now - startOfYear;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor(diff / oneDay);
+
+  const verseIndex = dayOfYear % verses.length;
+  return verses[verseIndex];
+}
+
 // --- Hook: Verse of the Day ---
 export function useVerseOfTheDay() {
-  const [verse, setVerse] = useState(null);
-
-  useEffect(() => {
-    const now = new Date();
-    const startOfYear = new Date(now.getFullYear(), 0, 0);
-    const diff = now - startOfYear;
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
-
-    const verseIndex = dayOfYear % verses.length;
-    setVerse(verses[verseIndex]);
-  }, []);
+  const [verse] = useState(getVerseForToday);
 
   return verse;
 }

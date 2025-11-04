@@ -150,7 +150,11 @@ export default function Faculty() {
           className="space-y-16"
         >
           {facultyMembers.map((department, deptIndex) => (
-            <motion.div variants={itemVariants} className="relative">
+            <motion.div
+              variants={itemVariants}
+              className="relative"
+              key={deptIndex}
+            >
               {/* Faculty Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {department.members.map((faculty, facultyIndex) => (
@@ -298,9 +302,12 @@ export default function Faculty() {
               want to contribute to our mission of integrated Islamic and modern
               education.
             </p>
-            <button className="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
-              View Faculty Opportunities
-            </button>
+            <a
+              href="mailto:careers@nahjurrashad.edu"
+              className="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Look for Faculty Opportunities
+            </a>
           </div>
         </motion.div>
       </div>

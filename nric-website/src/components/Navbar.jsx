@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
@@ -37,6 +37,7 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navRef = useRef(null);
 
   // Handle scroll effect
   useEffect(() => {
@@ -47,18 +48,38 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close mobile menu AND desktop dropdown on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location]);
 
+  // Handle "click-away" to close desktop dropdowns ---
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // If the navRef exists and the click was *outside* the nav
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActiveDropdown(null); // Close any active dropdown
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // --- Mobile-only click toggle ---
   const toggleDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
   return (
     <motion.nav
+      ref={navRef}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -95,14 +116,19 @@ export default function Navbar() {
             {navItems.map((item, index) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <motion.div whileHover={{ scale: 1.02 }} className="relative">
+                  <motion.div
+                    onMouseEnter={() => setActiveDropdown(index)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                    className="relative"
+                  >
                     <button
-                      onClick={() => toggleDropdown(index)}
                       className={`flex items-center space-x-1 px-4 py-3 font-medium transition-all duration-200 rounded-lg ${
                         location.pathname.startsWith(item.path)
                           ? "text-emerald-700 bg-emerald-50 dark:bg-emerald-900/20"
                           : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 hover:bg-gray-50 dark:hover:bg-gray-800"
                       }`}
+                      aria-haspopup="true"
+                      aria-expanded={activeDropdown === index}
                     >
                       <span>{item.name}</span>
                       <motion.div
@@ -164,6 +190,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <FiX className="size-6" />
@@ -192,6 +219,8 @@ export default function Navbar() {
                       <button
                         onClick={() => toggleDropdown(index)}
                         className="flex items-center justify-between w-full px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                        aria-haspopup="true"
+                        aria-expanded={activeDropdown === index}
                       >
                         <span>{item.name}</span>
                         <motion.div

@@ -234,14 +234,14 @@ export default function Footer() {
             <div className="flex items-center gap-1 text-sm text-gray-500">
               <span>Developed</span>
               <span>by</span>
-              <Link
-                to="https://dev-scp.vercel.app"
+              <a
+                href="https://dev-scp.vercel.app"
                 className="text-gray-400 hover:text-emerald-300 font-medium transition-all hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 SCP
-              </Link>
+              </a>
             </div>
 
             {/* Scroll to Top Button */}

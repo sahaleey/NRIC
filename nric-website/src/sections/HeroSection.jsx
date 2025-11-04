@@ -68,11 +68,21 @@ export default function HeroSection() {
         {/* Multi-layer gradient overlay */}
         <div className="absolute inset-0 bg-linear-to-r from-gray-900/80 via-gray-800/60 to-gray-900/80 z-10" />
         <div className="absolute inset-0 bg-black/40 z-20" />
-        <img
-          src="/images/DJI_0509.jpg"
-          alt="Nahjurrashad Islamic College Campus"
-          className="w-full h-full object-cover"
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet="/images/dji-hero-mobile.webp"
+            type="image/webp"
+          />
+          <source srcSet="/images/dji-hero-desktop.avif" type="image/avif" />
+          <source srcSet="/images/dji-hero-desktop.webp" type="image/webp" />
+          <img
+            src="/images/dji-hero-desktop.jpg"
+            alt="Nahjurrashad Islamic College Campus"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+        </picture>
       </motion.div>
 
       {/* Decorative Islamic Geometric Patterns */}
@@ -135,7 +145,7 @@ export default function HeroSection() {
               className="size-5 ml-2 transform group-hover:translate-x-1 transition-transform"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
+              viewBox="0 24 24"
             >
               <path
                 strokeLinecap="round"
@@ -152,13 +162,14 @@ export default function HeroSection() {
                        transition-all duration-300
                        border-2 border-white/50 hover:border-white backdrop-blur-sm
                        flex items-center justify-center min-w-56"
+            s
           >
             <span>Know our leaders</span>
             <svg
               className="size-5 ml-2 transform group-hover:translate-x-1 transition-transform"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
+              viewBox="0 24 24"
             >
               <path
                 strokeLinecap="round"
