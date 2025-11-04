@@ -20,7 +20,7 @@ const cards = [
     description:
       "Discover student clubs, hostel facilities, cultural events, and spiritual activities on campus.",
     link: "/about/campus",
-    imageUrl: "/images/DJI_0509.jpg",
+    imageUrl: "/images/dji-hero-desktop.jpg",
     icon: FiUsers,
     stats: "15+ Clubs",
     gradient: "from-emerald-500/20 to-green-600/20",
