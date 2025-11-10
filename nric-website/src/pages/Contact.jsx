@@ -228,7 +228,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <label className=" text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                     <FiUser className="size-4 text-emerald-600" />
                     Full Name
                   </label>
@@ -253,7 +253,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <label className=" text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                     <FiMail className="size-4 text-emerald-600" />
                     Email Address
                   </label>
@@ -303,7 +303,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <label className=" text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                     <FiMessageCircle className="size-4 text-emerald-600" />
                     Your Message
                   </label>

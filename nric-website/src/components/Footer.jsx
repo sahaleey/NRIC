@@ -235,7 +235,7 @@ export default function Footer() {
               <span>Developed</span>
               <span>by</span>
               <a
-                href="https://dev-scp.vercel.app"
+                href="https://sahaleey.me"
                 className="text-gray-400 hover:text-emerald-300 font-medium transition-all hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"

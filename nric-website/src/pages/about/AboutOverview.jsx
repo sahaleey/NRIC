@@ -167,15 +167,15 @@ export default function AboutOverview() {
             {/* =====================
                 Key Stats
             ====================== */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+            <div className="flex justify-between  gap-6 max-w-2xl mx-auto">
               {[
-                { value: "2005", label: "Established" },
+                { value: "2006", label: "Established" },
                 { value: "300+", label: "Students" },
                 { value: "20+", label: "Faculty" },
-                { value: "2", label: "Departments" },
+                { value: "Hadith and science", label: "Departments" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+                  <div className="text-2xl  md:text-3xl font-bold text-emerald-600 dark:text-emerald-400">
                     {stat.value}
                   </div>
                   <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
