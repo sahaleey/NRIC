@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FiLayers, FiFileText, FiUsers, FiArrowRight } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 import { siteSections } from "../data/sitemapData";
 
 export default function Sitemap() {
