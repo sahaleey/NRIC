@@ -118,9 +118,9 @@ export default function Sitemap() {
           aria-label="Sitemap statistics"
         >
           {[
-            { number: "5", label: "Main Categories", icon: FiLayers },
+            { number: "3", label: "Main Categories", icon: FiLayers },
             { number: "15+", label: "Total Pages", icon: FiFileText },
-            { number: "2", label: "Academic Departments", icon: FiUsers },
+            { number: "3", label: "Academic Department Pages", icon: FiUsers },
           ].map((stat) => {
             const Icon = stat.icon;
             return (
