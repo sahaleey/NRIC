@@ -98,8 +98,9 @@ export const facultyMembers = [
         name: "Muhammed Ajnas Hudawi",
         position: "",
         experience: "1 year Experience",
-        specialization: "",
-        bio: "",
+        specialization:
+          "Expert in multilingual translation and linguistic adaptation across English, Urdu, Arabic, and Malayalam, with strong focus on cultural context, literary nuance, and academic precision.",
+        bio: "A passionate multilingual translator skilled in bridging languages and cultures. With mastery in English, Urdu, Arabic, and Malayalam, he is dedicated to delivering clear, context-rich translations that preserve meaning, emotion, and authenticity.",
         image: "/images/faculty/ajnas.jpg",
         email: "ajnasmohammedt@gmail.com",
       },
