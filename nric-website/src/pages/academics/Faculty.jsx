@@ -10,6 +10,7 @@ import {
   FiStar,
 } from "react-icons/fi";
 import { facultyMembers } from "../../data/faculty";
+import { Helmet } from "react-helmet-async";
 
 const facultyStats = [
   { number: "20+", label: "Qualified Faculty", icon: FiUsers },
@@ -68,6 +69,29 @@ export default function Faculty() {
     },
   };
 
+  const allFaculty = facultyMembers.flatMap((dept) => dept.members);
+
+  const facultySchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: allFaculty.map((member, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Person",
+        name: member.name,
+        jobTitle: member.position || "Faculty Member",
+        image: `https://nric-chamakkala.vercel.app${member.image}`,
+        description: member.specialization || member.bio,
+        affiliation: {
+          "@type": "CollegeOrUniversity",
+          name: "Nahjurrashad Islamic College",
+          url: "https://nric-chamakkala.vercel.app",
+        },
+      },
+    })),
+  };
+
   return (
     <motion.div
       className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
@@ -75,6 +99,16 @@ export default function Faculty() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>Academic Programes | NRIC</title>
+        <meta
+          name="description"
+          content="Meet the distinguished faculty of Nahjurrashad Islamic College."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify(facultySchema)}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div

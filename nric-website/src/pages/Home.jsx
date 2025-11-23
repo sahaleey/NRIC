@@ -12,7 +12,6 @@ export default function Home() {
       <SEO
         title="Home"
         description="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. Blending Islamic scholarship with modern excellence."
-        canonical="https://nric-chamakkala.vercel.app/"
       />
       <HeroSection />
       <AnnouncementsTicker />
