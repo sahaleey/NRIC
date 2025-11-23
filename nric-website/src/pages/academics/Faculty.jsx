@@ -166,7 +166,7 @@ export default function Faculty() {
                   >
                     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
                       {/* Faculty Image */}
-                      <div className="relative h-64 overflow-hidden">
+                      <div className="relative aspect-square overflow-hidden">
                         <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
                           {faculty.image ? (
                             <img

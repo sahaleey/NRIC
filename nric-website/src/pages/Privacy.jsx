@@ -364,7 +364,7 @@ export default function Privacy() {
                 </p>
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
-                    <strong>Email:</strong> example@nahjurrashad.edu
+                    <strong>Email:</strong> nahjurrashad@gmail.com
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Phone:</strong> +91 00000 00000

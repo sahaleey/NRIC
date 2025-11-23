@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nric-chamakkala.vercel.app/sitemap.xml

@@ -1,19 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 export default function About() {
   return (
     <div className="bg-white dark:bg-black">
-      <Helmet>
-        <title>Nahjurrashad Islamic College | About</title>
-        <meta
-          name="description"
-          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
-        />
-
-        <link rel="canonical" href="https://nric-chamakkala.vercel.app/about" />
-      </Helmet>
+      <SEO
+        title="About Us"
+        description="Learn about NRIC's history, leadership, and mission to shape the future of Islamic education."
+        canonical="https://nric-chamakkala.vercel.app/about"
+      />
 
       <section className="relative h-72 flex items-center justify-center text-center text-white">
         <div className="absolute inset-0 bg-black/60 z-0">

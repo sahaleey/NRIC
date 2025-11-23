@@ -9,7 +9,7 @@ import {
   FiSend,
   FiClock,
 } from "react-icons/fi";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 export default function Contact() {
   const {
@@ -113,18 +113,10 @@ export default function Contact() {
 
   return (
     <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28">
-      <Helmet>
-        <title>Nahjurrashad Islamic College | Contact</title>
-        <meta
-          name="description"
-          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
-        />
-
-        <link
-          rel="canonical"
-          href="https://nric-chamakkala.vercel.app/contact"
-        />
-      </Helmet>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with NRIC Chamakkala. Find our phone numbers, email addresses, and campus location."
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div

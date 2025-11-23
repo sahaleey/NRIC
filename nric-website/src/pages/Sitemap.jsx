@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FiLayers, FiFileText, FiUsers, FiArrowRight } from "react-icons/fi";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 import { siteSections } from "../data/sitemapData";
 
 export default function Sitemap() {
@@ -60,19 +60,12 @@ export default function Sitemap() {
   };
 
   return (
-    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
-      <Helmet>
-        <title>Nahjurrashad Islamic College | Sitemap</title>
-        <meta
-          name="description"
-          content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
-        />
+    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+      <SEO
+        title="Sitemap"
+        description="Official website structure of Nahjurrashad Islamic College (NRIC), Chamakkala. Easily find any page or section."
+      />
 
-        <link
-          rel="canonical"
-          href="https://nric-chamakkala.vercel.app/sitemap"
-        />
-      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.header

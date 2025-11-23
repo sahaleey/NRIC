@@ -133,7 +133,16 @@ export const facultyMembers = [
         email: "rahim.khan@nahjurrashad.edu",
       },
       {
-        name: "Muhammed Rahoof hudawi",
+        name: "Muhammed Abdul Rahoof Hudawi",
+        position: "IT & Fiqh lecturer",
+        experience: "1 year Experience",
+        specialization: "Advanced IT skills and Islamic jurisprudence",
+        bio: "Combines expertise in Information Technology and Islamic jurisprudence to provide students with a comprehensive understanding of both fields, emphasizing practical applications and ethical considerations.",
+        image: "/images/faculty/rahoof.jpg",
+        email: "rahim.khan@nahjurrashad.edu",
+      },
+      {
+        name: "Ansarudheen Hudawi",
         position: "",
         experience: "",
         specialization: "",
@@ -142,17 +151,8 @@ export const facultyMembers = [
         email: "rahim.khan@nahjurrashad.edu",
       },
       {
-        name: "Ansarudheen hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/dr-rahim.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
-      },
-      {
-        name: "Murshid hudawi",
-        position: "Hadith & Arabic Grammar lecturer",
+        name: "Murshid Hudawi",
+        position: "Hadith, Arabic Grammar lecturer and Martial Arts Instructor",
         experience: "3 years experience",
         specialization:
           "A deep understanding of Hadith sciences and Arabic grammar",
@@ -161,7 +161,7 @@ export const facultyMembers = [
         email: "murshiddhiu@gmail.com",
       },
       {
-        name: "Zainudheen hudawi",
+        name: "Zainudheen Hudawi",
         position: "Fiqh & Usul Al-Fiqh lecturer",
         experience: "4 years experience",
         specialization: "Advanced Islamic jurisprudence and legal theory",
