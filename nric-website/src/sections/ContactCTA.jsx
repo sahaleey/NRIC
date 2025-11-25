@@ -7,8 +7,8 @@ export default function ContactCTA() {
     {
       icon: FiMail,
       label: "Email Us",
-      value: "admissions@nahjurrashad.edu",
-      link: "mailto:admissions@nahjurrashad.edu",
+      value: "nahjurrashad@gmail.com",
+      link: "mailto:nahjurrashad@gmail.com",
     },
     {
       icon: FiPhone,
@@ -180,8 +180,8 @@ export default function ContactCTA() {
           {/* Additional Info */}
           <motion.div variants={itemVariants} className="mt-8 text-center">
             <p className="text-gray-500 dark:text-gray-400 text-sm">
-              Typically respond within 24 hours • Office hours: 9 AM - 5 PM,
-              Monday - Friday
+              Typically respond within 24 hours • Office hours: 8 AM - 6 PM,
+              Saturday - Thursday
             </p>
           </motion.div>
         </motion.div>

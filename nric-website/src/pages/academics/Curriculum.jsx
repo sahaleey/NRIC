@@ -237,22 +237,6 @@ const curriculumStructure = [
           "Modern Application of Prophetic Traditions",
         ],
       },
-      {
-        name: "Science & Technology Department",
-        coreCourses: [
-          "Advanced Programming & Algorithms",
-          "Web Technologies & Development",
-          "Database Management Systems",
-          "Software Engineering Principles",
-          "Data Science & Analytics",
-          "Artificial Intelligence Ethics",
-        ],
-        researchAreas: [
-          "Islamic Ethics in Technology",
-          "Software Solutions for Muslim Community",
-          "Digital Islamic Education Tools",
-        ],
-      },
     ],
   },
 ];
@@ -468,10 +452,10 @@ export default function Curriculum() {
 
     return (
       <div>
-        <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-6">
-          Specialization Departments
+        <h3 className="font-serif text-xl flex justify-center font-bold text-gray-900 dark:text-white mb-6">
+          Specialization Department
         </h3>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex justify-center gap-8">
           {departments.map((department, deptIndex) => (
             <div
               key={deptIndex}
@@ -583,7 +567,7 @@ export default function Curriculum() {
               >
                 {/* Phase Header */}
                 <div className={`${colors.bg} p-6 text-white`}>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center  gap-4">
                     <div className="size-12 bg-white/20 rounded-xl flex items-center justify-center">
                       <IconComponent className="size-6 text-white" />
                     </div>
@@ -642,11 +626,11 @@ export default function Curriculum() {
                 </p>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">2</div>
-                <div className="text-blue-100 font-semibold">Departments</div>
-                <p className="text-blue-200 text-sm mt-2">
-                  Hadith & Science Specializations
-                </p>
+                <div className="text-4xl font-bold mb-2">
+                  Hadith & Related Science
+                </div>
+
+                <div className="text-blue-200 font-semibold">Department</div>
               </div>
             </div>
           </div>

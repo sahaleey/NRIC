@@ -65,7 +65,7 @@ export default function Contact() {
     {
       icon: FiMail,
       title: "Email Us",
-      details: "info@nahjurrashad.edu",
+      details: "nahjurrashad@gmail.com",
       description: "We typically respond within 24 hours during working days",
       color: "amber",
     },

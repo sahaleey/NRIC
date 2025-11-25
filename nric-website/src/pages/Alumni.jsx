@@ -7,7 +7,7 @@ import SEO from "../components/SEO";
 const alumniClasses = [
   {
     year: "2023",
-    batch: "Class of 2023",
+    batch: "1st Batch",
     totalGraduates: "45",
     notableAchievements: [
       "15 students pursued higher studies in Islamic universities",
@@ -26,7 +26,7 @@ const alumniClasses = [
   },
   {
     year: "2022",
-    batch: "Class of 2022",
+    batch: "2nd Batch",
     totalGraduates: "42",
     notableAchievements: [
       "12 students admitted to DHIU for advanced studies",
@@ -45,7 +45,7 @@ const alumniClasses = [
   },
   {
     year: "2021",
-    batch: "Class of 2021",
+    batch: "3rd Batch",
     totalGraduates: "38",
     notableAchievements: [
       "First batch with 100% placement record",
@@ -64,7 +64,7 @@ const alumniClasses = [
   },
   {
     year: "2020",
-    batch: "Class of 2020",
+    batch: "4th Batch",
     totalGraduates: "35",
     notableAchievements: [
       "Pioneering online Islamic education initiatives",
@@ -83,7 +83,7 @@ const alumniClasses = [
   },
   {
     year: "2019",
-    batch: "Class of 2019",
+    batch: "5th Batch",
     totalGraduates: "32",
     notableAchievements: [
       "First international research collaborations",
@@ -102,7 +102,7 @@ const alumniClasses = [
   },
   {
     year: "2018",
-    batch: "Class of 2018",
+    batch: "6th Batch",
     totalGraduates: "30",
     notableAchievements: [
       "Silver jubilee batch achievements",
@@ -208,7 +208,7 @@ export default function Alumni() {
   };
 
   return (
-    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50">
+    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/90">
       <SEO
         title="Alumni Network"
         description="Connect with the NRIC Alumni network. Celebrating the achievements of our graduates across the globe."

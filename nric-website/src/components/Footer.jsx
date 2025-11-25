@@ -162,7 +162,7 @@ export default function Footer() {
                     <br />
                     Chamakkala, Thrissur,
                     <br />
-                    Kerala 680652, India
+                    Kerala 680568, India
                   </p>
                 </div>
               </div>
@@ -189,10 +189,10 @@ export default function Footer() {
                 <div>
                   <p className="text-white font-medium text-sm">Email</p>
                   <a
-                    href="mailto:info@nahjurrashad.edu"
+                    href="mailto:nahjurrashad@gmail.com"
                     className="text-gray-400 text-sm hover:text-emerald-300 transition-colors break-all"
                   >
-                    info@nahjurrashad.edu
+                    nahjurrashad@gmail.com
                   </a>
                 </div>
               </div>
