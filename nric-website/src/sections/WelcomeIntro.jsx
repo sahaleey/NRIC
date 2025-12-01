@@ -55,6 +55,17 @@ export default function WelcomeIntro() {
                 Nahjurrashad
               </span>
             </h2>
+            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-5">
+              For over{" "}
+              <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                20 years
+              </span>
+              , Nahjurrashad Islamic College has stood as a beacon of knowledge
+              in Kerala. Celebrating two decades of excellence, we continue our
+              mission of integrating spiritual enlightenment with academic
+              brilliance, molding a generation that leads with both intellect
+              and heart.
+            </p>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-5">
               A center of Islamic scholarship integrated with modern education —
               fostering moral excellence, academic depth, and spiritual growth.

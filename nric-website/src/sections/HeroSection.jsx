@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaAward } from "react-icons/fa6";
+import logo from "../assets/20th logo.png";
 
 // --- Enhanced Animation Variants ---
 const heroTextVariants = {
@@ -89,21 +90,40 @@ export default function HeroSection() {
 
       {/* Main Hero Content */}
       <motion.div
-        className="relative z-30 px-6 text-center max-w-6xl mx-auto mt-30"
+        className="relative z-30 px-6 text-center max-w-6xl mx-auto mt-10"
         variants={heroTextVariants}
         initial="hidden"
         animate="visible"
       >
+        {/* --- FIXED: 20th Anniversary Logo --- */}
+        <motion.div
+          variants={itemVariant}
+          className="flex justify-center items-center px-3 rounded-lg md:mb-6 w-fit mx-auto"
+        >
+          <div
+            className="flex justify-center items-center 
+  bg-white/40 backdrop-blur-md 
+  px-4 py-2 rounded-2xl shadow-lg 
+  border border-white/50 w-fit mx-auto"
+          >
+            {/* The Logo Image */}
+            <img
+              src={logo}
+              alt="20th Anniversary Logo"
+              className="relative w-35 md:w-52 lg:w-64 h-auto object-contain "
+            />
+          </div>
+        </motion.div>
         {/* Main Heading */}
         <motion.h1
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
           variants={itemVariant}
         >
-          <span className="block text-white font-light [text-shadow:0_4px_12px_rgb(0_0_0_/50%)]">
-            Nahjurrashad
+          <span className="block text-white font-secondary font-medium [text-shadow:0_4px_12px_rgb(0_0_0_/50%)]">
+            NAHJURRASHAD
           </span>
-          <span className="block text-3xl md:text-4xl font-secondary lg:text-5xl mt-2 text-green-500 font-light">
-            Islamic College
+          <span className="block text-3xl md:text-4xl font-secondary lg:text-5xl mt-2 text-green-500 font-thin">
+            ISLAMIC COLLEGE
           </span>
         </motion.h1>
 
@@ -122,8 +142,8 @@ export default function HeroSection() {
           className="flex items-center justify-center text-gray-300 mb-8"
           variants={itemVariant}
         >
-          <FaLocationDot className="size-5 max-sm:size-7 mr-3" />
-          <span className="text-lg">
+          <FaLocationDot className="size-5 max-sm:size-5 mr-3  max-sm:ml-9 max-sm:mb-6" />
+          <span className="text-lg mr-5">
             Thrissur, Kerala - Where Tradition Meets Excellence
           </span>
         </motion.div>
