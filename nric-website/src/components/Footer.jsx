@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-black text-gray-300 overflow-hidden border-t border-white/5">
       {/* NAHJ Text */}
-      <div className="absolute bottom-0 left-0 right-0 text-[18vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100/50 via-gray-400/30 to-gray-900/10 select-none tracking-tight leading-none text-center md:text-left flex justify-center max-md:justify-start max-sm:justify-center px-6 pointer-events-none max-sm:text-[35vw] md:text-[35vw]">
+      <div className="absolute bottom-0 left-0 right-0 text-[18vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100/50 via-gray-400/30 to-gray-900/10 select-none tracking-tight leading-none text-center md:text-left flex justify-center max-md:justify-start max-sm:justify-center px-6 pointer-events-none max-sm:text-[35vw] md:text-[35vw] ">
         NAHJ
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative py-12">

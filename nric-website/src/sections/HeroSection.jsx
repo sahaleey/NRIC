@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLocationDot, FaAward } from "react-icons/fa6";
-import logo from "../assets/20th logo.png";
+import logo from "../assets/logo.png";
 
 // --- Enhanced Animation Variants ---
 const heroTextVariants = {
@@ -100,17 +100,12 @@ export default function HeroSection() {
           variants={itemVariant}
           className="flex justify-center items-center px-3 rounded-lg md:mb-6 w-fit mx-auto"
         >
-          <div
-            className="flex justify-center items-center 
-  bg-white/40 backdrop-blur-md 
-  px-4 py-2 rounded-2xl shadow-lg 
-  border border-white/50 w-fit mx-auto"
-          >
+          <div className="flex justify-center items-center w-fit mx-auto">
             {/* The Logo Image */}
             <img
               src={logo}
               alt="20th Anniversary Logo"
-              className="relative w-35 md:w-52 lg:w-64 h-auto object-contain "
+              className="relative lg:mt-7 md:w-52 max-sm:w-34 lg:w-34  object-contain "
             />
           </div>
         </motion.div>
