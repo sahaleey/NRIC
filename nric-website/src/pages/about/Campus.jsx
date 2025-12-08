@@ -407,7 +407,7 @@ export default function Campus() {
                   <FiMapPin className="size-5 text-emerald-600 flex-shrink-0" />
                   <span>
                     Nahjurrashad Islamic College, Chamakkala, Thrissur, Kerala
-                    680568
+                    680687
                   </span>
                 </div>
                 <div className="flex items-center gap-3">

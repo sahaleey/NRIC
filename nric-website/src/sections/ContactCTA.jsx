@@ -13,8 +13,8 @@ export default function ContactCTA() {
     {
       icon: FiPhone,
       label: "Call Us",
-      value: "+91 4872 123 456",
-      link: "tel:+914872123456",
+      value: "+91 9846 902 564",
+      link: "tel:+919846902564",
     },
     {
       icon: FiMapPin,

@@ -55,7 +55,7 @@ export default function WelcomeIntro() {
                 Nahjurrashad
               </span>
             </h2>
-            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-5">
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-5">
               For over{" "}
               <span className="font-semibold text-emerald-600 dark:text-emerald-400">
                 20 years
@@ -70,7 +70,7 @@ export default function WelcomeIntro() {
               A center of Islamic scholarship integrated with modern education —
               fostering moral excellence, academic depth, and spiritual growth.
             </p>
-            <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-8">
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
               We aim to nurture individuals who embody knowledge, empathy, and
               leadership — serving their communities with intellect and heart.
             </p>

@@ -13,6 +13,8 @@ const Sitemap = React.lazy(() => import("./pages/Sitemap"));
 const Privacy = React.lazy(() => import("./pages/Privacy"));
 const Terms = React.lazy(() => import("./pages/Terms"));
 const Alumni = React.lazy(() => import("./pages/Alumni"));
+const Gallery = React.lazy(() => import("./pages/Gallery"));
+const Donate = React.lazy(() => import("./pages/Donate"));
 
 // --- "About" pages ---
 const About = React.lazy(() => import("./pages/About"));
@@ -57,7 +59,8 @@ export default function App() {
             <Route path="sitemap" element={<Sitemap />} />
             <Route path="privacy" element={<Privacy />} />
             <Route path="terms" element={<Terms />} />
-
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="donate" element={<Donate />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

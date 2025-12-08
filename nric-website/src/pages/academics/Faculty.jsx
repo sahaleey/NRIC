@@ -4,8 +4,6 @@ import {
   FiAward,
   FiUsers,
   FiMail,
-  FiPhone,
-  FiGlobe,
   FiCheck,
   FiStar,
 } from "react-icons/fi";

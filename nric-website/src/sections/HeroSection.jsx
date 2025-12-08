@@ -1,74 +1,82 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaLocationDot, FaAward } from "react-icons/fa6";
-import logo from "../assets/logo.png";
+import { FaLocationDot } from "react-icons/fa6";
+import logo from "../assets/logo.png"; // Keeping your current logo import
 
-// --- Enhanced Animation Variants ---
-const heroTextVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.4,
-      delayChildren: 0.3,
-    },
-  },
+// --- 2. Text Reveal Component ---
+const TextReveal = ({ text, className, delay = 0 }) => {
+  const words = text.split(" ");
+  return (
+    <motion.h1
+      className={`flex flex-wrap justify-center gap-x-3 gap-y-1 ${className}`}
+      initial="hidden"
+      animate="visible"
+      variants={{
+        visible: { transition: { staggerChildren: 0.1, delayChildren: delay } },
+      }}
+    >
+      {words.map((word, index) => (
+        <motion.span
+          key={index}
+          variants={{
+            hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          transition={{ duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }}
+          className="relative block"
+        >
+          {word}
+        </motion.span>
+      ))}
+    </motion.h1>
+  );
 };
 
+// --- 3. Animation Variants ---
 const itemVariant = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-    scale: 0.95,
-  },
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: {
-      duration: 0.7,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-};
-
-const backgroundVariants = {
-  hidden: { scale: 1.1, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 1.2,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Floating animation for decorative elements
-const floatVariant = {
-  animate: {
-    y: [0, -15, 0],
-    transition: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
   },
 };
 
 export default function HeroSection() {
+  const ref = useRef(null);
+
+  // --- Parallax Mouse Effect Logic ---
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const handleMouseMove = ({ clientX, clientY, currentTarget }) => {
+    const { width, height, left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left - width / 2);
+    mouseY.set(clientY - top - height / 2);
+  };
+
+  // Background moves slightly OPPOSITE to mouse (Depth Effect)
+  const bgX = useTransform(mouseX, [-500, 500], [15, -15]);
+  const bgY = useTransform(mouseY, [-500, 500], [15, -15]);
+
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-zinc-900">
-      {/* Enhanced Background with Gradient Overlay */}
+    <section
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-zinc-900 perspective-1000"
+    >
+      {/* --- LAYER 1: Alive Background (Parallax) --- */}
       <motion.div
-        className="absolute inset-0 z-0"
-        variants={backgroundVariants}
-        initial="hidden"
-        animate="visible"
+        className="absolute inset-0 z-0 scale-110" // Scale up to prevent edges showing
+        style={{ x: bgX, y: bgY }} // Mouse movement applied here
       >
-        {/* Multi-layer gradient overlay */}
-        <div className="absolute inset-0 bg-linear-to-r from-gray-900/80 via-gray-800/60 to-gray-900/80 z-10" />
-        <div className="absolute inset-0 bg-black/40 z-20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-zinc-900 z-10" />
+
+        {/* Grain Overlay for Texture */}
+        <div className="absolute inset-0 opacity-20 z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
+
         <picture>
           <source
             media="(max-width: 768px)"
@@ -76,68 +84,76 @@ export default function HeroSection() {
             type="image/webp"
           />
           <source srcSet="/images/dji-hero-desktop.avif" type="image/avif" />
-          <source srcSet="/images/dji-hero-desktop.webp" type="image/webp" />
           <img
             src="/images/dji-hero-desktop.jpg"
-            alt="Nahjurrashad Islamic College Campus"
+            alt="Nahjurrashad Campus"
             className="w-full h-full object-cover"
-            loading="eager"
           />
         </picture>
       </motion.div>
 
-      {/* Decorative Islamic Geometric Patterns */}
-
-      {/* Main Hero Content */}
-      <motion.div
-        className="relative z-30 px-6 text-center max-w-6xl mx-auto mt-10"
-        variants={heroTextVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* --- FIXED: 20th Anniversary Logo --- */}
+      {/* --- LAYER 3: Main Content --- */}
+      <div className="relative z-30 px-6 text-center max-w-7xl mx-auto flex flex-col items-center mt-10">
+        {/* Floating Logo */}
         <motion.div
           variants={itemVariant}
-          className="flex justify-center items-center px-3 rounded-lg md:mb-6 w-fit mx-auto"
+          initial="hidden"
+          animate="visible"
+          className="relative mb-6 group"
         >
-          <div className="flex justify-center items-center w-fit mx-auto">
-            {/* The Logo Image */}
-            <img
-              src={logo}
-              alt="20th Anniversary Logo"
-              className="relative lg:mt-7 md:w-52 max-sm:w-34 lg:w-34  object-contain "
-            />
-          </div>
+          {/* Glow Effect */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-amber-400/20 rounded-full blur-[50px] group-hover:bg-amber-400/40 transition-colors duration-500"></div>
+
+          <motion.img
+            src={logo}
+            alt="Anniversary Logo"
+            className="relative w-32 md:w-52 lg:w-48 object-contain drop-shadow-2xl"
+            animate={{ y: [0, -10, 0] }} // Gentle float animation
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          />
         </motion.div>
-        {/* Main Heading */}
-        <motion.h1
-          className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
-          variants={itemVariant}
-        >
-          <span className="block text-white font-secondary font-medium [text-shadow:0_4px_12px_rgb(0_0_0_/50%)]">
-            NAHJURRASHAD
-          </span>
-          <span className="block text-3xl md:text-4xl font-secondary lg:text-5xl mt-2 text-green-500 font-thin">
-            ISLAMIC COLLEGE
-          </span>
-        </motion.h1>
+
+        {/* Text Section */}
+        <div className="mb-6 space-y-2">
+          <TextReveal
+            text="NAHJURRASHAD"
+            className="font-secondary font-medium text-5xl md:text-7xl lg:text-8xl text-white tracking-wide drop-shadow-lg"
+            delay={0.5}
+          />
+
+          <motion.h2
+            initial={{ opacity: 0, letterSpacing: "0.5em" }}
+            animate={{ opacity: 1, letterSpacing: "0.2em" }}
+            transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
+            className="font-secondary font-thin text-xl md:text-3xl text-emerald-400 uppercase tracking-widest"
+          >
+            Islamic College Chamakkala
+          </motion.h2>
+        </div>
 
         {/* Tagline */}
         <motion.p
-          className="text-xl md:text-2xl lg:text-3xl text-gray-200 font-light mb-8 max-w-4xl mx-auto leading-relaxed [text-shadow:0_2px_8px_rgb(0_0_0_/40%)]"
-          variants={itemVariant}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.7 }}
+          className="text-lg md:text-2xl text-gray-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed"
         >
-          Illuminating Minds with{" "}
-          <span className="text-amber-100 font-semibold">Knowledge</span> and{" "}
-          <span className="text-emerald-400 font-semibold">Guidance</span>
+          Celebrating{" "}
+          <span className="text-amber-400 font-serif italic text-2xl">
+            20 Years
+          </span>{" "}
+          of Illuminating Minds with{" "}
+          <span className="text-white font-medium">Knowledge</span> & Guidance.
         </motion.p>
 
         {/* Location */}
         <motion.div
           className="flex items-center justify-center text-gray-300 mb-8"
           variants={itemVariant}
+          initial="hidden"
+          animate="visible"
         >
-          <FaLocationDot className="size-5 max-sm:size-5 mr-3  max-sm:ml-9 max-sm:mb-6" />
+          <FaLocationDot className="size-5 mr-3 text-emerald-500" />
           <span className="text-lg mr-5">
             Thrissur, Kerala - Where Tradition Meets Excellence
           </span>
@@ -147,17 +163,22 @@ export default function HeroSection() {
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           variants={itemVariant}
+          initial="hidden"
+          animate="visible"
         >
           <Link
             to="/about"
             className="group bg-emerald-600 hover:bg-green-900 text-white font-semibold py-4 px-10 rounded-full 
-                       transition-all duration-300 hover:shadow-2xl
+                       transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/20
                        border-2 border-emerald-600 hover:border-green-400 shadow-lg
-                       flex items-center justify-center min-w-56"
+                       flex items-center justify-center min-w-56 relative overflow-hidden"
           >
-            <span>Explore Campus</span>
+            {/* Button Shine */}
+            <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out skew-x-12" />
+
+            <span className="relative">Explore Campus</span>
             <svg
-              className="size-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+              className="size-5 ml-2 transform group-hover:translate-x-1 transition-transform relative"
               fill="none"
               stroke="currentColor"
               viewBox="0 24 24"
@@ -177,7 +198,6 @@ export default function HeroSection() {
                        transition-all duration-300
                        border-2 border-white/50 hover:border-white backdrop-blur-sm
                        flex items-center justify-center min-w-56"
-            s
           >
             <span>Know our leaders</span>
             <svg
@@ -195,7 +215,15 @@ export default function HeroSection() {
             </svg>
           </Link>
         </motion.div>
-      </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: 60 }}
+        transition={{ delay: 2.5, duration: 1 }}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-transparent via-emerald-400 to-emerald-600"
+      />
     </section>
   );
 }

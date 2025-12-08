@@ -429,11 +429,11 @@ export default function Terms() {
                     <strong>Email:</strong> nahjurrashad@gmail.com
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
-                    <strong>Phone:</strong> +91 00000 00000
+                    <strong>Phone:</strong> 0480 2837745, 9846902564
                   </p>
                   <p className="text-gray-700 dark:text-gray-300">
                     <strong>Address:</strong> Nahjurrashad Islamic College,
-                    Chamakkala, Thrissur, Kerala - 680568
+                    Chamakkala, Thrissur, Kerala - 680687
                   </p>
                 </div>
                 <p className="leading-relaxed mt-4">

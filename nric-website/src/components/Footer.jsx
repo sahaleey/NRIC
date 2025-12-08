@@ -9,6 +9,7 @@ import {
   FiYoutube,
   FiArrowUp,
   FiHeart,
+  FiArrowRight, // Added for the button
 } from "react-icons/fi";
 
 export default function Footer() {
@@ -20,38 +21,42 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-black text-gray-300 overflow-hidden border-t border-white/5">
-      {/* NAHJ Text */}
+      {/* NAHJ Text Background (Parallax Effect) */}
       <div className="absolute bottom-0 left-0 right-0 text-[18vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100/50 via-gray-400/30 to-gray-900/10 select-none tracking-tight leading-none text-center md:text-left flex justify-center max-md:justify-start max-sm:justify-center px-6 pointer-events-none max-sm:text-[35vw] md:text-[35vw] ">
         NAHJ
       </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 py-12">
-          {/* Column 1: Brand & Description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative">
-                <img
-                  src="/images/logo.jpg"
-                  alt="NRIC LOGO"
-                  className="h-16 w-16 rounded-2xl border-2 border-emerald-500/20 shadow-lg"
-                />
-                <div className="absolute -inset-1 bg-emerald-500/10 rounded-2xl blur-sm"></div>
+          {/* --- Column 1: Brand, Socials & DONATION --- */}
+          <div className="lg:col-span-1 flex flex-col gap-6">
+            {/* Logo Section */}
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="relative">
+                  <img
+                    src="/images/logo.jpg"
+                    alt="NRIC LOGO"
+                    className="h-16 w-16 rounded-2xl border-2 border-emerald-500/20 shadow-lg"
+                  />
+                  <div className="absolute -inset-1 bg-emerald-500/10 rounded-2xl blur-sm"></div>
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl font-bold text-white bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
+                    Nahjurrashad
+                  </h3>
+                  <p className="text-emerald-400 text-sm font-medium">
+                    Islamic College
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-serif text-2xl font-bold text-white bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
-                  Nahjurrashad
-                </h3>
-                <p className="text-emerald-400 text-sm font-medium">
-                  Islamic College
-                </p>
-              </div>
+              <p className="text-gray-400 leading-relaxed text-sm">
+                A premier institution blending traditional Islamic scholarship
+                with modern education, dedicated to nurturing future leaders
+                with moral excellence and academic rigor.
+              </p>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-6 max-w-md text-sm">
-              A premier institution blending traditional Islamic scholarship
-              with modern education, dedicated to nurturing future leaders with
-              moral excellence and academic rigor.
-            </p>
 
             {/* Social Links */}
             <div className="flex gap-2">
@@ -60,19 +65,16 @@ export default function Footer() {
                   icon: FiFacebook,
                   href: "https://www.facebook.com/nricchamakkala",
                   label: "Facebook",
-                  color: "hover:bg-blue-600",
                 },
                 {
                   icon: FiInstagram,
                   href: "https://www.instagram.com/nahjurrashad/",
                   label: "Instagram",
-                  color: "hover:bg-pink-600",
                 },
                 {
                   icon: FiYoutube,
                   href: "https://www.youtube.com/channel/UC-Lbu2rSgvr5d92BFqXWe9w",
                   label: "YouTube",
-                  color: "hover:bg-red-600",
                 },
               ].map((social) => (
                 <a
@@ -86,6 +88,40 @@ export default function Footer() {
                   <social.icon className="size-5 text-gray-400 group-hover:text-white transition-colors" />
                 </a>
               ))}
+            </div>
+
+            {/* --- NEW: Donation / Support Card --- */}
+            <div className="relative group mt-2">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl opacity-30 group-hover:opacity-60 transition duration-500 blur-sm"></div>
+              <div className="relative bg-zinc-900 border border-white/10 rounded-2xl p-5 overflow-hidden">
+                {/* Decorative Glow */}
+                <div className="absolute top-0 right-0 -mt-4 -mr-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl"></div>
+
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2 text-white font-bold">
+                    <div className="p-1.5 bg-rose-500/20 rounded-lg">
+                      <FiHeart
+                        className="size-4 text-rose-500 animate-pulse"
+                        fill="currentColor"
+                      />
+                    </div>
+                    <span>Support Our Vision</span>
+                  </div>
+
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Your generous contributions empower students and sustain our
+                    educational mission.
+                  </p>
+
+                  <Link
+                    to="/donate" // Ensure you create this route later!
+                    className="inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-emerald-50 text-xs font-bold py-2.5 px-4 rounded-xl transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                  >
+                    <span>Donate Now</span>
+                    <FiArrowRight className="size-3" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -102,6 +138,7 @@ export default function Footer() {
                 { name: "Contact", path: "/contact" },
                 { name: "Campus", path: "/about/campus" },
                 { name: "Leadership", path: "/about/leadership" },
+                { name: "Gallery", path: "/gallery" }, // Added Gallery Link
               ].map((link) => (
                 <Link
                   key={link.name}
@@ -162,7 +199,7 @@ export default function Footer() {
                     <br />
                     Chamakkala, Thrissur,
                     <br />
-                    Kerala 680568, India
+                    Kerala 680687, India
                   </p>
                 </div>
               </div>
@@ -174,10 +211,10 @@ export default function Footer() {
                 <div>
                   <p className="text-white font-medium text-sm">Phone</p>
                   <a
-                    href="tel:+914872123456"
+                    href="tel:+919846902564"
                     className="text-gray-400 text-sm hover:text-emerald-300 transition-colors"
                   >
-                    +91 4872 123 456
+                    0480 2837745, 9846902564
                   </a>
                 </div>
               </div>
@@ -208,7 +245,7 @@ export default function Footer() {
                 &copy; {currentYear} Nahjurrashad Islamic College. All Rights
                 Reserved.
               </p>
-              <div className="flex gap-4 mt-3 text-xs text-gray-500">
+              <div className="flex gap-4 mt-3 text-xs text-gray-500 justify-center lg:justify-start">
                 {[
                   { name: "Privacy Policy", path: "/privacy" },
                   { name: "Terms of Service", path: "/terms" },

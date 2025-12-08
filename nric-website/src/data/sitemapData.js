@@ -99,6 +99,16 @@ export const siteSections = [
         description: "Connect with our graduates",
       },
       {
+        name: "Gallery",
+        path: "/gallery",
+        description: "A visual tour of our campus and events",
+      },
+      {
+        name: "Donate",
+        path: "/donate",
+        description: "A way to support our institution",
+      },
+      {
         name: "Sitemap",
         path: "/sitemap",
         description: "Full site structure overview",

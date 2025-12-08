@@ -20,36 +20,44 @@ export default function Contact() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const collegeWhatsAppNumber = "910000000000";
+    // 1. Show a loading state is handled by 'isSubmitting' in the hook-form
 
-    // Structure the message neatly
-    let message = `*📧 New Contact Form Submission - Nahjurrashad Islamic College*\n\n`;
-    message += `*👤 Name:* ${data.name}\n`;
-    message += `*📧 Email:* ${data.email}\n`;
-    message += `*📋 Subject:* ${data.subject}\n`;
-    message += `*💬 Message:* ${data.message}\n\n`;
-    message += `*🕒 Submitted:* ${new Date().toLocaleString()}\n`;
-    message += `*🌐 Source:* College Website Contact Form`;
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          // ⚠️ IMPORTANT: Go to web3forms.com, enter your email, and get your OWN Access Key.
+          // The key below is just a placeholder/example.
+          access_key: "03e1bcc1-92a6-46a7-bdc6-712659d08a53",
+          from_name: "NRIC Website", // Optional: Customizes the "From" name in your inbox
+          subject: `New Inquiry: ${data.subject}`, // Custom subject line
+          ...data,
+        }),
+      });
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${collegeWhatsAppNumber}?text=${encodedMessage}`;
+      const result = await response.json();
 
-    window.open(whatsappURL, "_blank");
-
-    setTimeout(() => {
-      alert(
-        "✅ Form submitted! Opening WhatsApp... Please click 'Send' to deliver your message to our administration."
-      );
-      reset();
-    }, 500);
+      // 2. Check if the email was actually sent
+      if (result.success) {
+        alert(
+          "✅ Message sent successfully! Our administration will contact you shortly."
+        );
+        reset(); // Clears the form only on success
+      } else {
+        alert("⚠️ Something went wrong: " + result.message);
+      }
+    } catch (error) {
+      alert("❌ Connection error. Please try again later.");
+      console.error("Form Error:", error);
+    }
   };
-
   const contactMethods = [
     {
       icon: FiMapPin,
       title: "Visit Our Campus",
       details:
-        "Nahjurrashad Islamic College, Chamakkala, Thrissur, Kerala - 680568",
+        "Nahjurrashad Islamic College, Chamakkala, Thrissur, Kerala - 680687",
       description:
         "Located in the serene surroundings of Chamakkala, easily accessible from Thrissur city",
       color: "emerald",
@@ -57,7 +65,7 @@ export default function Contact() {
     {
       icon: FiPhone,
       title: "Call Us",
-      details: "+91 00000 00000",
+      details: "0480 2837745, 9846902564",
       description:
         "Available during office hours: 9:00 AM - 5:00 PM, Monday - Friday",
       color: "blue",
@@ -377,7 +385,7 @@ export default function Contact() {
                       <br />
                       Chamakkala, Thrissur
                       <br />
-                      Kerala, India - 680568
+                      Kerala, India - 680687
                     </p>
                   </div>
                 </div>

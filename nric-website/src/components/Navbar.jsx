@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
 
-// --- Navigation Links with Dropdown Support ---
+// --- Navigation Links ---
 const navItems = [
   { name: "Home", path: "/" },
   {
@@ -25,10 +25,8 @@ const navItems = [
       { name: "Faculty", path: "/academics/faculty" },
     ],
   },
-  {
-    name: "Department",
-    path: "/departments",
-  },
+  { name: "Department", path: "/departments" },
+  { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -39,6 +37,14 @@ export default function Navbar() {
   const location = useLocation();
   const navRef = useRef(null);
 
+  // Scroll Progress Logic
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -48,31 +54,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu AND desktop dropdown on route change
+  // Close menus on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location]);
 
-  // Handle "click-away" to close desktop dropdowns ---
+  // Click away listener
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // If the navRef exists and the click was *outside* the nav
       if (navRef.current && !navRef.current.contains(event.target)) {
-        setActiveDropdown(null); // Close any active dropdown
+        setActiveDropdown(null);
       }
     };
-
-    // Add event listener
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // --- Mobile-only click toggle ---
   const toggleDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
@@ -82,7 +80,7 @@ export default function Navbar() {
       ref={navRef}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`w-full fixed top-0 z-100 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 dark:bg-gray-900/95 shadow-lg backdrop-blur-xl"
@@ -91,25 +89,59 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
-          {/* Logo Section */}
-          <motion.div className="flex items-center space-x-3">
-            <Link to="/" className="flex items-center space-x-3">
-              {/* College Emblem */}
-              <img
-                src="/images/logo.jpg"
-                alt="NRIC Emblem"
-                className="h-10 w-10 object-contain rounded-full "
-              />
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold text-emerald-800 leading-tight">
-                  Nahjurrashad
-                </span>
-                <span className="text-xs text-gray-600 dark:text-gray-300">
-                  Islamic College
-                </span>
-              </div>
-            </Link>
-          </motion.div>
+          {/* --- LOGO SECTION WITH ANIMATION --- */}
+          <Link
+            to="/"
+            className="flex items-center space-x-3 group overflow-hidden"
+          >
+            {/* Logo */}
+            <motion.img
+              src="/images/logo.jpg"
+              alt="NRIC Emblem"
+              className="h-10 w-10 object-contain rounded-full"
+              initial={{ opacity: 0, x: -60 }} // Hidden behind the "door" (left edge)
+              animate={{
+                opacity: 1,
+                x: 0, // Steps right into view and stops
+              }}
+              transition={{
+                duration: 0.9,
+                ease: "easeOut",
+                delay: 1,
+              }}
+            />
+
+            {/* Text Block (both lines inside same container) */}
+            <motion.div
+              className="flex flex-col"
+              initial={{ x: 40, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+                delay: 1.7,
+              }}
+            >
+              <span className="font-serif text-xl font-bold text-emerald-800 dark:text-emerald-400 leading-tight whitespace-nowrap">
+                Nahjurrashad
+              </span>
+
+              {/* Both Islamic College lines here */}
+
+              <motion.span
+                className="text-xs text-gray-600 dark:text-gray-300"
+                initial={{ y: 25, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 2.2,
+                }}
+              >
+                Islamic College Chamakkala
+              </motion.span>
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -120,6 +152,10 @@ export default function Navbar() {
                     onMouseEnter={() => setActiveDropdown(index)}
                     onMouseLeave={() => setActiveDropdown(null)}
                     className="relative"
+                    // Add subtle fade-in for nav items too
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 + index * 0.1 }}
                   >
                     <button
                       className={`flex items-center space-x-1 px-4 py-3 font-medium transition-all duration-200 rounded-lg ${
@@ -127,8 +163,6 @@ export default function Navbar() {
                           ? "text-emerald-700 bg-emerald-50 dark:bg-emerald-900/20"
                           : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 hover:bg-gray-50 dark:hover:bg-gray-800"
                       }`}
-                      aria-haspopup="true"
-                      aria-expanded={activeDropdown === index}
                     >
                       <span>{item.name}</span>
                       <motion.div
@@ -162,7 +196,12 @@ export default function Navbar() {
                     </AnimatePresence>
                   </motion.div>
                 ) : (
-                  <motion.div whileHover={{ scale: 1.02 }}>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
                     <Link
                       to={item.path}
                       className={`px-4 py-3 font-medium transition-all duration-200 rounded-lg ${
@@ -189,8 +228,6 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
-            aria-label="Toggle menu"
-            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <FiX className="size-6" />
@@ -201,6 +238,12 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[3px] bg-linear-to-r from-emerald-400 to-green-600 origin-left"
+        style={{ scaleX }}
+      />
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -208,7 +251,6 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
             className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-xl"
           >
             <div className="px-4 py-4 space-y-2">
@@ -219,20 +261,16 @@ export default function Navbar() {
                       <button
                         onClick={() => toggleDropdown(index)}
                         className="flex items-center justify-between w-full px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                        aria-haspopup="true"
-                        aria-expanded={activeDropdown === index}
                       >
                         <span>{item.name}</span>
                         <motion.div
                           animate={{
                             rotate: activeDropdown === index ? 180 : 0,
                           }}
-                          transition={{ duration: 0.2 }}
                         >
                           <FiChevronDown className="size-4" />
                         </motion.div>
                       </button>
-
                       <AnimatePresence>
                         {activeDropdown === index && (
                           <motion.div
@@ -257,7 +295,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       to={item.path}
-                      className="block px-4 py-3 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                      className="block px-4 py-3 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -265,16 +303,9 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-
-              {/* Mobile CTA Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="pt-4 border-t border-gray-200 flex items-center justify-center dark:border-gray-800"
-              >
+              <div className="pt-4 border-t border-gray-200 flex items-center justify-center dark:border-gray-800">
                 <ThemeToggle />
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         )}
