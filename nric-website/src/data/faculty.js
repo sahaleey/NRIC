@@ -11,7 +11,7 @@ export const facultyMembers = [
         email: "ahmed.hussain@nahjurrashad.edu",
       },
       {
-        name: "Anwer Muhyidheen Hudawi",
+        name: "Anwer Muhyiddeen Hudawi",
         position: "Vice Principal",
         experience: "",
         specialization: "",
@@ -44,16 +44,17 @@ export const facultyMembers = [
         specialization:
           "A passionate educator in language and literature with a deep understanding of Islamic law",
         bio: "A dedicated lecturer with a passion for language, literature, and Islamic jurisprudence, committed to fostering critical thinking and effective communication as a leader.",
-        image: "/images/faculty/hassan.jpg",
+        image: "/images/faculty/hasan.jpg",
         email: "hasanplpd@gmail.com",
       },
       {
         name: "Muhammed Swalih Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/ustadh-salman.jpg",
+        position: "Arabic Language & Social Science Lecturer",
+        experience: "8 years experience",
+        specialization:
+          "Expertise in Arabic language, classical grammar, and modern linguistic skills combined with strong knowledge in social sciences, including cultural studies, sociology, and contemporary social analysis.",
+        bio: "A dedicated lecturer skilled in both Arabic language and social sciences, committed to helping students understand how language shapes culture, society, and human behavior. With a balanced approach connecting classical Arabic foundations to modern social studies, he guides learners to think critically, communicate effectively, and interpret the world around them through informed perspectives.",
+        image: "/images/faculty/swalih.jpg",
         email: "salman.farooq@nahjurrashad.edu",
       },
       {
@@ -87,12 +88,13 @@ export const facultyMembers = [
       },
       {
         name: "Muhammed Shareef KP Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/dr-rahim.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        position: "Arabic Language & Literature Lecturer",
+        experience: "4 years Experience",
+        specialization:
+          "Advanced expertise in Arabic language, classical grammar (Nahw), morphology (Sarf), rhetoric (Balagha), and Quranic linguistics, with strong proficiency in literary analysis and academic translation.",
+        bio: "A committed Arabic language scholar with a deep foundation in classical grammar, eloquence, and linguistic precision. Passionate about connecting students to the beauty of Arabic through its structure, logic, and expressive power, he focuses on building strong fundamental skills that open doors to Quranic studies, literature, and scholarly research. His teaching blends clarity, discipline, and cultural depth to help learners master the language with confidence.",
+        image: "/images/faculty/shareefkp.jpg",
+        email: "kpshareef308803@gmail.com",
       },
       {
         name: "Muhammed Ajnas Hudawi",
@@ -106,11 +108,12 @@ export const facultyMembers = [
       },
       {
         name: "Dul Fuqar Ali Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/dr-rahim.jpg",
+        position: "Arabic Grammar & Philosophy lecturer",
+        experience: "4 years experience",
+        specialization:
+          "Advanced expertise in Arabic grammar (Nahw), morphology (Sarf), and linguistic logic, combined with a strong foundation in classical and modern philosophy, critical reasoning, and intellectual history.",
+        bio: "A passionate lecturer who unites the precision of Arabic grammar with the depth of philosophical inquiry. Skilled in guiding students through the structure and logic of the Arabic language while encouraging them to think critically about ideas, arguments, and concepts that shaped intellectual traditions. His teaching style blends analytical clarity, disciplined reasoning.",
+        image: "/images/faculty/dulfu.jpg",
         email: "rahim.khan@nahjurrashad.edu",
       },
       {
@@ -125,11 +128,12 @@ export const facultyMembers = [
 
       {
         name: "Muhammed Hassan Khan Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
-        image: "/images/faculty/dr-rahim.jpg",
+        position: "Urdu Language & Literature Lecturer",
+        experience: "4 years experience",
+        specialization:
+          "Expert in Urdu language, classical and modern Urdu literature, rhetoric, poetic forms, and linguistic analysis, with a strong command over translation, creative expression, and literary criticism.",
+        bio: "A dedicated Urdu language expert with a deep love for its poetry, prose, and rich linguistic heritage. With experience in teaching language structure, literary appreciation, and creative writing, he guides students to understand Urdu not just as a language, but as an art form. ",
+        image: "/images/faculty/hassan.jpg",
         email: "rahim.khan@nahjurrashad.edu",
       },
       {
@@ -147,7 +151,7 @@ export const facultyMembers = [
         experience: "",
         specialization: "",
         bio: "",
-        image: "/images/faculty/dr-rahim.jpg",
+        image: "/images/faculty/answer.jpg",
         email: "rahim.khan@nahjurrashad.edu",
       },
       {
@@ -184,7 +188,7 @@ export const facultyMembers = [
         experience: "3 years experience",
         specialization: "Mathematics, General Science",
         bio: "Dedicated to making complex scientific and mathematical concepts accessible and engaging for all students.",
-        image: "/images/faculty/salih.jpg",
+        image: "/images/faculty/swalihsir.jpg",
         email: "salih21cs@gmail.com",
       },
     ],
