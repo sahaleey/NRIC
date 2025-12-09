@@ -116,21 +116,17 @@ export default function StatsBar() {
   };
 
   return (
-    <section className="relative py-20 md:py-28 bg-linear-to-b from-gray-700 via-gray-700 to-gray-900 overflow-hidden ">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 ">
-        {/* Islamic geometric pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div
-            className="w-full h-full bg-repeat"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L80 20 L80 80 L50 50 L20 80 L20 20 Z' fill='%23ffffff'/%3E%3C/svg%3E")`,
-            }}
-          ></div>
-        </div>
+    <section className="relative py-20 md:py-28 bg-linear-to-b from-emerald-950 via-green-900 to-emerald-950 overflow-hidden">
+      {/* --- Noise Texture (Kept for Rough Look) --- */}
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+
+      {/* --- NEW: Blurred Ambient Background (Replaces Pattern) --- */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-96 h-96  bg-green-500/20 rounded-full blur-[500px]"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-emerald-500/10 rounded-full blur-[500px]"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative m-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 m-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -144,7 +140,7 @@ export default function StatsBar() {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, type: "spring" }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-3 rounded-full border border-white/20 mb-6"
+            className="inline-flex items-center gap-2 bg-emerald-900/40 backdrop-blur-lg px-6 py-3 rounded-full border border-emerald-500/30 mb-6 shadow-lg"
           >
             <div className="size-2 bg-emerald-400 rounded-full animate-pulse"></div>
             <span className="text-emerald-100 font-semibold text-sm uppercase tracking-wider">
@@ -156,7 +152,7 @@ export default function StatsBar() {
             Excellence in{" "}
             <span className="text-amber-400">Islamic Education</span>
           </h2>
-          <p className="text-lg md:text-xl text-emerald-100 leading-relaxed">
+          <p className="text-lg md:text-xl text-emerald-100/80 leading-relaxed">
             Decades of dedication to nurturing minds, souls, and future leaders
             through integrated learning
           </p>
@@ -181,7 +177,7 @@ export default function StatsBar() {
                 variants={itemVariants}
               >
                 <motion.div
-                  className={`relative ${colors.bg} backdrop-blur-lg rounded-2xl p-6 lg:p-8 border ${colors.border} hover:border-white/40 transition-all duration-500 h-full overflow-hidden`}
+                  className={`relative ${colors.bg} backdrop-blur-lg rounded-2xl p-6 lg:p-8 border ${colors.border} hover:border-emerald-400/30 transition-all duration-500 h-full overflow-hidden`}
                   whileHover={{
                     y: -8,
                     scale: 1.02,
@@ -210,7 +206,7 @@ export default function StatsBar() {
                       className="mb-6"
                     >
                       <div
-                        className={`size-14 bg-white/10 rounded-xl flex items-center justify-center border ${colors.border}`}
+                        className={`size-14 bg-white/5 rounded-xl flex items-center justify-center border ${colors.border}`}
                       >
                         <IconComponent className={`size-7 ${colors.icon}`} />
                       </div>
@@ -288,22 +284,6 @@ export default function StatsBar() {
               </motion.div>
             );
           })}
-        </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="text-center mt-12"
-        >
-          <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-lg px-8 py-4 rounded-2xl border border-white/10">
-            <div className="size-3 bg-amber-400 rounded-full animate-pulse"></div>
-            <p className="text-emerald-100 text-lg font-medium">
-              Join our legacy of educational excellence
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

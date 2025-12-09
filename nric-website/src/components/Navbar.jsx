@@ -88,62 +88,51 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3">
-          {/* --- LOGO SECTION WITH ANIMATION --- */}
+        <div className="flex justify-between items-center py-2 md:py-3">
+          {/* --- LOGO SECTION --- */}
           <Link
             to="/"
-            className="flex items-center space-x-3 group overflow-hidden"
+            className="flex items-center space-x-2 md:space-x-3 group overflow-hidden"
           >
-            {/* Logo */}
+            {/* Logo Icon (Scaled for Mobile) */}
             <motion.img
               src="/images/logo.jpg"
               alt="NRIC Emblem"
-              className="h-10 w-10 object-contain rounded-full"
-              initial={{ opacity: 0, x: -60 }} // Hidden behind the "door" (left edge)
-              animate={{
-                opacity: 1,
-                x: 0, // Steps right into view and stops
-              }}
-              transition={{
-                duration: 0.9,
-                ease: "easeOut",
-                delay: 1,
-              }}
+              className="h-8 w-8 md:h-10 md:w-10 object-contain rounded-full"
+              initial={{ opacity: 0, x: -60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut", delay: 1 }}
             />
 
-            {/* Text Block (both lines inside same container) */}
+            {/* Text/Calligraphy Block */}
             <motion.div
-              className="flex flex-col"
+              className="flex flex-col justify-center"
               initial={{ x: 40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 1,
-                ease: "easeOut",
-                delay: 1.7,
-              }}
+              transition={{ duration: 1, ease: "easeOut", delay: 1.7 }}
             >
-              <span className="font-serif text-xl font-bold text-emerald-800 dark:text-emerald-400 leading-tight whitespace-nowrap">
-                Nahjurrashad
-              </span>
+              {/* 1. CALLIGRAPHY IMAGE */}
+              {/* Adjusted Height: h-6 (24px) for mobile, h-9 (36px) for desktop */}
+              <img
+                src="/images/logocal.png"
+                alt="Nahjurrashad Calligraphy"
+                className="h-5 sm:h-6 md:h-8 lg:h-9 object-contain mb-0.5 md:mb-1 self-start"
+              />
 
-              {/* Both Islamic College lines here */}
-
+              {/* 2. Subtitle Text */}
+              {/* Adjusted Font Size: text-[9px] for mobile, text-xs for desktop */}
               <motion.span
-                className="text-xs text-gray-600 dark:text-gray-300"
+                className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-600 dark:text-gray-300 tracking-wide leading-none"
                 initial={{ y: 25, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{
-                  duration: 1,
-                  ease: "easeOut",
-                  delay: 2.2,
-                }}
+                transition={{ duration: 1, ease: "easeOut", delay: 2.2 }}
               >
-                Islamic College Chamakkala
+                Nahjurrashad Islamic College
               </motion.span>
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* --- DESKTOP NAVIGATION (Hidden on Mobile/Tablet) --- */}
           <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item, index) => (
               <div key={item.name} className="relative">
@@ -152,13 +141,12 @@ export default function Navbar() {
                     onMouseEnter={() => setActiveDropdown(index)}
                     onMouseLeave={() => setActiveDropdown(null)}
                     className="relative"
-                    // Add subtle fade-in for nav items too
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 + index * 0.1 }}
                   >
                     <button
-                      className={`flex items-center space-x-1 px-4 py-3 font-medium transition-all duration-200 rounded-lg ${
+                      className={`flex items-center space-x-1 px-3 py-2 xl:px-4 xl:py-3 font-medium transition-all duration-200 rounded-lg text-sm xl:text-base ${
                         location.pathname.startsWith(item.path)
                           ? "text-emerald-700 bg-emerald-50 dark:bg-emerald-900/20"
                           : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -204,7 +192,7 @@ export default function Navbar() {
                   >
                     <Link
                       to={item.path}
-                      className={`px-4 py-3 font-medium transition-all duration-200 rounded-lg ${
+                      className={`px-3 py-2 xl:px-4 xl:py-3 font-medium transition-all duration-200 rounded-lg text-sm xl:text-base ${
                         location.pathname === item.path
                           ? "text-emerald-700 bg-emerald-50 dark:bg-emerald-900/20"
                           : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -218,40 +206,38 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <ThemeToggle />
+          {/* --- RIGHT SIDE ACTIONS --- */}
+          <div className="flex items-center gap-2">
+            {/* Mobile/Tablet Menu Toggle */}
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+            >
+              {isMobileMenuOpen ? (
+                <FiX className="size-6" />
+              ) : (
+                <FiMenu className="size-6" />
+              )}
+            </motion.button>
           </div>
-
-          {/* Mobile Menu Toggle */}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
-          >
-            {isMobileMenuOpen ? (
-              <FiX className="size-6" />
-            ) : (
-              <FiMenu className="size-6" />
-            )}
-          </motion.button>
         </div>
       </div>
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[3px] bg-linear-to-r from-emerald-400 to-green-600 origin-left"
+        className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-400 to-green-600 origin-left"
         style={{ scaleX }}
       />
 
-      {/* Mobile Menu */}
+      {/* --- MOBILE MENU OVERLAY --- */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-xl"
+            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-xl overflow-hidden"
           >
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item, index) => (
@@ -284,6 +270,7 @@ export default function Navbar() {
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
                                 className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded-r-lg transition-colors"
+                                onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 {dropdownItem.name}
                               </Link>
@@ -303,9 +290,6 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-gray-200 flex items-center justify-center dark:border-gray-800">
-                <ThemeToggle />
-              </div>
             </div>
           </motion.div>
         )}

@@ -23,7 +23,7 @@ const leadershipTeam = [
   },
   {
     role: "Vice Principal",
-    name: "Anwer Muhyidheen Hudawi",
+    name: "Anwer Muhyiddeen Hudawi",
     quote:
       "Our campus is more than just classrooms; it's a community. We are dedicated to the holistic development of every student—intellectually, spiritually, and personally.",
     image: "/images/vice-principal.jpg",

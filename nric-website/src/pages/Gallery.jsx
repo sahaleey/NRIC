@@ -9,68 +9,7 @@ import {
   FiChevronRight,
 } from "react-icons/fi";
 import SEO from "../components/SEO";
-
-/**
- * Optimized Gallery (With Categories)
- * - No LayoutGroup or heavy layoutId usage
- * - Memoized filter
- * - lazy loading + decode="async"
- * - lightweight fade/scale modal animation
- * - simple hover CSS transform (GPU accelerated)
- * - preloads next image for snappy navigation
- */
-
-/* ---------------- sample data ---------------- */
-const galleryImages = [
-  {
-    id: 1,
-    src: "/images/campus/masjid.jpg",
-    category: "Campus",
-    title: "Grand Masjid",
-  },
-  {
-    id: 2,
-    src: "/images/campus/library.jpg",
-    category: "Campus",
-    title: "Central Library",
-  },
-  {
-    id: 3,
-    src: "/images/campus/academic.jpg",
-    category: "Campus",
-    title: "Academic Block",
-  },
-  {
-    id: 4,
-    src: "/images/dji-hero-desktop.jpg",
-    category: "Campus",
-    title: "Aerial View",
-  },
-  {
-    id: 5,
-    src: "/images/campus/digital.jpg",
-    category: "Students",
-    title: "Digital Lab",
-  },
-  {
-    id: 6,
-    src: "/images/campus/hostel.jpg",
-    category: "Campus",
-    title: "Student Hostel",
-  },
-  {
-    id: 7,
-    src: "/images/img_4094.jpg",
-    category: "Events",
-    title: "Convocation",
-  },
-  {
-    id: 8,
-    src: "/images/img_2589.jpg",
-    category: "Students",
-    title: "Classroom Session",
-  },
-];
+import { galleryImages } from "../data/gallery";
 
 const categories = ["All", "Campus", "Events", "Students"];
 

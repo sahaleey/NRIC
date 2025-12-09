@@ -1,26 +1,21 @@
 import { motion } from "framer-motion";
-import { FaUserTie } from "react-icons/fa6"; // Placeholder icon
+import { FaUserTie } from "react-icons/fa6";
+import { trustMembers } from "../data/trustee";
 
 // Dummy Data - Add more to make the loop smoother
-const trustMembers = [
-  { name: "Member Name 3", role: "Secretary", image: null },
-  { name: "Member Name 4", role: "Treasurer", image: null },
-  { name: "Member Name 5", role: "Trustee", image: null },
-  { name: "Member Name 6", role: "Board Member", image: null },
-];
 
 const MemberCard = ({ member }) => (
-  <div className="group relative w-[260px] h-[360px] flex-shrink-0 mx-4 overflow-hidden rounded-2xl bg-white dark:bg-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 border border-zinc-100 dark:border-zinc-700">
+  <div className="group relative w-[260px] h-[360px] flex-shrink-0 mx-4 overflow-hidden rounded-2xl bg-white  shadow-sm hover:shadow-xl transition-all duration-500 border border-zinc-100 ">
     {/* Image Container */}
-    <div className="h-[75%] w-full relative overflow-hidden bg-zinc-200 dark:bg-zinc-700">
+    <div className="h-[75%] w-full relative overflow-hidden bg-zinc-200 ">
       {member.image ? (
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover transition-all duration-700 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
+          className="w-full h-full object-cover transition-all duration-700  group-hover:scale-110"
         />
       ) : (
-        <div className="w-full h-full flex items-center justify-center text-zinc-300 dark:text-zinc-600">
+        <div className="w-full h-full flex items-center justify-center text-zinc-300 ">
           <FaUserTie className="size-20" />
         </div>
       )}
@@ -44,17 +39,6 @@ const MemberCard = ({ member }) => (
 export default function TrustMembersSlider() {
   return (
     <section className="py-24 bg-linear-to-b from-zinc-50 via-white to-zinc-50 dark:from-gray-900/80 dark:via-gray-700 dark:to-gray-700 overflow-hidden relative">
-      {/* Islamic geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="w-full h-full bg-repeat"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L80 20 L80 80 L50 50 L20 80 L20 20 Z' fill='%23ffffff'/%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div>
-      {/* Soft background accent */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(16,185,129,0.05),transparent_70%)] pointer-events-none" />
       {/* Section Header */}
 
       <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row items-end justify-between gap-6">
@@ -72,10 +56,6 @@ export default function TrustMembersSlider() {
 
       {/* Slider Area */}
       <div className="relative w-full">
-        {/* Soft Gradient Masks (Left & Right) */}
-        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-zinc-50 dark:from-zinc-950 to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-zinc-50 dark:from-zinc-950 to-transparent z-20 pointer-events-none" />
-
         {/* Marquee Track */}
         <div className="flex overflow-hidden group">
           {" "}

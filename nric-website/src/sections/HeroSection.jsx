@@ -32,8 +32,101 @@ const TextReveal = ({ text, className, delay = 0 }) => {
     </motion.h1>
   );
 };
+// --- 3. Animated Tagline  ---
+const AnimatedTagline = () => {
+  const sentence = [
+    { text: "Celebrating", type: "text" },
+    {
+      text: "20 Years",
+      type: "highlight",
+      color: "text-amber-400 font-serif italic text-2xl",
+    },
+    { text: "of Illuminating Minds with", type: "text" },
+    { text: "Knowledge", type: "highlight", color: "text-white font-medium" },
+    { text: "& Guidance.", type: "text" },
+  ];
 
-// --- 3. Animation Variants ---
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.08, delayChildren: 1.8 }, // Wait for title to finish
+    },
+  };
+
+  const wordVariant = {
+    hidden: { opacity: 0, y: 15, filter: "blur(8px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  return (
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className="text-lg md:text-2xl text-gray-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed flex flex-wrap justify-center gap-x-1.5 items-baseline px-4"
+    >
+      {sentence.map((part, index) => {
+        if (part.type === "text") {
+          return part.text.split(" ").map((word, wIndex) => (
+            <motion.span key={`${index}-${wIndex}`} variants={wordVariant}>
+              {word}
+            </motion.span>
+          ));
+        } else {
+          return (
+            <motion.span
+              key={index}
+              variants={wordVariant}
+              className={part.color}
+            >
+              {part.text}
+            </motion.span>
+          );
+        }
+      })}
+    </motion.div>
+  );
+};
+
+// --- 4. NEW: Pro Scroll Indicator (Mouse + Wheel) ---
+const ScrollIndicator = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 3, duration: 1 }}
+      className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-40"
+    >
+      <span className="text-[10px] font-medium tracking-[0.2em] text-emerald-400/80 uppercase animate-pulse">
+        Scroll
+      </span>
+
+      {/* Mouse Body */}
+      <div className="w-[26px] h-[42px] border-2 border-white/20 rounded-full flex justify-center p-2 bg-black/20 backdrop-blur-sm shadow-lg">
+        {/* The Wheel */}
+        <motion.div
+          className="w-1 h-1.5 bg-emerald-400 rounded-full shadow-[0_0_10px_rgba(52,211,153,0.8)]"
+          animate={{
+            y: [0, 12, 0],
+            opacity: [1, 0, 1],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+    </motion.div>
+  );
+};
+// --- 5. Animation Variants ---
 const itemVariant = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: {
@@ -117,7 +210,7 @@ export default function HeroSection() {
         <div className="mb-6 space-y-2">
           <TextReveal
             text="NAHJURRASHAD"
-            className="font-secondary font-medium text-5xl md:text-7xl lg:text-8xl text-white tracking-wide drop-shadow-lg"
+            className="font-primary font-bold text-5xl md:text-7xl lg:text-8xl text-white tracking-wide drop-shadow-lg"
             delay={0.5}
           />
 
@@ -125,26 +218,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, letterSpacing: "0.5em" }}
             animate={{ opacity: 1, letterSpacing: "0.2em" }}
             transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-            className="font-secondary font-thin text-xl md:text-3xl text-emerald-400 uppercase tracking-widest"
+            className="font-secondary font-medium text-xl md:text-3xl text-gray-300 uppercase tracking-widest"
           >
             Islamic College Chamakkala
           </motion.h2>
         </div>
 
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.7 }}
-          className="text-lg md:text-2xl text-gray-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed"
-        >
-          Celebrating{" "}
-          <span className="text-amber-400 font-serif italic text-2xl">
-            20 Years
-          </span>{" "}
-          of Illuminating Minds with{" "}
-          <span className="text-white font-medium">Knowledge</span> & Guidance.
-        </motion.p>
+        {/* --- The Animated Tagline --- */}
+        <AnimatedTagline />
 
         {/* Location */}
         <motion.div
@@ -153,7 +234,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          <FaLocationDot className="size-5 mr-3 text-emerald-500" />
+          <FaLocationDot className="size-5 mr-3 max-sm:ml-8 max-sm:mb-7 text-emerald-500" />
           <span className="text-lg mr-5">
             Thrissur, Kerala - Where Tradition Meets Excellence
           </span>
@@ -217,13 +298,8 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: 60 }}
-        transition={{ delay: 2.5, duration: 1 }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-transparent via-emerald-400 to-emerald-600"
-      />
+      {/* --- REPLACED: New Pro Scroll Indicator --- */}
+      <ScrollIndicator />
     </section>
   );
 }
