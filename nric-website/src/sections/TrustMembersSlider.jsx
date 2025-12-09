@@ -25,7 +25,7 @@ const MemberCard = ({ member }) => (
     </div>
 
     {/* Text Content */}
-    <div className="absolute bottom-0 left-0 w-full p-5 bg-white dark:bg-zinc-800 group-hover:bg-transparent group-hover:text-white transition-colors duration-300">
+    <div className="absolute bottom-0 left-0 w-full p-5 bg-white dark:bg-zinc-800  group-hover:text-white transition-colors duration-300">
       <h4 className="font-serif text-xl font-bold text-zinc-900 dark:text-white dark:group-hover:text-white mb-1 ">
         {member.name.toUpperCase()}
       </h4>
