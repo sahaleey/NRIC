@@ -22,7 +22,7 @@ export const facultyMembers = [
         email: "",
       },
       {
-        name: "Muhammed Shuhaib Hudawi",
+        name: "Muhammed Shuaib Hudawi",
         position: "HoD of Hadith and Related Science Department",
         experience: "13 years experience",
         specialization:

@@ -6,16 +6,18 @@ import {
   FiUsers,
   FiAward,
   FiTrendingUp,
+  FiUserCheck,
+  FiCheckCircle, // Added for authority badge
 } from "react-icons/fi";
 import SEO from "../components/SEO";
 
 // --- Actual Departments Data ---
 const departments = [
   {
+    slug: "hadith",
     name: "Hadith & Related Sciences",
     description:
       "Comprehensive study of Prophetic traditions, authentication methods, and Islamic scholarship with modern research approaches.",
-
     icon: <FiBookOpen className="text-4xl text-emerald-600" />,
     features: [
       "Mustalah al-Hadith (Hadith Terminology)",
@@ -27,6 +29,13 @@ const departments = [
     facultyCount: "8+ Scholars",
     programs: ["Bachelor's in Hadith Sciences", "Advanced Research Programs"],
     color: "emerald",
+    hod: {
+      name: "Muhammed Shuaib Hudawi",
+      role: "Head of Department",
+      image: "/images/faculty/shuhaib.jpg",
+      message:
+        "We strive to revive the legacy of Hadith scholarship by combining traditional chain analysis with contemporary critical thinking.",
+    },
   },
 ];
 
@@ -57,18 +66,6 @@ const cardVariants = {
   },
 };
 
-const hoverVariants = {
-  hover: {
-    y: -8,
-    scale: 1.02,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 25,
-    },
-  },
-};
-
 export default function Departments() {
   const colorMap = {
     emerald: {
@@ -76,17 +73,23 @@ export default function Departments() {
       text: "text-emerald-600",
       light: "bg-emerald-50 dark:bg-emerald-900/20",
       border: "border-emerald-200",
+      darkText: "text-emerald-800 dark:text-emerald-200",
+      hodBg: "bg-emerald-50/50 dark:bg-emerald-900/10", // Special HoD BG
+      hodBorder: "border-emerald-100 dark:border-emerald-800",
     },
     blue: {
       bg: "bg-blue-500",
       text: "text-blue-600",
       light: "bg-blue-50 dark:bg-blue-900/20",
       border: "border-blue-200",
+      darkText: "text-blue-800 dark:text-blue-200",
+      hodBg: "bg-blue-50/50 dark:bg-blue-900/10",
+      hodBorder: "border-blue-100 dark:border-blue-800",
     },
   };
 
   return (
-    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
       <SEO
         title="Our Departments"
         description="Explore the various academic departments at NRIC, from Islamic Studies to Modern Sciences."
@@ -106,7 +109,7 @@ export default function Departments() {
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             Our{" "}
-            <span className="bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Departments
             </span>
           </h1>
@@ -132,7 +135,7 @@ export default function Departments() {
         >
           <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
-              Hadith and Related Science
+              Hadith & Science
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium">
               Specialized Department
@@ -171,85 +174,128 @@ export default function Departments() {
                 key={dept.slug}
                 variants={cardVariants}
                 whileHover="hover"
-                className="group"
+                className="group w-full max-w-4xl"
               >
-                <div
-                  className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full`}
-                >
+                <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300">
                   {/* Department Header */}
                   <div
-                    className={`${colors.bg} p-6 text-white relative overflow-hidden`}
+                    className={`${colors.bg} p-8 text-white relative overflow-hidden`}
                   >
-                    <div className="absolute top-4 right-4 opacity-20">
+                    <div className="absolute top-4 right-4 opacity-20 transform scale-150">
                       {dept.icon}
                     </div>
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="size-14 bg-white/20 rounded-xl flex items-center justify-center">
-                          {dept.icon}
-                        </div>
-                        <div>
-                          <h3 className="font-serif text-2xl font-bold">
-                            {dept.name}
-                          </h3>
-                          <p className="text-white/90 flex items-center gap-2 mt-1">
-                            <FiUsers className="size-4" />
-                            {dept.facultyCount}
-                          </p>
-                        </div>
+                    <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6">
+                      <div className="size-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-inner backdrop-blur-sm">
+                        {dept.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-serif text-3xl font-bold">
+                          {dept.name}
+                        </h3>
+                        <p className="text-white/90 flex items-center gap-2 mt-2 font-medium">
+                          <FiUsers className="size-4" />
+                          {dept.facultyCount}
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Department Content */}
-                  <div className="p-6">
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                      {dept.description}
-                    </p>
+                  {/* Main Content Area */}
+                  <div className="p-8 grid md:grid-cols-2 gap-8">
+                    {/* Left Column: Info & Features */}
+                    <div className="space-y-8">
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900 dark:text-white mb-3">
+                          About the Department
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                          {dept.description}
+                        </p>
+                      </div>
 
-                    {/* Key Features */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                        <FiAward className={`size-4 ${colors.text}`} />
-                        Key Focus Areas
-                      </h4>
-                      <div className="space-y-2">
-                        {dept.features.map((feature, index) => (
-                          <div key={index} className="flex items-center gap-3">
-                            <div
-                              className={`size-2 ${colors.bg} rounded-full flex-shrink-0`}
-                            ></div>
-                            <span className="text-sm text-gray-600 dark:text-gray-400">
-                              {feature}
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                          <FiAward className={`size-5 ${colors.text}`} />
+                          Key Focus Areas
+                        </h4>
+                        <ul className="space-y-2">
+                          {dept.features.map((feature, index) => (
+                            <li key={index} className="flex items-start gap-3">
+                              <span
+                                className={`mt-1.5 size-1.5 ${colors.bg} rounded-full flex-shrink-0`}
+                              />
+                              <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                          <FiTrendingUp className={`size-5 ${colors.text}`} />
+                          Programs Offered
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {dept.programs.map((program, index) => (
+                            <span
+                              key={index}
+                              className={`inline-block ${colors.light} ${colors.darkText} px-3 py-1.5 rounded-lg text-xs font-bold border ${colors.border}`}
+                            >
+                              {program}
                             </span>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    {/* Programs Offered */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                        <FiTrendingUp className={`size-4 ${colors.text}`} />
-                        Programs Offered
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {dept.programs.map((program, index) => (
-                          <span
-                            key={index}
-                            className={`inline-block ${colors.light} ${colors.text} px-3 py-1 rounded-full text-xs font-semibold border ${colors.border}`}
+                    {/* Right Column: HoD Profile Card (IMPROVED UI) */}
+                    <div
+                      className={`rounded-2xl p-6 border ${colors.hodBorder} ${colors.hodBg} flex flex-col transition-all duration-300`}
+                    >
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                          <FiUserCheck className="size-4" />
+                          Leadership
+                        </div>
+                        {/* Optional: Add Department Icon here faintly */}
+                      </div>
+
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="relative">
+                          <img
+                            src={dept.hod.image}
+                            alt={dept.hod.name}
+                            className="size-16 md:size-20 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md"
+                          />
+                          <div
+                            className={`absolute bottom-0 right-0 p-1 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700`}
                           >
-                            {program}
-                          </span>
-                        ))}
+                            <FiCheckCircle
+                              className={`size-4 ${colors.text}`}
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <h5 className="font-serif text-lg md:text-xl font-bold text-gray-900 dark:text-white leading-tight">
+                            {dept.hod.name}
+                          </h5>
+                          <p
+                            className={`text-sm font-medium ${colors.text} mt-1`}
+                          >
+                            {dept.hod.role}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    {/* CTA */}
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-                      <span className="font-semibold text-gray-900 dark:text-white">
-                        Explore Department
-                      </span>
+                      <div className="relative bg-white dark:bg-gray-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 italic text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        {/* Watermark Quote Icon */}
+                        <span className="absolute -top-3 left-4 text-5xl text-gray-100 dark:text-gray-700 leading-none select-none font-serif">
+                          "
+                        </span>
+                        <p className="relative z-10">{dept.hod.message}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -265,11 +311,14 @@ export default function Departments() {
           transition={{ duration: 0.7, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl relative overflow-hidden">
+            {/* Decorative Background Circle */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+
+            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 relative z-10">
               Integrated Learning Approach
             </h3>
-            <p className="text-emerald-100 text-lg max-w-3xl mx-auto leading-relaxed mb-6">
+            <p className="text-emerald-100 text-lg max-w-3xl mx-auto leading-relaxed mb-6 relative z-10">
               Both departments work collaboratively to provide students with a
               comprehensive education that combines deep Islamic knowledge with
               language proficiency, preparing them for scholarly excellence and
