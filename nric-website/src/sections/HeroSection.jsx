@@ -39,10 +39,10 @@ const AnimatedTagline = () => {
     {
       text: "20 Years",
       type: "highlight",
-      color: "text-amber-400 font-serif italic text-2xl",
+      color: "text-amber-400 font-bold text-2xl",
     },
     { text: "of Illuminating Minds with", type: "text" },
-    { text: "Knowledge", type: "highlight", color: "text-white font-medium" },
+    { text: "Knowledge", type: "highlight" },
     { text: "& Guidance.", type: "text" },
   ];
 

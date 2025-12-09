@@ -116,7 +116,7 @@ export default function Navbar() {
               <img
                 src="/images/logocal.png"
                 alt="Nahjurrashad Calligraphy"
-                className="h-5 sm:h-6 md:h-8 lg:h-9 object-contain mb-0.5 md:mb-1 self-start"
+                className="h-5 sm:h-6 md:h-8 lg:h-9  object-contain mb-0.5 md:mb-1 self-start"
               />
 
               {/* 2. Subtitle Text */}
@@ -168,7 +168,7 @@ export default function Navbar() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 backdrop-blur-lg"
+                          className="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 backdrop-blur-lg z-1"
                         >
                           {item.dropdown.map((dropdownItem) => (
                             <Link

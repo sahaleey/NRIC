@@ -5,37 +5,41 @@ export const facultyMembers = [
         name: "Muhammed Shafi Hudawi",
         position: "Principal",
         experience: "20+ years",
-        specialization: "Quranic Tafsir, Hadith Sciences",
-        bio: "",
+        specialization:
+          "Expertise in Islamic jurisprudence (Fiqh), legal methodology, and foundational Deen studies, with strong understanding of classical scholarship, ethical principles, and practical religious guidance.",
+        bio: "A dedicated scholar specializing in Islamic jurisprudence and core Deen studies, committed to guiding students through the principles, ethics, and legal frameworks of Islamic life. His teaching blends classical scholarship with practical understanding, helping learners connect religious knowledge to real-world application with clarity and confidence. He emphasizes disciplined reasoning, moral responsibility, and a balanced approach to understanding Islamic law and practice",
         image: "/images/faculty/Principal.jpg",
         email: "ahmed.hussain@nahjurrashad.edu",
       },
       {
         name: "Anwer Muhyiddeen Hudawi",
         position: "Vice Principal",
-        experience: "",
-        specialization: "",
-        bio: "",
+        experience: "19 years experience",
+        specialization:
+          "Expertise in public speaking, rhetoric, and effective communication, combined with strong command over Quranic Tafseer, thematic interpretation, and classical linguistic analysis.",
+        bio: "A skilled lecturer known for powerful public speaking and insightful Quranic Tafseer. He guides students in understanding the depth, meaning, and linguistic beauty of the Quran while also training them to communicate effectively and confidently. His teaching blends clarity, expression, and scholarly reflection, helping learners develop both eloquence and a deeper spiritual connection to Quranic interpretation.",
         image: "/images/faculty/vice-principal.jpg",
-        email: "fatima.rahman@nahjurrashad.edu",
+        email: "",
       },
       {
         name: "Muhammed Shuhaib Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
+        position: "HoD of Hadith and Related Science Department",
+        experience: "13 years experience",
+        specialization:
+          "Expertise in Islamic jurisprudence (Fiqh), Quranic sciences, and Hadith studies, with strong command over legal methodology, thematic interpretation, and authentication of prophetic traditions.",
+        bio: "A dedicated scholar with advanced knowledge in Islamic jurisprudence, Quranic sciences, and Hadith studies. He guides students through legal principles, textual interpretation, and the methodology of authenticating prophetic traditions. His teaching emphasizes clarity, disciplined reasoning, and deep reflection, helping learners approach Islamic knowledge with confidence, understanding, and a strong connection to classical scholarship.",
         image: "/images/faculty/shuhaib.jpg",
-        email: "fatima.rahman@nahjurrashad.edu",
+        email: "",
       },
       {
         name: "Bahauddin Hudawi",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
+        position: "Language, Literature & Quranic Studies Lecturer",
+        experience: "14 years experience",
+        specialization:
+          "Expertise in classical and modern language studies, literary analysis, and Quranic studies, with strong understanding of linguistic structure, thematic interpretation, and the stylistic beauty of Quranic expression.",
+        bio: "A dedicated lecturer skilled in language, literature, and Quranic studies, committed to helping students appreciate the depth and eloquence found across classical texts and the Quran. His teaching blends linguistic precision, literary insight, and contextual understanding, guiding learners to explore language as both an academic field and a spiritual journey. He emphasizes clarity, reflection, and analytical thinking, enabling students to engage meaningfully with both literature and Quranic interpretation.",
         image: "/images/faculty/bahahudheen.jpg",
-        email: "sameer.ahmed@nahjurrashad.edu",
+        email: "",
       },
       {
         name: "Hassan Hudawi",
@@ -55,7 +59,7 @@ export const facultyMembers = [
           "Expertise in Arabic language, classical grammar, and modern linguistic skills combined with strong knowledge in social sciences, including cultural studies, sociology, and contemporary social analysis.",
         bio: "A dedicated lecturer skilled in both Arabic language and social sciences, committed to helping students understand how language shapes culture, society, and human behavior. With a balanced approach connecting classical Arabic foundations to modern social studies, he guides learners to think critically, communicate effectively, and interpret the world around them through informed perspectives.",
         image: "/images/faculty/swalih.jpg",
-        email: "salman.farooq@nahjurrashad.edu",
+        email: "",
       },
       {
         name: "Muhammed Shareef Hudawi",
@@ -99,8 +103,8 @@ export const facultyMembers = [
         email: "kpshareef308803@gmail.com",
       },
       {
-        name: "Muhammed Ajnas Hudawi",
-        position: "",
+        name: "MUHAMMED AJNAS HUDAWI",
+        position: "Multilingual Translator & Linguistics Lecturer",
         experience: "1 year Experience",
         specialization:
           "Expert in multilingual translation and linguistic adaptation across English, Urdu, Arabic, and Malayalam, with strong focus on cultural context, literary nuance, and academic precision.",
@@ -116,7 +120,7 @@ export const facultyMembers = [
           "Advanced expertise in Arabic grammar (Nahw), morphology (Sarf), and linguistic logic, combined with a strong foundation in classical and modern philosophy, critical reasoning, and intellectual history.",
         bio: "A passionate lecturer who unites the precision of Arabic grammar with the depth of philosophical inquiry. Skilled in guiding students through the structure and logic of the Arabic language while encouraging them to think critically about ideas, arguments, and concepts that shaped intellectual traditions. His teaching style blends analytical clarity, disciplined reasoning.",
         image: "/images/faculty/dulfu.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        email: " ",
       },
       {
         name: "Muvaffaq Hudawi",
@@ -137,7 +141,7 @@ export const facultyMembers = [
           "Expert in Urdu language, classical and modern Urdu literature, rhetoric, poetic forms, and linguistic analysis, with a strong command over translation, creative expression, and literary criticism.",
         bio: "A dedicated Urdu language expert with a deep love for its poetry, prose, and rich linguistic heritage. With experience in teaching language structure, literary appreciation, and creative writing, he guides students to understand Urdu not just as a language, but as an art form. ",
         image: "/images/faculty/hassan.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        email: " ",
       },
       {
         name: "Muhammed Abdul Rahoof Hudawi",
@@ -147,7 +151,7 @@ export const facultyMembers = [
           "Expertise in advanced information technology, digital systems, and software proficiency, combined with strong grounding in Islamic jurisprudence (Fiqh), legal methodology, and contemporary ethical issues in technology.",
         bio: "A versatile lecturer skilled in both modern technology and Islamic jurisprudence. He guides students through advanced IT concepts while connecting them to the ethical, legal, and societal dimensions of the digital world through Fiqh. His teaching emphasizes precision, problem-solving, and responsible use of technology, helping learners understand both technical systems and the moral frameworks that shape their application.",
         image: "/images/faculty/rahoof.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        email: " ",
       },
       {
         name: "Ansarudheen Hudawi",
@@ -157,7 +161,7 @@ export const facultyMembers = [
           "Expertise in English language, academic writing, and communication skills, combined with strong knowledge of Islamic jurisprudence (Fiqh), legal theory, and applied religious rulings",
         bio: "A committed lecturer skilled in both English language education and Islamic jurisprudence. He focuses on developing students’ communication abilities while guiding them through the principles, methodology, and practical applications of Fiqh. His teaching integrates clarity, reasoning, and discipline, helping learners think critically, express ideas effectively, and understand religious legal frameworks.",
         image: "/images/faculty/answer.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        email: " ",
       },
       {
         name: "Murshid Hudawi",
@@ -181,12 +185,13 @@ export const facultyMembers = [
       },
       {
         name: "Musthafa Sir",
-        position: "",
-        experience: "",
-        specialization: "",
-        bio: "",
+        position: "Math, Science & Economics lecturer",
+        experience: "10 years experience",
+        specialization:
+          "Expertise in mathematics, general science, and business accounting with strong understanding of economic principles, financial literacy, and analytical reasoning, along with broad knowledge across current affairs, world studies, and general knowledge domains.",
+        bio: "A versatile lecturer skilled in mathematics, science, and business accounting, with a strong foundation in economics and practical financial concepts. He also brings broad general knowledge that helps students connect academic subjects to real-world events and everyday understanding. His teaching emphasizes analytical thinking, problem-solving, and practical application, empowering learners to approach numbers, scientific ideas, and economic principles with confidence and clarity.",
         image: "/images/faculty/dr-rahim.jpg",
-        email: "rahim.khan@nahjurrashad.edu",
+        email: " ",
       },
       {
         name: "Salih Sir",

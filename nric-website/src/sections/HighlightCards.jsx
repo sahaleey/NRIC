@@ -85,16 +85,6 @@ const hoverVariants = {
 export default function HighlightCards() {
   return (
     <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900/50">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-        <div
-          className="w-full h-full bg-repeat opacity-[0.3]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L80 20 L80 80 L50 50 L20 80 L20 20 Z' fill='%23ffffff'/%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 m-8">
         {/* Section Header */}
         <motion.div

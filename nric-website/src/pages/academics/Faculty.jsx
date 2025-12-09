@@ -67,6 +67,7 @@ export default function Faculty() {
     },
   };
 
+  // Combine all faculty for schema
   const allFaculty = facultyMembers.flatMap((dept) => dept.members);
 
   const facultySchema = {
@@ -107,6 +108,7 @@ export default function Faculty() {
           {JSON.stringify(facultySchema)}
         </script>
       </Helmet>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
@@ -138,8 +140,7 @@ export default function Faculty() {
             className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
           >
             Learn from experienced scholars and educators who combine deep
-            Islamic knowledge with modern academic expertise, dedicated to
-            nurturing the next generation of Muslim leaders and professionals.
+            Islamic knowledge with modern academic expertise.
           </motion.p>
         </motion.div>
 
@@ -151,7 +152,7 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {facultyStats.map((stat, index) => {
+          {facultyStats.map((stat) => {
             const IconComponent = stat.icon;
             return (
               <motion.div
@@ -181,78 +182,82 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="space-y-16"
         >
-          {facultyMembers.map((department, deptIndex) => (
-            <motion.div
-              variants={itemVariants}
-              className="relative"
-              key={deptIndex}
-            >
-              {/* Faculty Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {department.members.map((faculty, facultyIndex) => (
-                  <motion.div
-                    key={faculty.name}
-                    variants={cardVariants}
-                    whileHover="hover"
-                    className="group"
-                  >
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
-                      {/* Faculty Image */}
-                      <div className="relative aspect-square overflow-hidden">
-                        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
-                          {faculty.image ? (
-                            <img
-                              src={faculty.image}
-                              alt={faculty.name}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                            />
-                          ) : (
-                            <FiUsers className="size-16 text-gray-400 dark:text-gray-500" />
-                          )}
+          {facultyMembers.map((department, deptIndex) => {
+            // SORT MEMBERS INSIDE DEPARTMENT
+            const sortedMembers = [...department.members]
+              .map((m) => ({
+                ...m,
+                expValue: parseInt(m.experience) || 0,
+              }))
+              .sort((a, b) => b.expValue - a.expValue);
+
+            return (
+              <motion.div
+                variants={itemVariants}
+                className="relative"
+                key={deptIndex}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {sortedMembers.map((faculty) => (
+                    <motion.div
+                      key={faculty.name}
+                      variants={cardVariants}
+                      whileHover="hover"
+                      className="group"
+                    >
+                      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
+                        <div className="relative aspect-square overflow-hidden">
+                          <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
+                            {faculty.image ? (
+                              <img
+                                src={faculty.image}
+                                alt={faculty.name}
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                              />
+                            ) : (
+                              <FiUsers className="size-16 text-gray-400 dark:text-gray-500" />
+                            )}
+                          </div>
+
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                          <div className="absolute bottom-4 left-4 text-white">
+                            <h3 className="font-serif text-xl font-bold">
+                              {faculty.name}
+                            </h3>
+                            <p className="text-white/90 text-sm">
+                              {faculty.position}
+                            </p>
+                          </div>
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div className="absolute bottom-4 left-4 text-white">
-                          <h3 className="font-serif text-xl font-bold">
-                            {faculty.name}
-                          </h3>
-                          <p className="text-white/90 text-sm">
-                            {faculty.position}
+
+                        <div className="p-6">
+                          <div className="mb-4">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                              <strong className="text-gray-900 dark:text-white">
+                                Experience:
+                              </strong>{" "}
+                              {faculty.experience}
+                            </p>
+                          </div>
+
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
+                              Specialization:
+                            </h4>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                              {faculty.specialization}
+                            </p>
+                          </div>
+
+                          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            {faculty.bio}
                           </p>
-                        </div>
-                      </div>
 
-                      {/* Faculty Details */}
-                      <div className="p-6">
-                        <div className="mb-4">
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
-                            <strong className="text-gray-900 dark:text-white">
-                              Experience:
-                            </strong>{" "}
-                            {faculty.experience}
-                          </p>
-                        </div>
-
-                        {/* Specialization */}
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
-                            Specialization:
-                          </h4>
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
-                            {faculty.specialization}
-                          </p>
-                        </div>
-
-                        {/* Bio */}
-                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
-                          {faculty.bio}
-                        </p>
-
-                        {/* Contact Information */}
-                        <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-                          <div className="flex items-center justify-between text-xs">
+                          <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
                             <a
                               href={`mailto:${faculty.email}`}
-                              className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
+                              className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline text-xs"
                             >
                               <FiMail className="size-3" />
                               Email
@@ -260,12 +265,12 @@ export default function Faculty() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* Teaching Philosophy */}
@@ -283,10 +288,8 @@ export default function Faculty() {
                   Our Teaching Philosophy
                 </h3>
                 <p className="text-amber-100 text-lg leading-relaxed mb-6">
-                  Our faculty believes in the holistic development of students,
-                  combining rigorous academic training with spiritual and moral
-                  guidance. We emphasize mentorship, research, and practical
-                  application of knowledge in both Islamic and modern contexts.
+                  Our faculty believes in holistic development, mentorship, and
+                  integrated Islamic learning.
                 </p>
                 <div className="space-y-3">
                   {[
@@ -302,6 +305,7 @@ export default function Faculty() {
                   ))}
                 </div>
               </div>
+
               <div className="text-center">
                 <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/20">
                   <FiUsers className="size-16 text-amber-300 mx-auto mb-4" />
@@ -330,9 +334,7 @@ export default function Faculty() {
               Join Our Academic Team
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-              We're always looking for passionate educators and scholars who
-              want to contribute to our mission of integrated Islamic and modern
-              education.
+              We're always looking for passionate educators and scholars.
             </p>
             <a
               href="mailto:careers@nahjurrashad.edu"

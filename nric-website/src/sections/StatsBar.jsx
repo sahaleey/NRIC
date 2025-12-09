@@ -177,7 +177,7 @@ export default function StatsBar() {
                 variants={itemVariants}
               >
                 <motion.div
-                  className={`relative ${colors.bg} backdrop-blur-lg rounded-2xl p-6 lg:p-8 border ${colors.border} hover:border-emerald-400/30 transition-all duration-500 h-full overflow-hidden`}
+                  className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 lg:p-8 border border-slate-100/30 hover:border-slate-200/80 hover:shadow-2xl transition-all duration-500 h-full overflow-hidden`}
                   whileHover={{
                     y: -8,
                     scale: 1.02,

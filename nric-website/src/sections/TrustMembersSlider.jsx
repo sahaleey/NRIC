@@ -26,7 +26,7 @@ const MemberCard = ({ member }) => (
 
     {/* Text Content */}
     <div className="absolute bottom-0 left-0 w-full p-5 bg-white dark:bg-zinc-800 group-hover:bg-transparent group-hover:text-white transition-colors duration-300">
-      <h4 className="font-serif text-xl font-bold text-zinc-900 dark:text-white dark:group-hover:text-white mb-1 truncate">
+      <h4 className="font-serif text-xl font-bold text-zinc-900 dark:text-white dark:group-hover:text-white mb-1 ">
         {member.name}
       </h4>
       <p className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-wide uppercase dark:group-hover:text-emerald-300">
