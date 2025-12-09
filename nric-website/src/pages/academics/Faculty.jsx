@@ -222,8 +222,8 @@ export default function Faculty() {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
                           <div className="absolute bottom-4 left-4 text-white">
-                            <h3 className="font-serif text-xl font-bold">
-                              {faculty.name}
+                            <h3 className="font-serif text-xl font-bold ">
+                              {faculty.name.toUpperCase()}
                             </h3>
                             <p className="text-white/90 text-sm">
                               {faculty.position}

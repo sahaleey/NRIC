@@ -3,13 +3,21 @@ import { FiAward, FiUsers, FiTarget } from "react-icons/fi";
 import { GrBlockQuote } from "react-icons/gr";
 
 const leadershipTeam = [
+  // --- ADDED PRESIDENT HERE ---
+  {
+    role: "President",
+    name: "Dr. Bahauddeen Muhammed Nadwi",
+    quote:
+      "Our vision is to empower the community through education that harmonizes spiritual values with worldly excellence, creating leaders who serve humanity.",
+    image: "/images/president.jpg",
+    color: "violet",
+  },
   {
     role: "Chairman",
     name: "Hayder Haji",
     quote:
       "Nahjurrashad was founded not merely to build careers, but to forge character. We are guided by the light of faith, illuminating a path where modern knowledge serves timeless truths.",
     image: "/images/Chairman.jpg",
-
     color: "emerald",
   },
   {
@@ -18,16 +26,14 @@ const leadershipTeam = [
     quote:
       "At NRIC, we believe excellence is a form of Ihsan. Our mission is to seamlessly integrate rigorous academic inquiry with profound Islamic scholarship, creating well-rounded individuals.",
     image: "/images/Principal.jpg",
-
     color: "blue",
   },
   {
     role: "Vice Principal",
-    name: "Anwer Muhyiddeen Hudawi",
+    name: "Anwer Muhyidheen Hudawi",
     quote:
       "Our campus is more than just classrooms; it's a community. We are dedicated to the holistic development of every student—intellectually, spiritually, and personally.",
     image: "/images/vice-principal.jpg",
-
     color: "amber",
   },
 ];
@@ -175,13 +181,14 @@ export default function Leadership() {
           </motion.p>
         </motion.div>
 
-        {/* Leadership Team Grid */}
+        {/* Leadership Team Grid (Updated for 4 items) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
+          // CHANGED: Grid now supports 4 columns on large screens
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
         >
           {leadershipTeam.map((leader, index) => {
             const colors = colorMap[leader.color];
@@ -191,9 +198,9 @@ export default function Leadership() {
                 key={leader.role}
                 variants={cardVariants}
                 whileHover="hover"
-                className="group"
+                className="group h-full"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full flex flex-col">
                   {/* Profile Header */}
                   <div
                     className={`${colors.bg} p-6 text-white relative overflow-hidden`}
@@ -202,15 +209,17 @@ export default function Leadership() {
                       <GrBlockQuote className="size-16" />
                     </div>
                     <div className="relative z-10">
-                      <h3 className="font-serif text-2xl font-bold mb-1">
-                        {leader.name}
+                      <h3 className="font-serif text-xl font-bold mb-1 ">
+                        {leader.name.toUpperCase()}
                       </h3>
-                      <p className="text-white/90 font-medium">{leader.role}</p>
+                      <p className="text-white/90 font-medium text-sm">
+                        {leader.role}
+                      </p>
                     </div>
                   </div>
 
                   {/* Profile Image and Content */}
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-grow">
                     {/* Profile Image */}
                     <div className="flex justify-center -mt-16 mb-6">
                       <div className="relative">
@@ -230,14 +239,14 @@ export default function Leadership() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center mb-6 italic">
+                    <blockquote className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed text-center mb-6 italic flex-grow">
                       "{leader.quote}"
                     </blockquote>
 
                     {/* Role Badge */}
-                    <div className="text-center">
+                    <div className="text-center mt-auto">
                       <span
-                        className={`inline-flex items-center gap-2 ${colors.text} bg-${leader.color}-50 dark:bg-${leader.color}-900/20 px-4 py-2 rounded-full text-sm font-semibold border ${colors.border}`}
+                        className={`inline-flex items-center gap-2 ${colors.text} bg-${leader.color}-50 dark:bg-${leader.color}-900/20 px-3 py-1.5 rounded-full text-xs font-semibold border ${colors.border}`}
                       >
                         <div
                           className={`size-2 ${colors.bg} rounded-full`}
@@ -276,7 +285,7 @@ export default function Leadership() {
                 <motion.div
                   key={principle.title}
                   variants={cardVariants}
-                  className="group text-center"
+                  className="group text-center h-full"
                 >
                   <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 h-full transition-all duration-300 hover:shadow-lg">
                     <div
@@ -289,7 +298,7 @@ export default function Leadership() {
                       {principle.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                       {principle.description}
                     </p>
                   </div>
