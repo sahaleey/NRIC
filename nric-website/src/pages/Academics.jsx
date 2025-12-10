@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 
 export default function Academics() {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white ">
       <SEO
         title="Academic Programs"
         description="Discover the academic excellence at NRIC Chamakkala. Blending Wafy curriculum with secular degrees for holistic development."

@@ -154,7 +154,7 @@ export default function Campus() {
 
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
+      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -169,14 +169,14 @@ export default function Campus() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
               <FiMapPin className="size-4" />
               Campus Life
             </div>
           </motion.div>
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Explore Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -185,7 +185,7 @@ export default function Campus() {
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             {/* I updated this text to match your "5-acre" stat */}
             Discover our sprawling 5-acre campus in Thrissur, designed to
@@ -206,15 +206,13 @@ export default function Campus() {
             <motion.div
               key={stat.label}
               variants={itemVariants}
-              className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+              className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 "
             >
-              <div className="text-3xl md:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-emerald-600  mb-2">
                 {stat.value}
                 {stat.suffix}
               </div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">
-                {stat.label}
-              </div>
+              <div className="text-gray-600  font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -237,7 +235,7 @@ export default function Campus() {
                 whileHover="hover"
                 className="group"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
+                <div className="bg-white  rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200  overflow-hidden transition-all duration-300 h-full">
                   {/* ... (Your full card layout: Image, Content, Features) ... */}
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -255,10 +253,10 @@ export default function Campus() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-3">
                       {facility.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                    <p className="text-gray-600  leading-relaxed mb-4">
                       {facility.description}
                     </p>
                     <div className="space-y-2">
@@ -270,7 +268,7 @@ export default function Campus() {
                           <div
                             className={`size-2 ${colors.bg} rounded-full`}
                           ></div>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">
+                          <span className="text-sm text-gray-600 ">
                             {feature}
                           </span>
                         </div>
@@ -341,14 +339,14 @@ export default function Campus() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <motion.div variants={itemVariants}>
-              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-700 mb-6">
+              <div className="inline-flex items-center gap-2 bg-blue-50  text-blue-700  px-4 py-2 rounded-full text-sm font-semibold border border-blue-200  mb-6">
                 <FiUsers className="size-4" />
                 Student Life
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-6">
                 Hisan: The Student Union
               </h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              <div className="space-y-4 text-gray-600  text-lg leading-relaxed">
                 <p>
                   Hisan, our official student union, is the vibrant, student-led
                   body that serves as the bridge between the students and the
@@ -372,7 +370,7 @@ export default function Campus() {
 
             {/* Image for Hisan */}
             <motion.div variants={itemVariants}>
-              <div className="bg-gray-200 dark:bg-gray-700 rounded-2xl aspect-video overflow-hidden shadow-lg">
+              <div className="bg-gray-200  rounded-2xl aspect-video overflow-hidden shadow-lg">
                 <img
                   src="/images/hisan.jpg"
                   alt="Hisan Student Union Event"
@@ -393,10 +391,10 @@ export default function Campus() {
         >
           {/* ... (Your full location & map layout) ... */}
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-6">
               Visit Our Campus
             </h2>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300">
+            <div className="space-y-4 text-gray-600 ">
               <p className="text-lg leading-relaxed">
                 Located in the serene surroundings of Chamakkala, Thrissur, our
                 campus offers the perfect environment for focused learning and
@@ -426,7 +424,7 @@ export default function Campus() {
               </div>
             </div>
           </div>
-          <div className="bg-gray-200 dark:bg-gray-700 rounded-2xl aspect-video overflow-hidden shadow-lg">
+          <div className="bg-gray-200  rounded-2xl aspect-video overflow-hidden shadow-lg">
             <iframe
               src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Nahjurrashad%20Islamic%20College&t=&z=14&ie=UTF8&iwloc=B&output=embed"
               width="100%"

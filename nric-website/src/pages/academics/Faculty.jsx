@@ -93,7 +93,7 @@ export default function Faculty() {
 
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
+      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -119,7 +119,7 @@ export default function Faculty() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 px-4 py-2 rounded-full text-sm font-semibold border border-amber-200 dark:border-amber-700">
+            <div className="inline-flex items-center gap-2 bg-amber-50  text-amber-700  px-4 py-2 rounded-full text-sm font-semibold border border-amber-200 ">
               <FiUsers className="size-4" />
               Meet Our Educators
             </div>
@@ -127,7 +127,7 @@ export default function Faculty() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
@@ -137,7 +137,7 @@ export default function Faculty() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             Learn from experienced scholars and educators who combine deep
             Islamic knowledge with modern academic expertise.
@@ -158,15 +158,15 @@ export default function Faculty() {
               <motion.div
                 key={stat.label}
                 variants={itemVariants}
-                className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+                className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 "
               >
                 <div className="inline-flex size-16 bg-amber-500 rounded-xl items-center justify-center mb-4 mx-auto">
                   <IconComponent className="size-7 text-white" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">
+                <div className="text-2xl md:text-3xl font-bold text-amber-600  mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm">
+                <div className="text-gray-600  font-medium text-sm">
                   {stat.label}
                 </div>
               </motion.div>
@@ -205,9 +205,9 @@ export default function Faculty() {
                       whileHover="hover"
                       className="group"
                     >
-                      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
+                      <div className="bg-white  rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200  overflow-hidden transition-all duration-300 h-full">
                         <div className="relative aspect-square overflow-hidden">
-                          <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
+                          <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300   flex items-center justify-center">
                             {faculty.image ? (
                               <img
                                 src={faculty.image}
@@ -215,7 +215,7 @@ export default function Faculty() {
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                               />
                             ) : (
-                              <FiUsers className="size-16 text-gray-400 dark:text-gray-500" />
+                              <FiUsers className="size-16 text-gray-400 " />
                             )}
                           </div>
 
@@ -233,8 +233,8 @@ export default function Faculty() {
 
                         <div className="p-6">
                           <div className="mb-4">
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                              <strong className="text-gray-900 dark:text-white">
+                            <p className="text-sm text-gray-600 ">
+                              <strong className="text-gray-900 ">
                                 Experience:
                               </strong>{" "}
                               {faculty.experience}
@@ -242,22 +242,22 @@ export default function Faculty() {
                           </div>
 
                           <div className="mb-4">
-                            <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
+                            <h4 className="font-semibold text-gray-900  text-sm mb-2">
                               Specialization:
                             </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                            <p className="text-sm text-gray-600 ">
                               {faculty.specialization}
                             </p>
                           </div>
 
-                          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                          <p className="text-gray-600  text-sm leading-relaxed mb-4">
                             {faculty.bio}
                           </p>
 
-                          <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                          <div className="border-t border-gray-200  pt-4">
                             <a
                               href={`mailto:${faculty.email}`}
-                              className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline text-xs"
+                              className="flex items-center gap-1 text-blue-600  hover:underline text-xs"
                             >
                               <FiMail className="size-3" />
                               Email
@@ -329,11 +329,11 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="bg-white  rounded-2xl p-8 shadow-lg border border-gray-200 ">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900  mb-4">
               Join Our Academic Team
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600  text-lg mb-6 max-w-2xl mx-auto">
               We're always looking for passionate educators and scholars.
             </p>
             <a

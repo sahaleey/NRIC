@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
-import ThemeToggle from "./ThemeToggle";
 
 // --- Navigation Links ---
 const navItems = [
@@ -83,8 +82,8 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`w-full fixed top-0 z-100 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 dark:bg-gray-900/95 shadow-lg backdrop-blur-xl"
-          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md"
+          ? "bg-white/95 shadow-lg backdrop-blur-xl"
+          : "bg-white/80  backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,7 +121,7 @@ export default function Navbar() {
               {/* 2. Subtitle Text */}
               {/* Adjusted Font Size: text-[9px] for mobile, text-xs for desktop */}
               <motion.span
-                className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-600 dark:text-gray-300 tracking-wide leading-none"
+                className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-600  tracking-wide leading-none"
                 initial={{ y: 25, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 2.2 }}
@@ -148,8 +147,8 @@ export default function Navbar() {
                     <button
                       className={`flex items-center space-x-1 px-3 py-2 xl:px-4 xl:py-3 font-medium transition-all duration-200 rounded-lg text-sm xl:text-base ${
                         location.pathname.startsWith(item.path)
-                          ? "text-emerald-700 bg-emerald-50 dark:bg-emerald-900/20"
-                          : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+                          ? "text-emerald-700 bg-emerald-50 "
+                          : "text-gray-700  hover:text-emerald-600 hover:bg-gray-50 "
                       }`}
                     >
                       <span>{item.name}</span>
@@ -168,13 +167,13 @@ export default function Navbar() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 backdrop-blur-lg z-1"
+                          className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-200  backdrop-blur-lg z-1"
                         >
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               to={dropdownItem.path}
-                              className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:text-emerald-600 transition-colors first:rounded-t-xl last:rounded-b-xl"
+                              className="block px-4 py-3 text-sm text-gray-700 -300 hover:bg-emerald-50  hover:text-emerald-600 transition-colors first:rounded-t-xl last:rounded-b-xl"
                             >
                               {dropdownItem.name}
                             </Link>
@@ -194,8 +193,8 @@ export default function Navbar() {
                       to={item.path}
                       className={`px-3 py-2 xl:px-4 xl:py-3 font-medium transition-all duration-200 rounded-lg text-sm xl:text-base ${
                         location.pathname === item.path
-                          ? "text-emerald-700 bg-emerald-50 dark:bg-emerald-900/20"
-                          : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+                          ? "text-emerald-700 bg-emerald-50 "
+                          : "text-gray-700  hover:text-emerald-600 hover:bg-gray-50 "
                       }`}
                     >
                       {item.name}
@@ -212,7 +211,7 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+              className="lg:hidden p-2 rounded-lg bg-gray-100  text-gray-700 "
             >
               {isMobileMenuOpen ? (
                 <FiX className="size-6" />
@@ -237,7 +236,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-xl overflow-hidden"
+            className="lg:hidden bg-white  border-t border-gray-200  shadow-xl overflow-hidden"
           >
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item, index) => (
@@ -246,7 +245,7 @@ export default function Navbar() {
                     <div className="space-y-1">
                       <button
                         onClick={() => toggleDropdown(index)}
-                        className="flex items-center justify-between w-full px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                        className="flex items-center justify-between w-full px-4 py-3 text-left font-medium text-gray-700  hover:bg-gray-50  rounded-lg transition-colors"
                       >
                         <span>{item.name}</span>
                         <motion.div
@@ -263,13 +262,13 @@ export default function Navbar() {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="ml-4 space-y-1 border-l-2 border-emerald-200 dark:border-emerald-800"
+                            className="ml-4 space-y-1 border-l-2 border-emerald-200 "
                           >
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
-                                className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded-r-lg transition-colors"
+                                className="block px-4 py-2 text-sm text-gray-600  hover:text-emerald-600 hover:bg-emerald-50  rounded-r-lg transition-colors"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 {dropdownItem.name}
@@ -282,7 +281,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       to={item.path}
-                      className="block px-4 py-3 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg"
+                      className="block px-4 py-3 font-medium text-gray-700  hover:bg-gray-50  rounded-lg"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.name}

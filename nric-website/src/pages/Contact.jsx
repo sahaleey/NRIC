@@ -120,7 +120,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28">
+    <div className="bg-linear-to-b from-white to-gray-50/50   py-20 md:py-28">
       <SEO
         title="Contact Us"
         description="Get in touch with NRIC Chamakkala. Find our phone numbers, email addresses, and campus location."
@@ -135,7 +135,7 @@ export default function Contact() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
               <FiMessageCircle className="size-4" />
               Get In Touch
             </div>
@@ -143,7 +143,7 @@ export default function Contact() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Contact{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -153,7 +153,7 @@ export default function Contact() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             We're here to help you with admissions, campus visits, and any
             questions about our integrated Islamic education programs. Reach out
@@ -177,7 +177,7 @@ export default function Contact() {
               <motion.div
                 key={method.title}
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 text-center group hover:shadow-xl transition-all duration-300"
+                className="bg-white  rounded-2xl p-6 shadow-lg border border-gray-200  text-center group hover:shadow-xl transition-all duration-300"
               >
                 <div
                   className={`inline-flex size-16 ${colors.bg} rounded-xl items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
@@ -185,15 +185,15 @@ export default function Contact() {
                   <IconComponent className="size-7 text-white" />
                 </div>
 
-                <h3 className="font-serif text-lg font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="font-serif text-lg font-bold text-gray-900  mb-2">
                   {method.title}
                 </h3>
 
-                <p className="text-gray-900 dark:text-white font-semibold mb-2">
+                <p className="text-gray-900  font-semibold mb-2">
                   {method.details}
                 </p>
 
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-600  text-sm leading-relaxed">
                   {method.description}
                 </p>
               </motion.div>
@@ -210,16 +210,16 @@ export default function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8">
+            <div className="bg-white  rounded-2xl shadow-xl border border-gray-200  p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="size-12 bg-emerald-500 rounded-xl flex items-center justify-center">
                   <FiSend className="size-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="font-serif text-2xl font-bold text-gray-900 ">
                     Send Us a Message
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  <p className="text-gray-600  text-sm">
                     We'll contact you via WhatsApp
                   </p>
                 </div>
@@ -228,7 +228,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label className=" text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <label className=" text-sm font-semibold text-gray-900  mb-3 flex items-center gap-2">
                     <FiUser className="size-4 text-emerald-600" />
                     Full Name
                   </label>
@@ -241,7 +241,7 @@ export default function Contact() {
                         message: "Name must be at least 2 characters",
                       },
                     })}
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-50  border border-gray-300  rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300"
                     placeholder="Enter your full name"
                   />
                   {errors.name && (
@@ -253,7 +253,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <div>
-                  <label className=" text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <label className=" text-sm font-semibold text-gray-900  mb-3 flex items-center gap-2">
                     <FiMail className="size-4 text-emerald-600" />
                     Email Address
                   </label>
@@ -266,7 +266,7 @@ export default function Contact() {
                         message: "Please enter a valid email address",
                       },
                     })}
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-50  border border-gray-300  rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300"
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
@@ -278,14 +278,14 @@ export default function Contact() {
 
                 {/* Subject */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                  <label className="block text-sm font-semibold text-gray-900  mb-3">
                     Subject
                   </label>
                   <select
                     {...register("subject", {
                       required: "Please select a subject",
                     })}
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-50  border border-gray-300  rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300"
                   >
                     <option value="">Select inquiry type</option>
                     <option value="Admission Inquiry">Admission Inquiry</option>
@@ -303,7 +303,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label className=" text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <label className=" text-sm font-semibold text-gray-900  mb-3 flex items-center gap-2">
                     <FiMessageCircle className="size-4 text-emerald-600" />
                     Your Message
                   </label>
@@ -316,7 +316,7 @@ export default function Contact() {
                         message: "Message must be at least 10 characters",
                       },
                     })}
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-gray-50  border border-gray-300  rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 resize-none"
                     placeholder="Tell us about your inquiry or how we can help you..."
                   />
                   {errors.message && (
@@ -338,7 +338,7 @@ export default function Contact() {
                   {isSubmitting ? "Sending..." : "Send via WhatsApp"}
                 </motion.button>
 
-                <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
+                <p className="text-center text-gray-500  text-sm">
                   📱 Your message will open in WhatsApp for final sending
                 </p>
               </form>
@@ -354,8 +354,8 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* Campus Information */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8">
-              <h3 className="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="bg-white  rounded-2xl shadow-xl border border-gray-200  p-8">
+              <h3 className="font-serif text-2xl font-bold text-gray-900  mb-6">
                 Campus Information
               </h3>
 
@@ -363,10 +363,10 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <FiClock className="size-5 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="font-semibold text-gray-900  mb-2">
                       Office Hours
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 ">
                       Saturday - Thursday: 6:00 AM - 7:45 PM & 4:45 PM - 6:00 PM
                       <br />
                       Friday: Closed
@@ -377,10 +377,10 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <FiMapPin className="size-5 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="font-semibold text-gray-900  mb-2">
                       Campus Address
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600  leading-relaxed">
                       Nahjurrashad Islamic College
                       <br />
                       Chamakkala, Thrissur
@@ -393,9 +393,9 @@ export default function Contact() {
             </div>
 
             {/* Google Maps Embed */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-                <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+            <div className="bg-white  rounded-2xl shadow-xl border border-gray-200  overflow-hidden">
+              <div className="p-6 border-b border-gray-200 ">
+                <h3 className="font-serif text-xl font-bold text-gray-900  flex items-center gap-2">
                   <FiMapPin className="size-5 text-emerald-600" />
                   Find Our Campus
                 </h3>

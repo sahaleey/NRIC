@@ -190,7 +190,7 @@ export const facultyMembers = [
         specialization:
           "Expertise in mathematics, general science, and business accounting with strong understanding of economic principles, financial literacy, and analytical reasoning, along with broad knowledge across current affairs, world studies, and general knowledge domains.",
         bio: "A versatile lecturer skilled in mathematics, science, and business accounting, with a strong foundation in economics and practical financial concepts. He also brings broad general knowledge that helps students connect academic subjects to real-world events and everyday understanding. His teaching emphasizes analytical thinking, problem-solving, and practical application, empowering learners to approach numbers, scientific ideas, and economic principles with confidence and clarity.",
-        image: "/images/faculty/dr-rahim.jpg",
+        image: "/images/faculty/musthafa.jpg",
         email: " ",
       },
       {

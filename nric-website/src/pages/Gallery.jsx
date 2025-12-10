@@ -177,7 +177,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-zinc-950 py-20 md:py-28 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50  py-20 md:py-28 transition-colors duration-300">
       <SEO
         title="Gallery | Nahjurrashad Islamic College"
         description="Explore our campus moments through stunning photography of campus life, events, and student activities."
@@ -189,7 +189,7 @@ export default function Gallery() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+            className="font-serif text-5xl md:text-6xl font-bold text-gray-900  mb-4"
           >
             Campus <span className="text-emerald-600">Moments</span>
           </motion.h1>
@@ -197,14 +197,14 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+            className="text-lg text-gray-600  max-w-2xl mx-auto"
           >
             A visual journey through our history, daily life, and celebrations.
           </motion.p>
         </div>
 
         {/* --- Filters (Sticky) --- */}
-        <div className="sticky max-sm:top-14 top-20 z-30 bg-gray-50/95 dark:bg-zinc-950/95 backdrop-blur-sm py-4 mb-8 -mx-4 px-4 flex justify-center">
+        <div className="sticky max-sm:top-14 top-20 z-30 bg-gray-50/95  backdrop-blur-sm py-4 mb-8 -mx-4 px-4 flex justify-center">
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => {
               const isActive = filter === category;
@@ -215,7 +215,7 @@ export default function Gallery() {
                   className={`relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                     isActive
                       ? "text-white shadow-lg shadow-emerald-500/25"
-                      : "text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-zinc-800"
+                      : "text-gray-600  hover:bg-gray-200 "
                   }`}
                 >
                   {isActive && (
@@ -251,7 +251,7 @@ export default function Gallery() {
               >
                 <div
                   onClick={() => setSelectedImage(image)}
-                  className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200 dark:bg-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300"
+                  className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200  shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   <img
                     src={image.src}
@@ -327,7 +327,7 @@ export default function Gallery() {
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               // Responsive Flex: Col on mobile, Row on Desktop
-              className="relative w-full max-w-6xl h-full sm:h-[90vh] bg-white dark:bg-zinc-900 sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row"
+              className="relative w-full max-w-6xl h-full sm:h-[90vh] bg-white  sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button (Mobile Absolute) */}
@@ -370,28 +370,28 @@ export default function Gallery() {
 
               {/* --- RIGHT: Details & Suggestions --- */}
               {/* Flex-1 ensures it takes remaining height on mobile */}
-              <div className="lg:w-[35%] flex-1 flex flex-col bg-white dark:bg-zinc-900 border-l border-gray-100 dark:border-zinc-800 h-full overflow-hidden">
+              <div className="lg:w-[35%] flex-1 flex flex-col bg-white  border-l border-gray-100  h-full overflow-hidden">
                 {/* Info Header */}
-                <div className="p-6 border-b border-gray-100 dark:border-zinc-800 flex-shrink-0">
+                <div className="p-6 border-b border-gray-100  flex-shrink-0">
                   <div className="flex justify-between items-start mb-1">
-                    <h2 className="text-2xl font-serif font-bold text-gray-900 dark:text-white line-clamp-2">
+                    <h2 className="text-2xl font-serif font-bold text-gray-900  line-clamp-2">
                       {selectedImage.title}
                     </h2>
                     <button
                       onClick={() => setSelectedImage(null)}
-                      className="hidden lg:block p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+                      className="hidden lg:block p-2 hover:bg-gray-100  rounded-full transition-colors"
                     >
                       <FiX className="size-6 text-gray-500" />
                     </button>
                   </div>
-                  <span className="inline-block px-3 py-1 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider rounded-full">
+                  <span className="inline-block px-3 py-1 bg-emerald-50  text-emerald-600  text-xs font-bold uppercase tracking-wider rounded-full">
                     {selectedImage.category}
                   </span>
                 </div>
 
                 {/* Scrollable Suggestions Area */}
                 <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
-                  <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-4 top-0 bg-white dark:bg-zinc-900 z-10 py-2 flex items-center gap-2">
+                  <h4 className="text-sm font-bold text-gray-900  mb-4 top-0 bg-white  z-10 py-2 flex items-center gap-2">
                     More like this
                   </h4>
 
@@ -401,7 +401,7 @@ export default function Gallery() {
                         <div
                           key={image.uniqueKey}
                           onClick={() => setSelectedImage(image)}
-                          className="cursor-pointer group relative rounded-xl overflow-hidden aspect-square bg-gray-100 dark:bg-zinc-800"
+                          className="cursor-pointer group relative rounded-xl overflow-hidden aspect-square bg-gray-100 "
                         >
                           <img
                             src={image.src}
@@ -421,12 +421,12 @@ export default function Gallery() {
                 </div>
 
                 {/* Footer Buttons */}
-                <div className="p-6 border-t border-gray-100 dark:border-zinc-800 flex-shrink-0">
+                <div className="p-6 border-t border-gray-100  flex-shrink-0">
                   <button
                     onClick={() =>
                       handleDownload(selectedImage.src, selectedImage.title)
                     }
-                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-gray-100 dark:bg-zinc-800 hover:bg-emerald-600 hover:text-white dark:hover:bg-zinc-700 text-gray-900 dark:text-white font-bold rounded-xl transition-all duration-300"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-gray-100  hover:bg-emerald-600 hover:text-white  text-gray-900  font-bold rounded-xl transition-all duration-300"
                   >
                     <FiDownload className="size-5" />
                     Download Image

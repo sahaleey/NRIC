@@ -84,7 +84,7 @@ const hoverVariants = {
 
 export default function HighlightCards() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900/50">
+    <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50   ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 m-8">
         {/* Section Header */}
         <motion.div
@@ -94,17 +94,17 @@ export default function HighlightCards() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-emerald-200 dark:border-emerald-700">
+          <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-emerald-200 ">
             <FiStar className="size-4" />
             Explore Our Campus
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-4">
             Discover{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Nahjurrashad
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
             Experience the perfect blend of traditional Islamic values and
             modern academic excellence in a nurturing campus environment.
           </p>
@@ -121,9 +121,9 @@ export default function HighlightCards() {
           {cards.map((card) => {
             const IconComponent = card.icon;
             const colorClasses = {
-              blue: "text-blue-600 dark:text-blue-400",
-              emerald: "text-emerald-600 dark:text-emerald-400",
-              amber: "text-amber-600 dark:text-amber-400",
+              blue: "text-blue-600 ",
+              emerald: "text-emerald-600 ",
+              amber: "text-amber-600 ",
             };
 
             return (

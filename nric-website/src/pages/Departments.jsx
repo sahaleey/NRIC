@@ -71,25 +71,25 @@ export default function Departments() {
     emerald: {
       bg: "bg-emerald-500",
       text: "text-emerald-600",
-      light: "bg-emerald-50 dark:bg-emerald-900/20",
+      light: "bg-emerald-50 ",
       border: "border-emerald-200",
-      darkText: "text-emerald-800 dark:text-emerald-200",
-      hodBg: "bg-emerald-50/50 dark:bg-emerald-900/10", // Special HoD BG
-      hodBorder: "border-emerald-100 dark:border-emerald-800",
+      darkText: "text-emerald-800 ",
+      hodBg: "bg-emerald-50/50 ", // Special HoD BG
+      hodBorder: "border-emerald-100 ",
     },
     blue: {
       bg: "bg-blue-500",
       text: "text-blue-600",
-      light: "bg-blue-50 dark:bg-blue-900/20",
+      light: "bg-blue-50 ",
       border: "border-blue-200",
-      darkText: "text-blue-800 dark:text-blue-200",
-      hodBg: "bg-blue-50/50 dark:bg-blue-900/10",
-      hodBorder: "border-blue-100 dark:border-blue-800",
+      darkText: "text-blue-800 ",
+      hodBg: "bg-blue-50/50 ",
+      hodBorder: "border-blue-100 ",
     },
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-gradient-to-b from-white to-gray-50/50   py-20 md:py-28 min-h-screen">
       <SEO
         title="Our Departments"
         description="Explore the various academic departments at NRIC, from Islamic Studies to Modern Sciences."
@@ -102,12 +102,12 @@ export default function Departments() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700 mb-6">
+          <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200  mb-6">
             <FiUsers className="size-4" />
             Academic Departments
           </div>
 
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
             Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Departments
@@ -115,7 +115,7 @@ export default function Departments() {
           </h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  mt-4 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -133,27 +133,27 @@ export default function Departments() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+          <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
+            <div className="text-3xl font-bold text-emerald-600  mb-2">
               Hadith & Science
             </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
+            <div className="text-gray-600  font-medium">
               Specialized Department
             </div>
           </div>
-          <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+          <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
+            <div className="text-3xl font-bold text-blue-600  mb-2">
               14+
             </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
+            <div className="text-gray-600  font-medium">
               Expert Faculty
             </div>
           </div>
-          <div className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">
+          <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
+            <div className="text-3xl font-bold text-amber-600  mb-2">
               3+
             </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
+            <div className="text-gray-600  font-medium">
               Degree Programs
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function Departments() {
                 whileHover="hover"
                 className="group w-full max-w-4xl"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300">
+                <div className="bg-white  rounded-3xl shadow-xl border border-gray-200  overflow-hidden transition-all duration-300">
                   {/* Department Header */}
                   <div
                     className={`${colors.bg} p-8 text-white relative overflow-hidden`}
@@ -205,16 +205,16 @@ export default function Departments() {
                     {/* Left Column: Info & Features */}
                     <div className="space-y-8">
                       <div>
-                        <h4 className="font-bold text-lg text-gray-900 dark:text-white mb-3">
+                        <h4 className="font-bold text-lg text-gray-900  mb-3">
                           About the Department
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                        <p className="text-gray-600  leading-relaxed text-sm md:text-base">
                           {dept.description}
                         </p>
                       </div>
 
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                        <h4 className="font-semibold text-gray-900  mb-3 flex items-center gap-2">
                           <FiAward className={`size-5 ${colors.text}`} />
                           Key Focus Areas
                         </h4>
@@ -224,7 +224,7 @@ export default function Departments() {
                               <span
                                 className={`mt-1.5 size-1.5 ${colors.bg} rounded-full flex-shrink-0`}
                               />
-                              <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                              <span className="text-sm text-gray-600  font-medium">
                                 {feature}
                               </span>
                             </li>
@@ -233,7 +233,7 @@ export default function Departments() {
                       </div>
 
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                        <h4 className="font-semibold text-gray-900  mb-3 flex items-center gap-2">
                           <FiTrendingUp className={`size-5 ${colors.text}`} />
                           Programs Offered
                         </h4>
@@ -255,7 +255,7 @@ export default function Departments() {
                       className={`rounded-2xl p-6 border ${colors.hodBorder} ${colors.hodBg} flex flex-col transition-all duration-300`}
                     >
                       <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 ">
                           <FiUserCheck className="size-4" />
                           Leadership
                         </div>
@@ -267,10 +267,10 @@ export default function Departments() {
                           <img
                             src={dept.hod.image}
                             alt={dept.hod.name}
-                            className="size-16 md:size-20 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md"
+                            className="size-16 md:size-20 rounded-full object-cover border-4 border-white  shadow-md"
                           />
                           <div
-                            className={`absolute bottom-0 right-0 p-1 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700`}
+                            className={`absolute bottom-0 right-0 p-1 bg-white  rounded-full border border-gray-200 
                           >
                             <FiCheckCircle
                               className={`size-4 ${colors.text}`}
@@ -278,7 +278,7 @@ export default function Departments() {
                           </div>
                         </div>
                         <div>
-                          <h5 className="font-serif text-lg md:text-xl font-bold text-gray-900 dark:text-white leading-tight">
+                          <h5 className="font-serif text-lg md:text-xl font-bold text-gray-900  leading-tight">
                             {dept.hod.name}
                           </h5>
                           <p
@@ -289,9 +289,9 @@ export default function Departments() {
                         </div>
                       </div>
 
-                      <div className="relative bg-white dark:bg-gray-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 italic text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      <div className="relative bg-white  p-5 rounded-xl shadow-sm border border-gray-100  italic text-gray-600  text-sm leading-relaxed">
                         {/* Watermark Quote Icon */}
-                        <span className="absolute -top-3 left-4 text-5xl text-gray-100 dark:text-gray-700 leading-none select-none font-serif">
+                        <span className="absolute -top-3 left-4 text-5xl text-gray-100  leading-none select-none font-serif">
                           "
                         </span>
                         <p className="relative z-10">{dept.hod.message}</p>

@@ -178,37 +178,37 @@ export default function Alumni() {
     emerald: {
       bg: "bg-emerald-500",
       text: "text-emerald-600",
-      light: "bg-emerald-50 dark:bg-emerald-900/20",
+      light: "bg-emerald-50 ",
     },
     blue: {
       bg: "bg-blue-500",
       text: "text-blue-600",
-      light: "bg-blue-50 dark:bg-blue-900/20",
+      light: "bg-blue-50 ",
     },
     amber: {
       bg: "bg-amber-500",
       text: "text-amber-600",
-      light: "bg-amber-50 dark:bg-amber-900/20",
+      light: "bg-amber-50 ",
     },
     violet: {
       bg: "bg-violet-500",
       text: "text-violet-600",
-      light: "bg-violet-50 dark:bg-violet-900/20",
+      light: "bg-violet-50 ",
     },
     red: {
       bg: "bg-red-500",
       text: "text-red-600",
-      light: "bg-red-50 dark:bg-red-900/20",
+      light: "bg-red-50 ",
     },
     green: {
       bg: "bg-green-500",
       text: "text-green-600",
-      light: "bg-green-50 dark:bg-green-900/20",
+      light: "bg-green-50 ",
     },
   };
 
   return (
-    <div className="bg-linear-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/90">
+    <div className="bg-linear-to-b from-white to-gray-50/50  ">
       <SEO
         title="Alumni Network"
         description="Connect with the NRIC Alumni network. Celebrating the achievements of our graduates across the globe."
@@ -244,7 +244,7 @@ export default function Alumni() {
       </section>
 
       {/* --- 2. Alumni Statistics --- */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
@@ -259,15 +259,15 @@ export default function Alumni() {
                 <motion.div
                   key={stat.label}
                   variants={itemVariants}
-                  className="text-center bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-600"
+                  className="text-center bg-gray-50  rounded-2xl p-6 shadow-lg border border-gray-200 "
                 >
                   <div className="inline-flex size-16 bg-emerald-500 rounded-xl items-center justify-center mb-4 mx-auto">
                     <IconComponent className="size-7 text-white" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+                  <div className="text-2xl md:text-3xl font-bold text-emerald-600  mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 dark:text-gray-300 font-medium text-sm">
+                  <div className="text-gray-600  font-medium text-sm">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -288,7 +288,7 @@ export default function Alumni() {
             className="text-center max-w-4xl mx-auto mb-16"
           >
             <motion.div variants={itemVariants} className="mb-6">
-              <div className="inline-flex items-center gap-2 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 px-4 py-2 rounded-full text-sm font-semibold border border-amber-200 dark:border-amber-700">
+              <div className="inline-flex items-center gap-2 bg-amber-50  text-amber-700  px-4 py-2 rounded-full text-sm font-semibold border border-amber-200 ">
                 <FiAward className="size-4" />
                 Graduating Classes
               </div>
@@ -296,7 +296,7 @@ export default function Alumni() {
 
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+              className="font-serif text-4xl md:text-5xl font-bold text-gray-900  mb-6"
             >
               Our{" "}
               <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
@@ -306,7 +306,7 @@ export default function Alumni() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+              className="text-lg md:text-xl text-gray-600  leading-relaxed"
             >
               Each graduating class represents a unique chapter in our college's
               history, carrying forward the legacy of integrated Islamic and
@@ -331,7 +331,7 @@ export default function Alumni() {
                   whileHover="hover"
                   className="group"
                 >
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full">
+                  <div className="bg-white  rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200  overflow-hidden transition-all duration-300 h-full">
                     {/* Class Header */}
                     <div
                       className={`${colors.bg} p-6 text-white relative overflow-hidden`}
@@ -358,7 +358,7 @@ export default function Alumni() {
                     <div className="p-6">
                       {/* Notable Achievements */}
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                        <h4 className="font-semibold text-gray-900  mb-3 flex items-center gap-2">
                           <FiAward className={`size-4 ${colors.text}`} />
                           Notable Achievements
                         </h4>
@@ -369,7 +369,7 @@ export default function Alumni() {
                                 <div
                                   className={`size-1.5 ${colors.bg} rounded-full mt-2 flex-shrink-0`}
                                 ></div>
-                                <span className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <span className="text-sm text-gray-600  leading-relaxed">
                                   {achievement}
                                 </span>
                               </li>
@@ -380,7 +380,7 @@ export default function Alumni() {
 
                       {/* Career Paths */}
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                        <h4 className="font-semibold text-gray-900  mb-3 flex items-center gap-2">
                           <FiTrendingUp className={`size-4 ${colors.text}`} />
                           Career Paths
                         </h4>

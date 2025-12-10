@@ -75,7 +75,7 @@ export default function Terms() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-gradient-to-b from-white to-gray-50/50   py-20 md:py-28 min-h-screen">
       <Helmet>
         <title>Nahjurrashad Islamic College | Terms</title>
         <meta
@@ -95,7 +95,7 @@ export default function Terms() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-700">
+            <div className="inline-flex items-center gap-2 bg-blue-50  text-blue-700  px-4 py-2 rounded-full text-sm font-semibold border border-blue-200 ">
               <FiFileText className="size-4" />
               Legal Agreement
             </div>
@@ -103,7 +103,7 @@ export default function Terms() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Terms of{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -113,7 +113,7 @@ export default function Terms() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed mb-4"
           >
             Please read these terms carefully before using our website. These
             terms govern your access to and use of Nahjurrashad Islamic
@@ -122,7 +122,7 @@ export default function Terms() {
 
           <motion.div
             variants={itemVariants}
-            className="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400"
+            className="flex items-center justify-center gap-4 text-sm text-gray-500 "
           >
             <div className="flex items-center gap-2">
               <FiRefreshCw className="size-4" />
@@ -152,7 +152,7 @@ export default function Terms() {
               <motion.div
                 key={section.title}
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+                className="bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 "
               >
                 <div className="flex items-start gap-4">
                   <div
@@ -161,10 +161,10 @@ export default function Terms() {
                     <IconComponent className="size-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-2">
                       {section.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600  leading-relaxed">
                       {section.content}
                     </p>
                   </div>
@@ -180,13 +180,13 @@ export default function Terms() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+          className="bg-white  rounded-2xl shadow-xl border border-gray-200  overflow-hidden"
         >
           <div className="p-8 lg:p-12">
-            <div className="prose dark:prose-invert lg:prose-lg max-w-none text-gray-700 dark:text-gray-300">
+            <div className="prose  lg:prose-lg max-w-none text-gray-700 ">
               {/* Introduction */}
               <div className="mb-8">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900  mb-4">
                   Introduction
                 </h2>
                 <p className="leading-relaxed">
@@ -201,7 +201,7 @@ export default function Terms() {
                   these Terms and our{" "}
                   <Link
                     to="/privacy"
-                    className="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+                    className="text-blue-600  hover:underline font-semibold"
                   >
                     Privacy Policy
                   </Link>
@@ -212,7 +212,7 @@ export default function Terms() {
 
               {/* Acceptance of Terms */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiUserCheck className="text-emerald-600" />
                   1. Acceptance of Terms
                 </h3>
@@ -227,7 +227,7 @@ export default function Terms() {
 
               {/* Use of the Site */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   2. Use of the Site
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -260,7 +260,7 @@ export default function Terms() {
 
               {/* Intellectual Property */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiShield className="text-amber-600" />
                   3. Intellectual Property Rights
                 </h3>
@@ -287,7 +287,7 @@ export default function Terms() {
 
               {/* User Conduct and Responsibilities */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiAlertTriangle className="text-red-600" />
                   4. User Conduct and Responsibilities
                 </h3>
@@ -327,7 +327,7 @@ export default function Terms() {
 
               {/* Disclaimers */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   5. Disclaimers and Limitations
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -354,7 +354,7 @@ export default function Terms() {
 
               {/* Limitation of Liability */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   6. Limitation of Liability
                 </h3>
                 <p className="leading-relaxed">
@@ -383,7 +383,7 @@ export default function Terms() {
 
               {/* Governing Law */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiGlobe className="text-blue-600" />
                   7. Governing Law and Jurisdiction
                 </h3>
@@ -398,7 +398,7 @@ export default function Terms() {
 
               {/* Changes to Terms */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   8. Changes to Terms
                 </h3>
                 <p className="leading-relaxed">
@@ -417,21 +417,21 @@ export default function Terms() {
 
               {/* Contact Information */}
               <div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   9. Contact Information
                 </h3>
                 <p className="leading-relaxed mb-4">
                   If you have any questions about these Terms of Service, please
                   contact us:
                 </p>
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
-                  <p className="text-gray-700 dark:text-gray-300 mb-2">
+                <div className="bg-gray-50  rounded-xl p-6">
+                  <p className="text-gray-700  mb-2">
                     <strong>Email:</strong> nahjurrashad@gmail.com
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-2">
+                  <p className="text-gray-700  mb-2">
                     <strong>Phone:</strong> 0480 2837745, 9846902564
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-700 ">
                     <strong>Address:</strong> Nahjurrashad Islamic College,
                     Chamakkala, Thrissur, Kerala - 680687
                   </p>
@@ -440,7 +440,7 @@ export default function Terms() {
                   For general inquiries, you can also{" "}
                   <Link
                     to="/contact"
-                    className="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+                    className="text-blue-600  hover:underline font-semibold"
                   >
                     contact us through our website
                   </Link>
@@ -459,11 +459,11 @@ export default function Terms() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-700">
-            <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="bg-blue-50  rounded-2xl p-8 border border-blue-200 ">
+            <h3 className="font-serif text-xl font-bold text-gray-900  mb-4">
               Agreement Confirmation
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-600  mb-6">
               By using our website and services, you acknowledge that you have
               read, understood, and agree to be bound by these Terms of Service
               and our Privacy Policy.
@@ -478,7 +478,7 @@ export default function Terms() {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold py-3 px-6 rounded-full border border-gray-300 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 bg-white  text-gray-900  font-semibold py-3 px-6 rounded-full border border-gray-300  hover:border-blue-300  transition-all duration-300 hover:scale-105"
               >
                 <FiMail className="size-4" />
                 Contact Legal Team

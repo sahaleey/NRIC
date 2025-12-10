@@ -105,22 +105,22 @@ const colorMap = {
   emerald: {
     bg: "bg-emerald-500",
     text: "text-emerald-600",
-    light: "bg-emerald-50 dark:bg-emerald-900/20",
+    light: "bg-emerald-50 ",
   },
   blue: {
     bg: "bg-blue-500",
     text: "text-blue-600",
-    light: "bg-blue-50 dark:bg-blue-900/20",
+    light: "bg-blue-50 ",
   },
   amber: {
     bg: "bg-amber-500",
     text: "text-amber-600",
-    light: "bg-amber-50 dark:bg-amber-900/20",
+    light: "bg-amber-50 ",
   },
   violet: {
     bg: "bg-violet-500",
     text: "text-violet-600",
-    light: "bg-violet-50 dark:bg-violet-900/20",
+    light: "bg-violet-50 ",
   },
 };
 
@@ -130,7 +130,7 @@ const colorMap = {
 
 export default function AboutOverview() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/50 dark:from-gray-900 dark:via-emerald-900/10 dark:to-green-900/10">
+    <section className="py-20 md:py-28 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/50   ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -145,19 +145,19 @@ export default function AboutOverview() {
             variants={itemVariants}
             className="text-center max-w-4xl mx-auto mb-16"
           >
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-emerald-200 ">
               <FiStar className="size-4" />
               About Our Institution
             </div>
 
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Nahjurrashad
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-600  leading-relaxed mb-8">
               Founded on the timeless principles of integrating spiritual
               enlightenment with academic excellence, Nahjurrashad Islamic
               College stands as a beacon of knowledge and moral guidance in the
@@ -175,10 +175,10 @@ export default function AboutOverview() {
                 { value: "Hadith and science", label: "Departments" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl  md:text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+                  <div className="text-2xl  md:text-3xl font-bold text-emerald-600 ">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  <div className="text-sm text-gray-500  mt-1">
                     {stat.label}
                   </div>
                 </div>
@@ -205,11 +205,11 @@ export default function AboutOverview() {
                 >
                   <Link to={link.path} className="block group">
                     <div
-                      className={`relative ${colors.light} rounded-2xl p-6 lg:p-8 border border-gray-200 dark:border-gray-700 hover:border-${link.color}-300 dark:hover:border-${link.color}-600 transition-all duration-300 h-full overflow-hidden`}
+                      className={`relative ${colors.light} rounded-2xl p-6 lg:p-8 border border-gray-200  hover:border-${link.color}-300  transition-all duration-300 h-full overflow-hidden`}
                     >
                       {/* Background Pattern */}
                       <div className="absolute top-4 right-4 opacity-5">
-                        <IconComponent className="size-24 text-gray-900 dark:text-white" />
+                        <IconComponent className="size-24 text-gray-900 " />
                       </div>
 
                       {/* Content */}
@@ -222,22 +222,22 @@ export default function AboutOverview() {
                             <IconComponent className="size-6 text-white" />
                           </div>
                           <span
-                            className={`text-xs font-semibold ${colors.text} bg-white dark:bg-gray-800 px-3 py-1 rounded-full border border-${link.color}-200 dark:border-${link.color}-800`}
+                            className={`text-xs font-semibold ${colors.text} bg-white  px-3 py-1 rounded-full border border-${link.color}-200 
                           >
                             {link.stats}
                           </span>
                         </div>
 
                         {/* Title and Description */}
-                        <h3 className="font-serif text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        <h3 className="font-serif text-2xl lg:text-3xl font-bold text-gray-900  mb-4 leading-tight">
                           {link.title}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                        <p className="text-gray-600  leading-relaxed mb-6">
                           {link.description}
                         </p>
 
                         {/* CTA */}
-                        <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold group-hover:gap-3 transition-all duration-300">
+                        <div className="flex items-center gap-2 text-emerald-600  font-semibold group-hover:gap-3 transition-all duration-300">
                           <span>Learn More</span>
                           <motion.div
                             animate={{ x: [0, 4, 0] }}

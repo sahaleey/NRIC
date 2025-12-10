@@ -70,14 +70,14 @@ export default function ContactCTA() {
   };
 
   return (
-    <section className="relative py-20 md:py-28 bg-linear-to-b from-emerald-50 via-white to-green-50 dark:from-gray-900/50 dark:via-gray-700 dark:to-gray-900 overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-linear-to-b from-emerald-50 via-white to-green-50    overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-10 size-32 bg-emerald-200/30 dark:bg-emerald-800/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 size-40 bg-amber-200/20 dark:bg-amber-800/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-10 size-32 bg-emerald-200/30  rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 size-40 bg-amber-200/20  rounded-full blur-3xl"></div>
 
         {/* Islamic pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03]">
+        <div className="absolute inset-0 opacity-[0.02] ">
           <div
             className="w-full h-full bg-repeat"
             style={{
@@ -97,19 +97,19 @@ export default function ContactCTA() {
         >
           {/* Header Section */}
           <motion.div variants={itemVariants} className="mb-12">
-            <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-100  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-emerald-200 ">
               <FiMessageCircle className="size-4" />
               We're Here to Help
             </div>
 
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
               Ready to{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Start Your Journey?
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600  max-w-3xl mx-auto leading-relaxed">
               Whether you're a prospective student exploring admissions, a
               parent seeking information, or a researcher looking for
               collaboration, our team is here to guide you every step of the
@@ -131,17 +131,17 @@ export default function ContactCTA() {
                   whileHover="hover"
                 >
                   <Link to={method.link} className="block group">
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700 transition-all duration-300 h-full">
+                    <div className="bg-white  rounded-2xl p-6 shadow-lg hover:shadow-xl border border-gray-200  transition-all duration-300 h-full">
                       <div className="flex flex-col items-center text-center">
                         <div className="size-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                           <IconComponent className="size-6 text-white" />
                         </div>
 
-                        <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        <h3 className="font-semibold text-gray-900  mb-2">
                           {method.label}
                         </h3>
 
-                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        <p className="text-gray-600  text-sm leading-relaxed">
                           {method.value}
                         </p>
                       </div>
@@ -179,7 +179,7 @@ export default function ContactCTA() {
 
           {/* Additional Info */}
           <motion.div variants={itemVariants} className="mt-8 text-center">
-            <p className="text-gray-500 dark:text-gray-400 text-sm">
+            <p className="text-gray-500  text-sm">
               Typically respond within 24 hours • Office hours: 8 AM - 6 PM,
               Saturday - Thursday
             </p>

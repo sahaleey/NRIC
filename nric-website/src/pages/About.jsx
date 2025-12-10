@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 
 export default function About() {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white ">
       <SEO
         title="About Us"
         description="Learn about NRIC's history, leadership, and mission to shape the future of Islamic education."

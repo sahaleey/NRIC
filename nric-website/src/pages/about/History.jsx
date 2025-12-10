@@ -100,28 +100,28 @@ export default function History() {
     emerald: {
       bg: "bg-emerald-500",
       text: "text-emerald-600",
-      light: "bg-emerald-50 dark:bg-emerald-900/20",
+      light: "bg-emerald-50 ",
     },
     blue: {
       bg: "bg-blue-500",
       text: "text-blue-600",
-      light: "bg-blue-50 dark:bg-blue-900/20",
+      light: "bg-blue-50 ",
     },
     amber: {
       bg: "bg-amber-500",
       text: "text-amber-600",
-      light: "bg-amber-50 dark:bg-amber-900/20",
+      light: "bg-amber-50 ",
     },
     violet: {
       bg: "bg-violet-500",
       text: "text-violet-600",
-      light: "bg-violet-50 dark:bg-violet-900/20",
+      light: "bg-violet-50 ",
     },
   };
 
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
+      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -136,7 +136,7 @@ export default function History() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
               <FiAward className="size-4" />
               Our Legacy & Future
             </div>
@@ -144,7 +144,7 @@ export default function History() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -154,7 +154,7 @@ export default function History() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             From humble beginnings to becoming a beacon of integrated education,
             our journey reflects our unwavering commitment to nurturing minds
@@ -173,14 +173,14 @@ export default function History() {
           >
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8"
+              className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-8"
             >
               Our Journey
             </motion.h2>
 
             <div className="space-y-8 relative">
               {/* Timeline Line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-emerald-200 dark:bg-emerald-800"></div>
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-emerald-200 "></div>
 
               {timelineEvents.map((event, index) => (
                 <motion.div
@@ -196,11 +196,11 @@ export default function History() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <div className="flex-1 bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
+                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-2">
                       {event.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600  leading-relaxed">
                       {event.description}
                     </p>
                   </div>
@@ -218,25 +218,25 @@ export default function History() {
           >
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8"
+              className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-8"
             >
               Our Foundation
             </motion.h2>
 
             <motion.div
               variants={itemVariants}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+              className="bg-white  rounded-2xl p-8 shadow-lg border border-gray-200 "
             >
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-600  text-lg leading-relaxed mb-6">
                 Founded on the principles of integrating spiritual enlightenment
                 with academic excellence, Nahjurrashad Islamic College began as
                 a humble endeavor to nurture a generation of scholars and
                 leaders grounded in both Islamic tradition and modern knowledge.
               </p>
 
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-600  text-lg leading-relaxed mb-6">
                 Affiliated with the esteemed{" "}
-                <strong className="text-emerald-600 dark:text-emerald-400">
+                <strong className="text-emerald-600 ">
                   Darul Huda Islamic University (DHIU)
                 </strong>
                 , our curriculum represents a carefully balanced blend of{" "}
@@ -246,7 +246,7 @@ export default function History() {
                 ethical values.
               </p>
 
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-600  text-lg leading-relaxed">
                 Our vision is to be a beacon of knowledge, radiating the light
                 of faith and wisdom, and producing graduates who serve their
                 communities with integrity, compassion, and excellence in all
@@ -265,7 +265,7 @@ export default function History() {
         >
           <motion.h2
             variants={itemVariants}
-            className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-12"
+            className="font-serif text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
           >
             Our Guiding Principles
           </motion.h2>
@@ -282,7 +282,7 @@ export default function History() {
                   className="group"
                 >
                   <div
-                    className={`${colors.light} rounded-2xl p-6 border border-gray-200 dark:border-gray-700 h-full text-center transition-all duration-300 hover:shadow-lg`}
+                    className={`${colors.light} rounded-2xl p-6 border border-gray-200  h-full text-center transition-all duration-300 hover:shadow-lg`}
                   >
                     <div
                       className={`inline-flex size-16 ${colors.bg} rounded-xl items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
@@ -290,11 +290,11 @@ export default function History() {
                       <IconComponent className="size-7 text-white" />
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-3">
                       {pillar.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600  leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>

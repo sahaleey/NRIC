@@ -29,7 +29,7 @@ export default function Donate() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-zinc-950 py-20 md:py-28">
+    <div className="min-h-screen bg-gray-50  py-20 md:py-28">
       <SEO
         title="Donate - Support Our Vision"
         description="Contribute to Nahjurrashad Islamic College. Your Sadaqah Jariyah helps nurture the next generation of scholars."
@@ -41,7 +41,7 @@ export default function Donate() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-20 h-20 bg-emerald-100  rounded-full flex items-center justify-center mx-auto mb-6"
           >
             <FiHeart className="size-10 text-emerald-600 animate-pulse" />
           </motion.div>
@@ -49,7 +49,7 @@ export default function Donate() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl font-bold text-gray-900  mb-6"
           >
             Invest in the <span className="text-emerald-600">Future</span>
           </motion.h1>
@@ -58,10 +58,10 @@ export default function Donate() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-gray-600  max-w-2xl mx-auto leading-relaxed"
           >
             "When a person dies, his deeds come to an end except for three:
-            <span className="font-semibold text-emerald-700 dark:text-emerald-400">
+            <span className="font-semibold text-emerald-700 ">
               {" "}
               Sadaqah Jariyah
             </span>
@@ -79,16 +79,16 @@ export default function Donate() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-800 relative overflow-hidden"
+            className="bg-white  rounded-3xl p-8 shadow-xl border border-gray-200  relative overflow-hidden"
           >
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-bl-full -mr-8 -mt-8"></div>
 
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+              <div className="p-3 bg-emerald-50  rounded-xl">
                 <FiCreditCard className="size-6 text-emerald-600" />
               </div>
-              <h2 className="font-serif text-2xl font-bold text-gray-900 dark:text-white">
+              <h2 className="font-serif text-2xl font-bold text-gray-900 ">
                 Bank Transfer
               </h2>
             </div>
@@ -99,7 +99,7 @@ export default function Donate() {
                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
                   Account Name
                 </label>
-                <p className="text-lg font-medium text-gray-900 dark:text-white mt-1">
+                <p className="text-lg font-medium text-gray-900  mt-1">
                   {bankDetails.accountName}
                 </p>
               </div>
@@ -109,13 +109,13 @@ export default function Donate() {
                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
                   Account Number
                 </label>
-                <div className="flex items-center justify-between mt-1 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 group-hover:border-emerald-500 transition-colors">
-                  <span className="font-mono text-xl text-gray-900 dark:text-white tracking-widest">
+                <div className="flex items-center justify-between mt-1 p-3 bg-gray-50  rounded-lg border border-gray-200  group-hover:border-emerald-500 transition-colors">
+                  <span className="font-mono text-xl text-gray-900  tracking-widest">
                     {bankDetails.accountNumber}
                   </span>
                   <button
                     onClick={() => handleCopy(bankDetails.accountNumber, "acc")}
-                    className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition-colors"
+                    className="p-2 hover:bg-gray-200  rounded-md transition-colors"
                     title="Copy Account Number"
                   >
                     {copiedField === "acc" ? (
@@ -132,13 +132,13 @@ export default function Donate() {
                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
                   IFSC Code
                 </label>
-                <div className="flex items-center justify-between mt-1 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 group-hover:border-emerald-500 transition-colors">
-                  <span className="font-mono text-lg text-gray-900 dark:text-white">
+                <div className="flex items-center justify-between mt-1 p-3 bg-gray-50  rounded-lg border border-gray-200  group-hover:border-emerald-500 transition-colors">
+                  <span className="font-mono text-lg text-gray-900 ">
                     {bankDetails.ifsc}
                   </span>
                   <button
                     onClick={() => handleCopy(bankDetails.ifsc, "ifsc")}
-                    className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition-colors"
+                    className="p-2 hover:bg-gray-200  rounded-md transition-colors"
                     title="Copy IFSC"
                   >
                     {copiedField === "ifsc" ? (
@@ -150,7 +150,7 @@ export default function Donate() {
                 </div>
               </div>
 
-              <div className="flex justify-between text-sm text-gray-500 pt-4 border-t border-gray-100 dark:border-gray-800">
+              <div className="flex justify-between text-sm text-gray-500 pt-4 border-t border-gray-100 ">
                 <span>{bankDetails.bankName}</span>
                 <span>{bankDetails.branch}</span>
               </div>
@@ -182,7 +182,7 @@ export default function Donate() {
               <div className="bg-white p-4 rounded-2xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300">
                 {/* ⚠️ Make sure to upload the real QR code to public/images/qr-placeholder.png or update this path */}
                 <img
-                  src="/images/qr-placeholder.png"
+                  src="/images/qrcode.jpg"
                   alt="Donation QR Code"
                   className="w-48 h-48 object-contain"
                 />
@@ -202,7 +202,7 @@ export default function Donate() {
           transition={{ delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-2 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 px-6 py-3 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-amber-50  text-amber-700  px-6 py-3 rounded-full text-sm font-medium">
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
@@ -214,7 +214,7 @@ export default function Donate() {
             href="https://wa.me/919846902564?text=I%20have%20made%20a%20donation%20to%20NRIC"
             target="_blank"
             rel="noreferrer"
-            className="block mt-4 text-gray-500 hover:text-emerald-600 dark:text-gray-400 transition-colors text-sm font-semibold flex items-center justify-center gap-2"
+            className="block mt-4 text-gray-500 hover:text-emerald-600  transition-colors text-sm font-semibold flex items-center justify-center gap-2"
           >
             <FaWhatsapp className="size-4" />
             Send Receipt

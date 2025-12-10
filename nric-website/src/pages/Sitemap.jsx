@@ -40,27 +40,27 @@ export default function Sitemap() {
     emerald: {
       bg: "bg-emerald-500",
       text: "text-emerald-600",
-      light: "bg-emerald-50 dark:bg-emerald-900/20",
+      light: "bg-emerald-50 ",
     },
     blue: {
       bg: "bg-blue-500",
       text: "text-blue-600",
-      light: "bg-blue-50 dark:bg-blue-900/20",
+      light: "bg-blue-50 ",
     },
     amber: {
       bg: "bg-amber-500",
       text: "text-amber-600",
-      light: "bg-amber-50 dark:bg-amber-900/20",
+      light: "bg-amber-50 ",
     },
     violet: {
       bg: "bg-violet-500",
       text: "text-violet-600",
-      light: "bg-violet-50 dark:bg-violet-900/20",
+      light: "bg-violet-50 ",
     },
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-gradient-to-b from-white to-gray-50/50   py-20 md:py-28 min-h-screen">
       <SEO
         title="Sitemap"
         description="Official website structure of Nahjurrashad Islamic College (NRIC), Chamakkala. Easily find any page or section."
@@ -76,7 +76,7 @@ export default function Sitemap() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
               <FiLayers className="size-4" />
               Complete Website Guide
             </div>
@@ -84,7 +84,7 @@ export default function Sitemap() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Website{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -94,7 +94,7 @@ export default function Sitemap() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             Explore our complete website structure. Every page, neatly organized
             by category.
@@ -120,15 +120,15 @@ export default function Sitemap() {
               <motion.div
                 key={stat.label}
                 variants={itemVariants}
-                className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 "
+                className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200  "
               >
                 <div className="inline-flex size-16 bg-emerald-500 rounded-xl items-center justify-center mb-4 mx-auto">
                   <Icon className="size-7 text-white" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+                <div className="text-2xl md:text-3xl font-bold text-emerald-600  mb-2">
                   {stat.number}
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 font-medium text-sm">
+                <p className="text-gray-600  font-medium text-sm">
                   {stat.label}
                 </p>
               </motion.div>
@@ -156,16 +156,16 @@ export default function Sitemap() {
                   className="group"
                 >
                   <div
-                    className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-${section.color}-200 border border-gray-200 dark:border-gray-700 p-6 h-full transition-all duration-300`}
+                    className={`bg-white  rounded-2xl shadow-lg hover:shadow-${section.color}-200 border border-gray-200  p-6 h-full transition-all duration-300`}
                   >
                     {/* Section Header */}
-                    <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+                    <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 ">
                       <div
                         className={`size-12 ${colors.bg} rounded-xl flex items-center justify-center`}
                       >
                         <Icon className="size-6 text-white" />
                       </div>
-                      <h2 className="font-serif text-xl font-bold text-gray-900 dark:text-white">
+                      <h2 className="font-serif text-xl font-bold text-gray-900 ">
                         {section.section}
                       </h2>
                     </div>
@@ -176,18 +176,18 @@ export default function Sitemap() {
                         <li key={page.name}>
                           <Link
                             to={page.path}
-                            className="group/link block p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300"
+                            className="group/link block p-3 rounded-xl hover:bg-gray-50  transition-all duration-300"
                           >
                             <div className="flex items-start gap-3">
                               <div
                                 className={`size-2 ${colors.bg} rounded-full mt-2 flex-shrink-0`}
                               ></div>
                               <div className="flex-1 min-w-0">
-                                <h3 className="font-semibold text-gray-900 dark:text-white group-hover/link:text-emerald-600 dark:group-hover/link:text-emerald-400 flex items-center gap-2 transition-colors">
+                                <h3 className="font-semibold text-gray-900  group-hover/link:text-emerald-600  flex items-center gap-2 transition-colors">
                                   {page.name}
                                   <FiArrowRight className="size-3 opacity-0 group-hover/link:opacity-100 transform group-hover/link:translate-x-1 transition-all" />
                                 </h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mt-1 leading-relaxed">
+                                <p className="text-gray-600  text-sm mt-1 leading-relaxed">
                                   {page.description}
                                 </p>
                               </div>

@@ -140,7 +140,7 @@ export default function Leadership() {
 
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
+      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -155,7 +155,7 @@ export default function Leadership() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
               <FiUsers className="size-4" />
               Meet Our Leadership
             </div>
@@ -163,7 +163,7 @@ export default function Leadership() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Guiding{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -173,7 +173,7 @@ export default function Leadership() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             Our leadership team brings together decades of experience in Islamic
             scholarship and modern education, united by a shared vision to
@@ -200,7 +200,7 @@ export default function Leadership() {
                 whileHover="hover"
                 className="group h-full"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                <div className="bg-white  rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200  overflow-hidden transition-all duration-300 h-full flex flex-col">
                   {/* Profile Header */}
                   <div
                     className={`${colors.bg} p-6 text-white relative overflow-hidden`}
@@ -223,15 +223,15 @@ export default function Leadership() {
                     {/* Profile Image */}
                     <div className="flex justify-center -mt-16 mb-6">
                       <div className="relative">
-                        <div className="size-24 bg-white dark:bg-gray-800 rounded-full p-1 shadow-lg">
+                        <div className="size-24 bg-white  rounded-full p-1 shadow-lg">
                           <img
                             src={leader.image}
                             alt={leader.name}
-                            className="size-full object-cover rounded-full border-4 border-white dark:border-gray-800"
+                            className="size-full object-cover rounded-full border-4 border-white "
                           />
                         </div>
                         <div
-                          className={`absolute -bottom-2 -right-2 size-8 ${colors.bg} rounded-full flex items-center justify-center border-2 border-white dark:border-gray-800`}
+                          className={`absolute -bottom-2 -right-2 size-8 ${colors.bg} rounded-full flex items-center justify-center border-2 border-white 
                         >
                           <GrBlockQuote className="size-3 text-white" />
                         </div>
@@ -239,14 +239,14 @@ export default function Leadership() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed text-center mb-6 italic flex-grow">
+                    <blockquote className="text-gray-600  text-sm leading-relaxed text-center mb-6 italic flex-grow">
                       "{leader.quote}"
                     </blockquote>
 
                     {/* Role Badge */}
                     <div className="text-center mt-auto">
                       <span
-                        className={`inline-flex items-center gap-2 ${colors.text} bg-${leader.color}-50 dark:bg-${leader.color}-900/20 px-3 py-1.5 rounded-full text-xs font-semibold border ${colors.border}`}
+                        className={`inline-flex items-center gap-2 ${colors.text} bg-${leader.color}-50  px-3 py-1.5 rounded-full text-xs font-semibold border ${colors.border}`}
                       >
                         <div
                           className={`size-2 ${colors.bg} rounded-full`}
@@ -271,7 +271,7 @@ export default function Leadership() {
         >
           <motion.h2
             variants={itemVariants}
-            className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-12"
+            className="font-serif text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
           >
             Our Leadership Philosophy
           </motion.h2>
@@ -287,18 +287,18 @@ export default function Leadership() {
                   variants={cardVariants}
                   className="group text-center h-full"
                 >
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 h-full transition-all duration-300 hover:shadow-lg">
+                  <div className="bg-white  rounded-2xl p-6 border border-gray-200  h-full transition-all duration-300 hover:shadow-lg">
                     <div
                       className={`inline-flex size-16 ${colors.bg} rounded-xl items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                     >
                       <IconComponent className="size-7 text-white" />
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-3">
                       {principle.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                    <p className="text-gray-600  leading-relaxed text-sm">
                       {principle.description}
                     </p>
                   </div>

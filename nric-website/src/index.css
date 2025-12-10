@@ -9,12 +9,6 @@
   --color-text: #111111;
 }
 
-@layer theme {
-  .dark {
-    --color-bg: #111111;
-    --color-text: #eeeeee;
-  }
-}
 /* Font */
 
 @font-face {

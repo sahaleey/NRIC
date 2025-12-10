@@ -73,7 +73,7 @@ export default function Privacy() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50 py-20 md:py-28 min-h-screen">
+    <div className="bg-gradient-to-b from-white to-gray-50/50   py-20 md:py-28 min-h-screen">
       <Helmet>
         <title>Nahjurrashad Islamic College | Privacy</title>
         <meta
@@ -96,7 +96,7 @@ export default function Privacy() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
               <FiShield className="size-4" />
               Data Protection
             </div>
@@ -104,7 +104,7 @@ export default function Privacy() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Privacy{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -114,7 +114,7 @@ export default function Privacy() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
+            className="text-lg md:text-xl text-gray-600  leading-relaxed mb-4"
           >
             Your privacy is important to us. This policy explains how
             Nahjurrashad Islamic College collects, uses, and protects your
@@ -123,7 +123,7 @@ export default function Privacy() {
 
           <motion.div
             variants={itemVariants}
-            className="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400"
+            className="flex items-center justify-center gap-4 text-sm text-gray-500 "
           >
             <div className="flex items-center gap-2">
               <FiRefreshCw className="size-4" />
@@ -153,7 +153,7 @@ export default function Privacy() {
               <motion.div
                 key={section.title}
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+                className="bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 "
               >
                 <div className="flex items-start gap-4">
                   <div
@@ -162,10 +162,10 @@ export default function Privacy() {
                     <IconComponent className="size-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-2">
                       {section.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600  leading-relaxed">
                       {section.content}
                     </p>
                   </div>
@@ -181,13 +181,13 @@ export default function Privacy() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+          className="bg-white  rounded-2xl shadow-xl border border-gray-200  overflow-hidden"
         >
           <div className="p-8 lg:p-12">
-            <div className="prose dark:prose-invert lg:prose-lg max-w-none text-gray-700 dark:text-gray-300">
+            <div className="prose  lg:prose-lg max-w-none text-gray-700 ">
               {/* Introduction */}
               <div className="mb-8">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900  mb-4">
                   Introduction
                 </h2>
                 <p className="leading-relaxed">
@@ -206,7 +206,7 @@ export default function Privacy() {
 
               {/* Information Collection and Use */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiUser className="text-emerald-600" />
                   1. Information Collection and Use
                 </h3>
@@ -232,7 +232,7 @@ export default function Privacy() {
 
               {/* Log Data */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   2. Log Data
                 </h3>
                 <p className="leading-relaxed">
@@ -248,7 +248,7 @@ export default function Privacy() {
 
               {/* How We Use Your Information */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiMail className="text-blue-600" />
                   3. How We Use Your Information
                 </h3>
@@ -280,7 +280,7 @@ export default function Privacy() {
 
               {/* Information Sharing */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiLock className="text-violet-600" />
                   4. Information Sharing and Disclosure
                 </h3>
@@ -312,7 +312,7 @@ export default function Privacy() {
 
               {/* Security */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   5. Data Security
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -333,7 +333,7 @@ export default function Privacy() {
 
               {/* Changes to Policy */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   6. Changes to This Privacy Policy
                 </h3>
                 <p className="leading-relaxed">
@@ -354,7 +354,7 @@ export default function Privacy() {
 
               {/* Contact Information */}
               <div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   7. Contact Us
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -362,14 +362,14 @@ export default function Privacy() {
                   personal information, or our data practices, please don't
                   hesitate to contact us:
                 </p>
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
-                  <p className="text-gray-700 dark:text-gray-300 mb-2">
+                <div className="bg-gray-50  rounded-xl p-6">
+                  <p className="text-gray-700  mb-2">
                     <strong>Email:</strong> nahjurrashad@gmail.com
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-2">
+                  <p className="text-gray-700  mb-2">
                     <strong>Phone:</strong> 0480 2837745, 9846902564
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-700 ">
                     <strong>Address:</strong> Nahjurrashad Islamic College,
                     Chamakkala, Thrissur, Kerala - 680687
                   </p>
@@ -378,7 +378,7 @@ export default function Privacy() {
                   You can also{" "}
                   <Link
                     to="/contact"
-                    className="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
+                    className="text-emerald-600  hover:underline font-semibold"
                   >
                     contact us through our website
                   </Link>{" "}
