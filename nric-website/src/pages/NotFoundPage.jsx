@@ -9,12 +9,12 @@ import {
 } from "react-icons/fi";
 import { Helmet } from "react-helmet-async";
 
-// --- 1. The "Pro" Student Animation Component ---
+// --- 1. The "Pro" Student Animation Component (Kept same) ---
 const LostStudentAnimation = () => {
   return (
     <div className="relative w-80 h-80 mx-auto flex items-center justify-center">
       {/* Ambient Background Glow */}
-      <div className="absolute inset-0 bg-emerald-400/20  blur-[60px] rounded-full" />
+      <div className="absolute inset-0 bg-emerald-400/20 blur-[60px] rounded-full" />
 
       <svg
         viewBox="0 0 400 400"
@@ -53,7 +53,7 @@ const LostStudentAnimation = () => {
           {/* 1. Body (Gown) */}
           <path
             d="M140 240 Q200 400 260 240 L240 380 L160 380 Z"
-            className="fill-gray-800 "
+            className="fill-gray-800"
           />
           {/* Gown Collar */}
           <path
@@ -70,13 +70,13 @@ const LostStudentAnimation = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             {/* Face */}
-            <circle cx="200" cy="180" r="50" className="fill-emerald-100 " />
+            <circle cx="200" cy="180" r="50" className="fill-emerald-100" />
 
             {/* 3. Graduation Cap */}
             <g transform="translate(0, -10)">
               <path
                 d="M130 160 L200 130 L270 160 L200 190 Z"
-                className="fill-emerald-600 "
+                className="fill-emerald-600"
               />
               <path
                 d="M200 190 L200 150" // Center strut invisible
@@ -85,7 +85,7 @@ const LostStudentAnimation = () => {
               {/* Cap Base */}
               <path
                 d="M145 166 L145 185 Q200 210 255 185 L255 166"
-                className="fill-emerald-700 "
+                className="fill-emerald-700"
               />
               {/* Tassel */}
               <motion.g
@@ -114,8 +114,8 @@ const LostStudentAnimation = () => {
               animate={{ x: [-10, 10, -10] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
-              <circle cx="185" cy="185" r="6" className="fill-gray-900 " />
-              <circle cx="215" cy="185" r="6" className="fill-gray-900 " />
+              <circle cx="185" cy="185" r="6" className="fill-gray-900" />
+              <circle cx="215" cy="185" r="6" className="fill-gray-900" />
             </motion.g>
           </motion.g>
 
@@ -135,7 +135,7 @@ const LostStudentAnimation = () => {
               width="10"
               height="60"
               rx="5"
-              className="fill-gray-700 "
+              className="fill-gray-700"
             />
             {/* Glass Rim */}
             <circle
@@ -147,7 +147,7 @@ const LostStudentAnimation = () => {
               className="stroke-emerald-500"
             />
             {/* Glass Lens (Semi-transparent) */}
-            <circle cx="200" cy="220" r="37" className="fill-blue-100/30 " />
+            <circle cx="200" cy="220" r="37" className="fill-blue-100/30" />
             {/* Reflection on Glass */}
             <path
               d="M180 200 Q190 190 205 195"
@@ -217,7 +217,7 @@ export default function NotFoundPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-emerald-50/30 to-green-50/30    flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-white via-emerald-50/30 to-green-50/30 flex items-center justify-center relative overflow-hidden">
       <Helmet>
         <title>Page Not Found | Nahjurrashad Islamic College</title>
         <meta name="robots" content="noindex" />
@@ -235,26 +235,29 @@ export default function NotFoundPage() {
           className="text-center"
         >
           {/* --- The New Pro Animation --- */}
-          <motion.div variants={itemVariants} className="mb-2">
+          <motion.div variants={itemVariants} className="mb-12">
             <LostStudentAnimation />
           </motion.div>
 
-          {/* 404 Text */}
+          {/* 404 Image/Graphic (REPLACING THE H1 TEXT) */}
           <motion.div
             variants={itemVariants}
-            className="mb-6 relative inline-block"
+            className="mb-6 relative inline-block w-full max-w-sm mx-auto"
           >
-            <h1 className="font-serif text-6xl md:text-8xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
-              404
-            </h1>
+            {/* ⚠️ IMPORTANT: Upload your 404 graphic to public/images/404-graphic.png */}
+            <img
+              src="/images/notfound.png"
+              alt="Page Not Found Error"
+              className=" h-auto mx-auto w-50 max-w-[200px] object-contain"
+            />
           </motion.div>
 
           {/* Main Message */}
           <motion.div variants={itemVariants} className="mb-10">
-            <h2 className="font-serif text-2xl md:text-4xl font-bold text-gray-900  mb-4">
+            <h2 className="font-serif text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               Looks like this page skipped class.
             </h2>
-            <p className="text-lg text-gray-600  leading-relaxed max-w-xl mx-auto">
+            <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto">
               We searched high and low, but the page you are looking for seems
               to be missing from our library.
             </p>
@@ -269,13 +272,13 @@ export default function NotFoundPage() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className="group bg-white  backdrop-blur-sm rounded-2xl p-4 shadow-sm hover:shadow-lg border border-gray-200  hover:border-emerald-400  transition-all duration-300 transform hover:-translate-y-1"
+                    className="group bg-white backdrop-blur-sm rounded-2xl p-4 shadow-sm hover:shadow-lg border border-gray-200 hover:border-emerald-400 transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <div className="flex flex-col items-center gap-3">
-                      <div className="size-10 bg-emerald-50  rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:scale-110 transition-all duration-300">
-                        <IconComponent className="size-5 text-emerald-600  group-hover:text-white transition-colors" />
+                      <div className="size-10 bg-emerald-50 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:scale-110 transition-all duration-300">
+                        <IconComponent className="size-5 text-emerald-600 group-hover:text-white transition-colors" />
                       </div>
-                      <span className="text-sm font-medium text-gray-700  group-hover:text-emerald-700  transition-colors">
+                      <span className="text-sm font-medium text-gray-700 group-hover:text-emerald-700 transition-colors">
                         {link.name}
                       </span>
                     </div>
@@ -289,7 +292,7 @@ export default function NotFoundPage() {
           <motion.div variants={itemVariants}>
             <button
               onClick={() => window.history.back()}
-              className="px-8 py-3 rounded-full bg-gray-900  text-white  font-semibold hover:bg-emerald-600  transition-all duration-300 shadow-lg hover:shadow-emerald-500/20"
+              className="px-8 py-3 rounded-full bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20"
             >
               Go Back Previous Page
             </button>
