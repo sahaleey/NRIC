@@ -122,7 +122,7 @@ export default function HighlightCards() {
             const IconComponent = card.icon;
             const colorClasses = {
               blue: "text-blue-600 ",
-              emerald: "text-emerald-600 ",
+              emerald: "text-emerald-400 ",
               amber: "text-amber-600 ",
             };
 

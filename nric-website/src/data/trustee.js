@@ -30,6 +30,11 @@ export const trustMembers = [
     image: "/images/trustee/trustee4.png",
   },
   {
+    name: "Abdul Qadir",
+    role: "Manager at Nahjurrashad",
+    image: "/images/trustee/qadir.jpg",
+  },
+  {
     name: "V.A Hasan",
     role: "Chairman, Flora Group of Hotels",
     image: "/images/trustee/trustee5.jpg",
