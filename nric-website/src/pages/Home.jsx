@@ -6,7 +6,7 @@ import HighlightCards from "../sections/HighlightCards";
 import ContactCTA from "../sections/ContactCTA";
 import SEO from "../components/SEO";
 import TrustMembersSlider from "../sections/TrustMembersSlider";
-import BentoGrid from "../sections/BentoGrid";
+import EventsSection from "../sections/EventsSection";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <HeroSection />
       <AnnouncementsTicker />
       <WelcomeIntro />
-      {/* <BentoGrid /> */}
+      <EventsSection />
       <TrustMembersSlider />
       <StatsBar />
       <HighlightCards />

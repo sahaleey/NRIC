@@ -8,13 +8,6 @@ const PageLoader = ({ loading }) => {
       <div className="logo-container">
         <div className="logo-skeleton"></div>
       </div>
-
-      {/* Loading dots */}
-      <div className="loading-dots">
-        <div className="loading-dot"></div>
-        <div className="loading-dot"></div>
-        <div className="loading-dot"></div>
-      </div>
     </div>
   );
 };
