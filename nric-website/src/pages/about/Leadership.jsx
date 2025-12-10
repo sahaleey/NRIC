@@ -231,7 +231,7 @@ export default function Leadership() {
                           />
                         </div>
                         <div
-                          className={`absolute -bottom-2 -right-2 size-8 ${colors.bg} rounded-full flex items-center justify-center border-2 border-white 
+                          className={`absolute -bottom-2 -right-2 size-8 ${colors.bg} rounded-full flex items-center justify-center border-2 border-white `}
                         >
                           <GrBlockQuote className="size-3 text-white" />
                         </div>

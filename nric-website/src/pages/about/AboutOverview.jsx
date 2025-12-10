@@ -222,7 +222,7 @@ export default function AboutOverview() {
                             <IconComponent className="size-6 text-white" />
                           </div>
                           <span
-                            className={`text-xs font-semibold ${colors.text} bg-white  px-3 py-1 rounded-full border border-${link.color}-200 
+                            className={`text-xs font-semibold ${colors.text} bg-white  px-3 py-1 rounded-full border border-${link.color}-200 `}
                           >
                             {link.stats}
                           </span>
