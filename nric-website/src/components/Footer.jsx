@@ -47,7 +47,7 @@ export default function Footer() {
                     Nahjurrashad
                   </h3>
                   <p className="text-emerald-400 text-sm font-medium">
-                    Islamic College
+                    Islamic College Chamakkala
                   </p>
                 </div>
               </div>

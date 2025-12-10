@@ -10,10 +10,10 @@ import {
 import { galleryImages } from "../data/gallery";
 
 export default function EventsSection() {
-  // 1. Get Latest 5 Events (Sorted by Date)
+  // 1. Get Latest 5 Events
   const latestEvents = galleryImages
     .filter((img) => img.category === "Events")
-    .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort newest first
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +22,7 @@ export default function EventsSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % latestEvents.length);
-    }, 5000); // 5000ms = 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [latestEvents.length]);
