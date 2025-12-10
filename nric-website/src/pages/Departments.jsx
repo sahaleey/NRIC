@@ -142,20 +142,12 @@ export default function Departments() {
             </div>
           </div>
           <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
-            <div className="text-3xl font-bold text-blue-600  mb-2">
-              14+
-            </div>
-            <div className="text-gray-600  font-medium">
-              Expert Faculty
-            </div>
+            <div className="text-3xl font-bold text-blue-600  mb-2">14+</div>
+            <div className="text-gray-600  font-medium">Expert Faculty</div>
           </div>
           <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
-            <div className="text-3xl font-bold text-amber-600  mb-2">
-              3+
-            </div>
-            <div className="text-gray-600  font-medium">
-              Degree Programs
-            </div>
+            <div className="text-3xl font-bold text-amber-600  mb-2">3+</div>
+            <div className="text-gray-600  font-medium">Degree Programs</div>
           </div>
         </motion.div>
 
@@ -270,7 +262,7 @@ export default function Departments() {
                             className="size-16 md:size-20 rounded-full object-cover border-4 border-white  shadow-md"
                           />
                           <div
-                            className={`absolute bottom-0 right-0 p-1 bg-white  rounded-full border border-gray-200 
+                            className={`absolute bottom-0 right-0 p-1 bg-white  rounded-full border border-gray-200 `}
                           >
                             <FiCheckCircle
                               className={`size-4 ${colors.text}`}
