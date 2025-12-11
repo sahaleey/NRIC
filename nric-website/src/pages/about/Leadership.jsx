@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiAward, FiUsers, FiTarget } from "react-icons/fi";
 import { GrBlockQuote } from "react-icons/gr";
+import TrustMembersSlider from "../../sections/TrustMembersSlider";
 
 const leadershipTeam = [
   // --- ADDED PRESIDENT HERE ---
@@ -35,6 +36,14 @@ const leadershipTeam = [
       "Our campus is more than just classrooms; it's a community. We are dedicated to the holistic development of every student—intellectually, spiritually, and personally.",
     image: "/images/vice-principal.jpg",
     color: "amber",
+  },
+  {
+    role: "Manager",
+    name: "Abdul Kadar",
+    quote:
+      "Effective administration and transparent governance are the pillars supporting our academic mission. We ensure every resource serves the student.",
+    image: "/images/trustee/qadir.jpg",
+    color: "red",
   },
 ];
 
@@ -136,23 +145,28 @@ export default function Leadership() {
       border: "border-violet-200",
       text: "text-violet-600",
     },
+    red: {
+      bg: "bg-red-500",
+      border: "border-red-200",
+      text: "text-red-600",
+    },
   };
 
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50  "
+      className="py-20 md:py-28  bg-gradient-to-b from-white to-gray-50/50  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 m-8">
+      <div className="container  mx-auto px-4 sm:px-6 lg:px-8 m-8">
         {/* Header Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="text-center max-w-4xl mx-auto mb-16"
+          className="text-center  max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
             <div className="inline-flex items-center gap-2 bg-emerald-50  text-emerald-700  px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 ">
@@ -188,7 +202,7 @@ export default function Leadership() {
           whileInView="visible"
           viewport={{ once: true }}
           // CHANGED: Grid now supports 4 columns on large screens
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
           {leadershipTeam.map((leader, index) => {
             const colors = colorMap[leader.color];
@@ -260,7 +274,7 @@ export default function Leadership() {
             );
           })}
         </motion.div>
-
+        <TrustMembersSlider />
         {/* Leadership Principles */}
         <motion.div
           variants={containerVariants}

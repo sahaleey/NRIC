@@ -28,7 +28,7 @@ const campusFacilities = [
   },
   {
     icon: FiHome,
-    title: "Student Hostels",
+    title: "Students Hostel",
     description:
       "Comfortable accommodation with modern amenities, creating a home away from home for our students.",
     image: "/images/campus/hostel.jpg",
@@ -59,7 +59,7 @@ const campusFacilities = [
     title: "Sports Beach",
     description:
       "Modern sports facilities promoting physical fitness and team spirit among students.",
-    image: "/images/sports.jpg",
+    image: "/images/beach.png",
     features: [
       "Baseball Court",
       "Football Ground",
@@ -73,7 +73,7 @@ const campusFacilities = [
     title: "Canteen",
     description:
       "Hygienic and spacious canteen serving nutritious meals in a comfortable environment.",
-    image: "/images/cafeteria.jpg",
+    image: "/images/canteen.jpg",
     features: ["Halal Food", "Multiple Counters", "Snack Bar", "Dining Hall"],
     color: "red",
   },

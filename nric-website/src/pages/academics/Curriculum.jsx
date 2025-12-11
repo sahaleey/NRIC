@@ -53,6 +53,15 @@ const curriculumStructure = [
             "Conversation Practice",
           ],
         },
+        {
+          name: "Hindi",
+          topics: [
+            "Vyakaran (Grammar Basics)",
+            "Reading Comprehension",
+            "Writing & Composition",
+            "Vocabulary Building",
+          ],
+        },
       ],
       islamicSciences: [
         {
@@ -270,43 +279,47 @@ export default function Curriculum() {
       bg: "bg-emerald-500",
       text: "text-emerald-600",
       border: "border-emerald-200",
-      light: "bg-emerald-50 ",
+      light: "bg-emerald-50 dark:bg-emerald-900/20",
     },
     blue: {
       bg: "bg-blue-500",
       text: "text-blue-600",
       border: "border-blue-200",
-      light: "bg-blue-50 ",
+      light: "bg-blue-50 dark:bg-blue-900/20",
     },
     amber: {
       bg: "bg-amber-500",
       text: "text-amber-600",
       border: "border-amber-200",
-      light: "bg-amber-50 ",
+      light: "bg-amber-50 dark:bg-amber-900/20",
     },
   };
 
-  // Helper function to safely render subjects
   const renderLanguages = (subjects) => {
     if (!subjects?.languages) return null;
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900  mb-4 flex items-center gap-2">
+        <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
           <FiGlobe className="size-5 text-emerald-600" />
           Language Foundation
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           {subjects.languages.map((language, langIndex) => (
-            <div key={langIndex} className="bg-gray-50  rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900  mb-3">
+            <div
+              key={langIndex}
+              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+            >
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
                 {language.name}
               </h4>
               <div className="space-y-2">
                 {language.topics.map((topic, topicIndex) => (
                   <div key={topicIndex} className="flex items-center gap-3">
                     <FiCheck className="size-4 text-emerald-600 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 ">{topic}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                      {topic}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -322,21 +335,26 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900  mb-4 flex items-center gap-2">
+        <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
           <FiAward className="size-5 text-blue-600" />
           Islamic Sciences
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           {subjects.islamicSciences.map((science, scienceIndex) => (
-            <div key={scienceIndex} className="bg-gray-50  rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900  mb-3">
+            <div
+              key={scienceIndex}
+              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+            >
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
                 {science.name}
               </h4>
               <div className="space-y-2">
                 {science.topics.map((topic, topicIndex) => (
                   <div key={topicIndex} className="flex items-center gap-3">
                     <FiCheck className="size-4 text-blue-600 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 ">{topic}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                      {topic}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -352,20 +370,25 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900  mb-4">
+        <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4">
           Language Literature
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           {subjects.languageLiterature.map((literature, litIndex) => (
-            <div key={litIndex} className="bg-gray-50  rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900  mb-3">
+            <div
+              key={litIndex}
+              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+            >
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
                 {literature.name}
               </h4>
               <div className="space-y-2">
                 {literature.topics.map((topic, topicIndex) => (
                   <div key={topicIndex} className="flex items-center gap-3">
                     <FiCheck className="size-4 text-amber-600 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 ">{topic}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                      {topic}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -381,14 +404,16 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900  mb-4">
+        <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4">
           Modern Education
         </h3>
         <div className="grid md:grid-cols-2 gap-4">
           {subjects.modernSubjects.map((subject, idx) => (
             <div key={idx} className="flex items-center gap-3">
               <FiCheck className="size-4 text-green-600 flex-shrink-0" />
-              <span className="text-sm text-gray-600 ">{subject}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-400">
+                {subject}
+              </span>
             </div>
           ))}
         </div>
@@ -401,20 +426,25 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900  mb-4">
+        <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-4">
           Specialization Tracks
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           {subjects.specializationTracks.map((track, trackIndex) => (
-            <div key={trackIndex} className="bg-gray-50  rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900  mb-3">
+            <div
+              key={trackIndex}
+              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+            >
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
                 {track.name}
               </h4>
               <div className="space-y-2">
                 {track.subjects.map((subject, subjectIndex) => (
                   <div key={subjectIndex} className="flex items-center gap-3">
                     <FiCheck className="size-4 text-violet-600 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 ">{subject}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                      {subject}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -430,42 +460,44 @@ export default function Curriculum() {
 
     return (
       <div>
-        <h3 className="font-serif text-xl flex justify-center font-bold text-gray-900  mb-6">
+        <h3 className="font-serif text-xl flex justify-center font-bold text-gray-900 dark:text-white mb-6">
           Specialization Department
         </h3>
         <div className="flex justify-center gap-8">
           {departments.map((department, deptIndex) => (
             <div
               key={deptIndex}
-              className="border-2 border-gray-200  rounded-xl p-6"
+              className="border-2 border-gray-200 dark:border-gray-600 rounded-xl p-6"
             >
-              <h4 className="font-serif text-lg font-bold text-gray-900  mb-4">
+              <h4 className="font-serif text-lg font-bold text-gray-900 dark:text-white mb-4">
                 {department.name}
               </h4>
 
               <div className="mb-4">
-                <h5 className="font-semibold text-gray-900  mb-2">
+                <h5 className="font-semibold text-gray-900 dark:text-white mb-2">
                   Core Courses:
                 </h5>
                 <div className="space-y-1">
                   {department.coreCourses.map((course, courseIndex) => (
                     <div key={courseIndex} className="flex items-center gap-3">
                       <div className="size-1 bg-emerald-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-sm text-gray-600 ">{course}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        {course}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h5 className="font-semibold text-gray-900  mb-2">
+                <h5 className="font-semibold text-gray-900 dark:text-white mb-2">
                   Research Areas:
                 </h5>
                 <div className="flex flex-wrap gap-2">
                   {department.researchAreas.map((area, areaIndex) => (
                     <span
                       key={areaIndex}
-                      className="inline-block bg-emerald-50  text-emerald-700  px-2 py-1 rounded text-xs font-medium"
+                      className="inline-block bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-2 py-1 rounded text-xs font-medium"
                     >
                       {area}
                     </span>
@@ -479,9 +511,77 @@ export default function Curriculum() {
     );
   };
 
+  // --- NEW: Global Language Electives Component ---
+  const renderGlobalElectives = () => (
+    <motion.div
+      variants={itemVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
+    >
+      <div className="bg-green-600 p-6 text-white">
+        <div className="flex items-center gap-4">
+          <div className="size-12 bg-white/20 rounded-xl flex items-center justify-center">
+            <FiGlobe className="size-6 text-white" />
+          </div>
+          <div>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold">
+              Global Language Electives
+            </h2>
+            <p className="text-white/80">
+              Enhancing communication and professional readiness
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="p-6 lg:p-8">
+        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+          Beyond our core four languages, students can opt to learn additional
+          global languages to enhance their professional and diplomatic skills.
+          We currently offer the following and plan to expand this selection in
+          the future:
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              name: "Spanish",
+              focus: "Basic Conversation, Grammar, and Culture",
+            },
+            {
+              name: "French",
+              focus: "Introduction to French, Vocabulary, and Syntax",
+            },
+          ].map((lang, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex items-start gap-4"
+            >
+              <FiCheck className="size-5 text-emerald-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                  {lang.name}
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Focus: {lang.focus}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 italic">
+          These courses are offered on an elective basis and are subject to
+          availability.
+        </p>
+      </div>
+    </motion.div>
+  );
+
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50  "
+      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -496,7 +596,7 @@ export default function Curriculum() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-blue-50  text-blue-700  px-4 py-2 rounded-full text-sm font-semibold border border-blue-200 ">
+            <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-700">
               <FiBook className="size-4" />
               Integrated Curriculum
             </div>
@@ -504,7 +604,7 @@ export default function Curriculum() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-green-500 to-green-300 bg-clip-text text-transparent">
@@ -514,7 +614,7 @@ export default function Curriculum() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600  leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
           >
             A carefully designed 10-year integrated curriculum (5+2+3) that
             systematically builds from language foundations to specialized
@@ -539,7 +639,7 @@ export default function Curriculum() {
               <motion.div
                 key={phase.phase}
                 variants={itemVariants}
-                className="bg-white  rounded-2xl shadow-lg border border-gray-200  overflow-hidden"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
               >
                 {/* Phase Header */}
                 <div className={`${colors.bg} p-6 text-white`}>
@@ -572,13 +672,16 @@ export default function Curriculum() {
           })}
         </motion.div>
 
-        {/* Curriculum Overview */}
+        {/* --- NEW: Global Language Electives Section --- */}
+        {renderGlobalElectives()}
+
+        {/* Curriculum Overview (Updated Stats) */}
         <motion.div
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
             <h3 className="font-serif text-2xl md:text-3xl font-bold mb-6">
@@ -594,11 +697,14 @@ export default function Curriculum() {
                   Years of Progressive Learning
                 </p>
               </div>
+              {/* UPDATED STATS: Reflects 4 core + 2 electives */}
               <div>
-                <div className="text-4xl font-bold mb-2">4</div>
-                <div className="text-blue-100 font-semibold">Languages</div>
+                <div className="text-4xl font-bold mb-2">7+</div>
+                <div className="text-blue-100 font-semibold">
+                  Languages Taught
+                </div>
                 <p className="text-blue-200 text-sm mt-2">
-                  Malayalam, English, Urdu, Arabic
+                  Including Spanish & French Electives
                 </p>
               </div>
               <div>
