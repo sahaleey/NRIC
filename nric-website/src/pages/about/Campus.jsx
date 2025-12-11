@@ -202,7 +202,7 @@ export default function Campus() {
           viewport={{ once: true }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {campusStats.map((stat, index) => (
+          {campusStats.map((stat) => (
             <motion.div
               key={stat.label}
               variants={itemVariants}
@@ -225,7 +225,7 @@ export default function Campus() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {campusFacilities.map((facility, index) => {
+          {campusFacilities.map((facility) => {
             const IconComponent = facility.icon;
             const colors = colorMap[facility.color];
             return (

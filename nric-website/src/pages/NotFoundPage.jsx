@@ -164,7 +164,7 @@ const LostStudentAnimation = () => {
 };
 
 // --- Helper Component for Floating Background Items ---
-const FloatingElement = ({ d, color, delay, x, y }) => (
+const FloatingElement = ({ d, color, delay }) => (
   <motion.path
     d={d}
     fill={color}

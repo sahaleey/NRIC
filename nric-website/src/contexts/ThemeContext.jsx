@@ -1,6 +1,11 @@
 import { createContext, useState, useEffect, useContext } from "react";
 
 const ThemeContext = createContext();
+
+// Custom hook to use the theme context
+// eslint-disable-next-line react-refresh/only-export-components
+export const useTheme = () => useContext(ThemeContext);
+
 export function ThemeProvider({ children }) {
   // Set initial theme from localStorage or system preference
   const [theme, setTheme] = useState(() => {
@@ -36,5 +41,3 @@ export function ThemeProvider({ children }) {
     </ThemeContext.Provider>
   );
 }
-
-export const useTheme = () => useContext(ThemeContext);

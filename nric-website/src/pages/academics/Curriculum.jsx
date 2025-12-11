@@ -631,7 +631,7 @@ export default function Curriculum() {
           viewport={{ once: true }}
           className="space-y-16 mb-20"
         >
-          {curriculumStructure.map((phase, phaseIndex) => {
+          {curriculumStructure.map((phase) => {
             const IconComponent = phase.icon;
             const colors = colorMap[phase.color];
 

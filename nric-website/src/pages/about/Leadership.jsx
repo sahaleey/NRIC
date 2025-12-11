@@ -204,7 +204,7 @@ export default function Leadership() {
           // CHANGED: Grid now supports 4 columns on large screens
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
-          {leadershipTeam.map((leader, index) => {
+          {leadershipTeam.map((leader) => {
             const colors = colorMap[leader.color];
 
             return (
@@ -291,7 +291,7 @@ export default function Leadership() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leadershipPrinciples.map((principle, index) => {
+            {leadershipPrinciples.map((principle) => {
               const IconComponent = principle.icon;
               const colors = colorMap[principle.color];
 

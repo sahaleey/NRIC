@@ -23,7 +23,14 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': [
+        'error',
+        {
+          // Allow unused vars that start with uppercase or underscore
+          // Also allow 'motion' which is used in JSX member expressions
+          varsIgnorePattern: '^[A-Z_]|motion',
+        },
+      ],
     },
   },
 ])

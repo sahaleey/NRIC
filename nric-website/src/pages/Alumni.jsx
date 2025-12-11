@@ -253,7 +253,7 @@ export default function Alumni() {
             viewport={{ once: true }}
             className="grid grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {alumniStats.map((stat, index) => {
+            {alumniStats.map((stat) => {
               const IconComponent = stat.icon;
               return (
                 <motion.div
@@ -321,7 +321,7 @@ export default function Alumni() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {alumniClasses.map((classData, index) => {
+            {alumniClasses.map((classData) => {
               const colors = colorMap[classData.color];
 
               return (

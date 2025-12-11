@@ -145,7 +145,7 @@ export default function Privacy() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
         >
-          {policySections.map((section, index) => {
+          {policySections.map((section) => {
             const IconComponent = section.icon;
             const colors = colorMap[section.color];
 

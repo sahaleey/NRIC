@@ -182,7 +182,7 @@ export default function History() {
               {/* Timeline Line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-emerald-200 "></div>
 
-              {timelineEvents.map((event, index) => (
+              {timelineEvents.map((event) => (
                 <motion.div
                   key={event.year}
                   variants={itemVariants}
@@ -271,7 +271,7 @@ export default function History() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {visionPillars.map((pillar, index) => {
+            {visionPillars.map((pillar) => {
               const IconComponent = pillar.icon;
               const colors = colorMap[pillar.color];
 

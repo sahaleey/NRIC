@@ -69,7 +69,7 @@ export default function TrustMembersSlider() {
     }, SLIDE_DURATION);
 
     return () => clearInterval(timer);
-  }, [currentIndex, totalReal]);
+  }, [currentIndex, totalReal, totalDisplay]);
 
   // Handle infinite loop jump
   const handleTransitionEnd = () => {

@@ -144,7 +144,7 @@ export default function Terms() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
         >
-          {termsSections.map((section, index) => {
+          {termsSections.map((section) => {
             const IconComponent = section.icon;
             const colors = colorMap[section.color];
 
