@@ -74,7 +74,7 @@ export default function Departments() {
       light: "bg-emerald-50 ",
       border: "border-emerald-200",
       darkText: "text-emerald-800 ",
-      hodBg: "bg-emerald-50/50 ", // Special HoD BG
+      hodBg: "bg-emerald-50/50 ",
       hodBorder: "border-emerald-100 ",
     },
     blue: {
@@ -283,7 +283,7 @@ export default function Departments() {
 
                       <div className="relative bg-white  p-5 rounded-xl shadow-sm border border-gray-100  italic text-gray-600  text-sm leading-relaxed">
                         {/* Watermark Quote Icon */}
-                        <span className="absolute -top-3 left-4 text-5xl text-gray-100  leading-none select-none font-serif">
+                        <span className="absolute -top-3 left-4 text-5xl text-gray-900/40  leading-none select-none font-serif">
                           "
                         </span>
                         <p className="relative z-10">{dept.hod.message}</p>

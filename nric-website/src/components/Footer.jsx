@@ -92,8 +92,8 @@ export default function Footer() {
 
             {/* --- NEW: Donation / Support Card --- */}
             <div className="relative group mt-2">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl opacity-30 group-hover:opacity-60 transition duration-500 blur-sm"></div>
-              <div className="relative bg-zinc-900 border border-white/10 rounded-2xl p-5 overflow-hidden">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl opacity-30 group-hover:opacity-60 transition duration-500 blur-sm"></div>
+              <div className="relative bg-zinc-900 border-white/10 rounded-2xl p-5 overflow-hidden">
                 {/* Decorative Glow */}
                 <div className="absolute top-0 right-0 -mt-4 -mr-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl"></div>
 
@@ -114,7 +114,7 @@ export default function Footer() {
                   </p>
 
                   <Link
-                    to="/donate" // Ensure you create this route later!
+                    to="/donate"
                     className="inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-emerald-50 text-xs font-bold py-2.5 px-4 rounded-xl transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                   >
                     <span>Donate Now</span>
@@ -138,7 +138,7 @@ export default function Footer() {
                 { name: "Contact", path: "/contact" },
                 { name: "Campus", path: "/about/campus" },
                 { name: "Leadership", path: "/about/leadership" },
-                { name: "Gallery", path: "/gallery" }, // Added Gallery Link
+                { name: "Gallery", path: "/gallery" },
               ].map((link) => (
                 <Link
                   key={link.name}
