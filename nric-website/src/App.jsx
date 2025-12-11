@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 import Layout from "./components/Layout";
 import PageLoader from "./components/PageLoader";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // --- LAZY-LOADED PAGES ---
 
@@ -32,39 +33,41 @@ const Faculty = React.lazy(() => import("./pages/academics/Faculty"));
 export default function App() {
   return (
     <>
-      <Suspense fallback={<PageLoader loading={true} />}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader loading={true} />}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
 
-            {/* --- "About" Nested Route --- */}
-            <Route path="about" element={<About />}>
-              <Route index element={<AboutOverview />} />
-              <Route path="history" element={<History />} />
-              <Route path="leadership" element={<Leadership />} />
-              <Route path="campus" element={<Campus />} />
-              <Route path="accreditation" element={<Accreditation />} />
+              {/* --- "About" Nested Route --- */}
+              <Route path="about" element={<About />}>
+                <Route index element={<AboutOverview />} />
+                <Route path="history" element={<History />} />
+                <Route path="leadership" element={<Leadership />} />
+                <Route path="campus" element={<Campus />} />
+                <Route path="accreditation" element={<Accreditation />} />
+              </Route>
+
+              {/* --- "Academics" Nested Route --- */}
+              <Route path="academics" element={<Academics />}>
+                <Route index element={<Curriculum />} />
+                <Route path="curriculum" element={<Curriculum />} />
+                <Route path="faculty" element={<Faculty />} />
+              </Route>
+
+              <Route path="departments" element={<Departments />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="alumni" element={<Alumni />} />
+              <Route path="sitemap" element={<Sitemap />} />
+              <Route path="privacy" element={<Privacy />} />
+              <Route path="terms" element={<Terms />} />
+              <Route path="gallery" element={<Gallery />} />
+              <Route path="donate" element={<Donate />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Route>
-
-            {/* --- "Academics" Nested Route --- */}
-            <Route path="academics" element={<Academics />}>
-              <Route index element={<Curriculum />} />
-              <Route path="curriculum" element={<Curriculum />} />
-              <Route path="faculty" element={<Faculty />} />
-            </Route>
-
-            <Route path="departments" element={<Departments />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="alumni" element={<Alumni />} />
-            <Route path="sitemap" element={<Sitemap />} />
-            <Route path="privacy" element={<Privacy />} />
-            <Route path="terms" element={<Terms />} />
-            <Route path="gallery" element={<Gallery />} />
-            <Route path="donate" element={<Donate />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </Suspense>
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </>
   );
 }
