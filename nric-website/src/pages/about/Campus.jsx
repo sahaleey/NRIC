@@ -61,7 +61,7 @@ const campusFacilities = [
       "Modern sports facilities promoting physical fitness and team spirit among students.",
     image: "/images/beach.png",
     features: [
-      "Baseball Court",
+      "Volleyball Court",
       "Football Ground",
       "Indoor Games",
       "Karate Dojo",
