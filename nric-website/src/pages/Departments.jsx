@@ -30,7 +30,7 @@ const departments = [
     programs: ["Bachelor's in Hadith Sciences", "Advanced Research Programs"],
     color: "emerald",
     hod: {
-      name: "Muhammed Shuaib Hudawi",
+      name: "Shuaib Hudawi Vallapuzha",
       role: "Head of Department",
       image: "/images/faculty/shuhaib.jpg",
       message:
@@ -146,7 +146,9 @@ export default function Departments() {
             <div className="text-gray-600  font-medium">Expert Faculty</div>
           </div>
           <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
-            <div className="text-3xl font-bold text-amber-600  mb-2">3+</div>
+            <div className="text-3xl font-bold text-amber-600  mb-2">
+              3 Years
+            </div>
             <div className="text-gray-600  font-medium">Degree Programs</div>
           </div>
         </motion.div>

@@ -11,7 +11,6 @@ import {
   FiChevronUp,
 } from "react-icons/fi";
 import SEO from "../components/SEO";
-// ⚠️ Ensure this path is correct based on your project structure
 import { galleryImages } from "../data/gallery";
 
 const categories = ["All", "Campus", "Events", "Students"];
@@ -23,6 +22,7 @@ export default function Gallery() {
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [observerEnabled, setObserverEnabled] = useState(false);
 
   const loadMoreRef = useRef(null);
   const modalRef = useRef(null);
@@ -157,6 +157,19 @@ export default function Gallery() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  useEffect(() => {
+    if (visibleCount === 0 && filteredImages.length > 0) {
+      setVisibleCount(ITEMS_PER_PAGE);
+    }
+  }, [filteredImages]);
+  useEffect(() => {
+    setVisibleCount(Math.min(ITEMS_PER_PAGE, filteredImages.length));
+  }, []);
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setObserverEnabled(true);
+    });
+  }, []);
 
   // Download Handler
   const handleDownload = async (imageSrc, imageTitle) => {
@@ -238,39 +251,35 @@ export default function Gallery() {
 
         {/* --- MASONRY GRID (Pinterest Style) --- */}
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5 space-y-5">
-          <AnimatePresence>
-            {visibleImages.map((image, index) => (
-              <motion.div
-                key={image.id}
-                layout
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "50px" }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="break-inside-avoid mb-5"
+          {visibleImages.map((image, index) => (
+            <motion.div
+              key={image.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.03 }}
+              className="break-inside-avoid mb-5"
+            >
+              <div
+                onClick={() => setSelectedImage(image)}
+                className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200  shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <div
-                  onClick={() => setSelectedImage(image)}
-                  className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200  shadow-sm hover:shadow-xl transition-all duration-300"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.title}
-                    loading="lazy"
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  loading="lazy"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
-                    <FiZoomIn className="size-8 mb-2 opacity-80" />
-                    <h3 className="font-serif text-lg font-bold text-center leading-tight">
-                      {image.title}
-                    </h3>
-                  </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
+                  <FiZoomIn className="size-8 mb-2 opacity-80" />
+                  <h3 className="font-serif text-lg font-bold text-center leading-tight">
+                    {image.title}
+                  </h3>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* --- Load More Spinner --- */}
@@ -326,7 +335,6 @@ export default function Gallery() {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              // Responsive Flex: Col on mobile, Row on Desktop
               className="relative w-full max-w-6xl h-full sm:h-[90vh] bg-white  sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row"
               onClick={(e) => e.stopPropagation()}
             >

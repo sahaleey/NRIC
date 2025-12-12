@@ -22,7 +22,7 @@ export const facultyMembers = [
         email: "",
       },
       {
-        name: "Muhammed Shuaib Hudawi",
+        name: "Shuaib Hudawi Vallapuzha",
         position: "HoD of Hadith and Related Science Department",
         experience: "13 years experience",
         specialization:
@@ -136,7 +136,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Hassan Khan Hudawi",
         position: "Urdu Language & Literature Lecturer",
-        experience: "4 years experience",
+        experience: "3 years experience",
         specialization:
           "Expert in Urdu language, classical and modern Urdu literature, rhetoric, poetic forms, and linguistic analysis, with a strong command over translation, creative expression, and literary criticism.",
         bio: "A dedicated Urdu language expert with a deep love for its poetry, prose, and rich linguistic heritage. With experience in teaching language structure, literary appreciation, and creative writing, he guides students to understand Urdu not just as a language, but as an art form. ",
@@ -154,7 +154,7 @@ export const facultyMembers = [
         email: "mohammedabdurahoof527@gmail.com",
       },
       {
-        name: "Ansarudheen Hudawi",
+        name: "Ansarudeen Hudawi",
         position: "English Language & Fiqh lecturer",
         experience: "5 years experience",
         specialization:

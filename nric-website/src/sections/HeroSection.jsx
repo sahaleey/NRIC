@@ -229,15 +229,21 @@ export default function HeroSection() {
 
         {/* Location */}
         <motion.div
-          className="flex items-center justify-center text-gray-300 mb-8"
           variants={itemVariant}
           initial="hidden"
           animate="visible"
+          className="mb-10"
         >
-          <FaLocationDot className="size-5 mr-3 max-sm:ml-8 max-sm:mb-7 text-emerald-500" />
-          <span className="text-lg mr-5">
-            Thrissur, Kerala - Where Tradition Meets Excellence
-          </span>
+          {/* Divider */}
+          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent mx-auto mb-1" />
+
+          {/* Identity Line */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-gray-300 text-sm md:text-base tracking-wide">
+            <p className="mt-4 text-xs tracking-widest text-gray-200 uppercase">
+              <FaLocationDot className="inline-block mr-2 h-4 w-3 text-emerald-400" />
+              Thrissur · Kerala · India
+            </p>
+          </div>
         </motion.div>
 
         {/* CTA Buttons */}

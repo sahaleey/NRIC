@@ -93,7 +93,7 @@ export default function TrustMembersSlider() {
     : { duration: 0 };
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-zinc-950 overflow-hidden relative">
+    <section className="py-24 bg-gray-50  overflow-hidden relative">
       <div className="container mx-auto px-6 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
