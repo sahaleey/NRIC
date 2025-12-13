@@ -6,27 +6,17 @@ export const trustMembers = [
   },
   {
     name: "Dr. P Muhammed Kasim",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee1.jpg",
   },
   {
-    name: "Dr. V.K Husain ",
-    role: "Managing Director",
-    image: "/images/trustee/trustee2.jpg",
-  },
-  {
-    name: "M.A Saleem ",
-    role: "Director",
-    image: "/images/trustee/trustee3.jpg",
-  },
-  {
     name: "P.B Abdul Jabbar",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee13.jpg",
   },
   {
     name: "Kareem T Abdulla",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee4.png",
   },
   {
@@ -36,32 +26,27 @@ export const trustMembers = [
   },
   {
     name: "Abdurrahman Haji",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee11.jpg",
   },
   {
     name: "Salim M A",
-    role: "Managing Director",
-    image: "/images/trustee/trustee14.jpg",
+    role: "Director",
+    image: "/images/trustee/trustee3.jpg",
   },
   {
     name: "E.P Moosa Haji",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee8.jpg",
   },
   {
     name: "A.K Mansoor",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee9.jpg",
   },
   {
-    name: "Adeeb Ahmed",
-    role: "Managing Director",
-    image: "/images/trustee/trustee10.jpg",
-  },
-  {
     name: "C.K Majeed",
-    role: "Managing Director",
+    role: "Director",
     image: "/images/trustee/trustee12.jpg",
   },
 ];

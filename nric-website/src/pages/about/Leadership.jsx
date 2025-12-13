@@ -37,14 +37,6 @@ const leadershipTeam = [
     image: "/images/vice-principal.jpg",
     color: "amber",
   },
-  {
-    role: "Manager",
-    name: "Abdul Kadar",
-    quote:
-      "Effective administration and transparent governance are the pillars supporting our academic mission. We ensure every resource serves the student.",
-    image: "/images/trustee/qadir.jpg",
-    color: "red",
-  },
 ];
 
 const leadershipPrinciples = [

@@ -104,7 +104,7 @@ const ScrollIndicator = () => {
       className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-40"
     >
       <span className="text-[10px] font-medium tracking-[0.2em] text-emerald-400/80 uppercase animate-pulse">
-        Scroll
+        Scroll Down
       </span>
 
       {/* Mouse Body */}

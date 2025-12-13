@@ -8,11 +8,10 @@ const SLIDE_DURATION = 3000;
 const CLONES = 3;
 
 // --- Member Card ---
-// --- Member Card (Updated: No bio, role secondary) ---
 const MemberCard = ({ member }) => (
-  <div className="group relative w-[300px] h-[350px] flex-shrink-0 overflow-hidden rounded-2xl bg-white dark:bg-zinc-900 shadow-lg hover:shadow-xl transition-all duration-500 border border-zinc-100 dark:border-zinc-800">
+  <div className="group relative w-[300px] h-[350px] flex-shrink-0 overflow-hidden rounded-2xl bg-white  shadow-lg hover:shadow-xl transition-all duration-500 border border-zinc-100 ">
     {/* Image */}
-    <div className="h-[70%] w-full relative overflow-hidden bg-zinc-200 dark:bg-zinc-800">
+    <div className="h-[70%] w-full relative overflow-hidden bg-zinc-200 ">
       {member.image ? (
         <img
           src={member.image}
@@ -27,12 +26,12 @@ const MemberCard = ({ member }) => (
     </div>
 
     {/* Name + Role Only */}
-    <div className="absolute bottom-0 left-0 w-full p-5 bg-white dark:bg-zinc-900">
-      <h4 className="font-serif text-xl font-bold text-zinc-900 dark:text-white leading-tight">
+    <div className="absolute bottom-0 left-0 w-full p-5 bg-white ">
+      <h4 className="font-serif text-xl font-bold text-zinc-900  leading-tight">
         {member.name.toUpperCase()}
       </h4>
 
-      <p className="text-emerald-600 dark:text-emerald-400 text-xs font-medium tracking-wide uppercase mt-1">
+      <p className="text-emerald-600  text-xs font-medium tracking-wide uppercase mt-1">
         {member.role}
       </p>
     </div>
@@ -100,10 +99,10 @@ export default function TrustMembersSlider() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 dark:text-white">
+          <h3 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 ">
             Our <span className="text-emerald-600">Trustees</span>
           </h3>
-          <p className="text-zinc-500 dark:text-zinc-400 mt-2 max-w-lg">
+          <p className="text-zinc-500  mt-2 max-w-lg">
             Guiding our institution with wisdom and foresight for over two
             decades.
           </p>

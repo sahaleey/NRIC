@@ -402,11 +402,11 @@ export default function Accreditation() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Verify Our Credentials
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
               Our affiliation status is publicly verifiable on the official
               Darul Huda Islamic University website.
             </p>
@@ -414,7 +414,7 @@ export default function Accreditation() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {/* Option 1: Direct Link to DHIU (Best Trust Signal) */}
               <a
-                href="https://www.dhiu.in/institution.html?id=479" // ⚠️ Replace this with your specific profile link if you have one!
+                href="https://www.dhiu.in/institution.html?id=479"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/20"
@@ -428,7 +428,7 @@ export default function Accreditation() {
                 href="https://wa.me/919846902564?text=Hello,%20I%20would%20like%20to%20request%20official%20accreditation%20documents."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 hover:bg-gray-50 dark:hover:bg-zinc-700 text-gray-900 dark:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 font-semibold py-3 px-8 rounded-full transition-all duration-300"
               >
                 <FiCheck className="size-5 text-emerald-600" />
                 Request Documents

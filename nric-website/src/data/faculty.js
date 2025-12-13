@@ -28,7 +28,7 @@ export const facultyMembers = [
         specialization:
           "Expertise in Islamic jurisprudence (Fiqh), Quranic sciences, and Hadith studies, with strong command over legal methodology, thematic interpretation, and authentication of prophetic traditions.",
         bio: "A dedicated scholar with advanced knowledge in Islamic jurisprudence, Quranic sciences, and Hadith studies. He guides students through legal principles, textual interpretation, and the methodology of authenticating prophetic traditions. His teaching emphasizes clarity, disciplined reasoning, and deep reflection, helping learners approach Islamic knowledge with confidence, understanding, and a strong connection to classical scholarship.",
-        image: "/images/faculty/shuhaib.jpg",
+        image: "/images/faculty/shuaib.jpeg",
         email: "shuaibvallapuzha@gmail.com",
       },
       {

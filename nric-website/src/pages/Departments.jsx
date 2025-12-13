@@ -32,7 +32,7 @@ const departments = [
     hod: {
       name: "Shuaib Hudawi Vallapuzha",
       role: "Head of Department",
-      image: "/images/faculty/shuhaib.jpg",
+      image: "/images/faculty/shuaib.jpeg",
       message:
         "We strive to revive the legacy of Hadith scholarship by combining traditional chain analysis with contemporary critical thinking.",
     },
