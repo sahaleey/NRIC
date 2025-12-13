@@ -68,7 +68,7 @@ export const facultyMembers = [
         specialization:
           "Expertise in Malayalam language and literature, including classical and modern works, stylistic analysis, and linguistic structure, combined with strong involvement in social work, community development, and cultural education.",
         bio: "A dedicated lecturer with deep knowledge of Malayalam language and literature, committed to preserving its cultural richness and expressive power. Actively engaged in social work and community development, he integrates real-world perspectives into his teaching, helping students understand how language, culture, and society influence one another. His approach blends literary appreciation, social awareness, and practical engagement, inspiring learners to connect academic knowledge with meaningful community impact.",
-        image: "/images/faculty/shareef.webp",
+        image: "/images/faculty/shareef.jpg",
         email: "muhammedshareefkm1994@gmail.com",
       },
       {
