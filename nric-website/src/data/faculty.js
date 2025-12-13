@@ -29,10 +29,10 @@ export const facultyMembers = [
           "Expertise in Islamic jurisprudence (Fiqh), Quranic sciences, and Hadith studies, with strong command over legal methodology, thematic interpretation, and authentication of prophetic traditions.",
         bio: "A dedicated scholar with advanced knowledge in Islamic jurisprudence, Quranic sciences, and Hadith studies. He guides students through legal principles, textual interpretation, and the methodology of authenticating prophetic traditions. His teaching emphasizes clarity, disciplined reasoning, and deep reflection, helping learners approach Islamic knowledge with confidence, understanding, and a strong connection to classical scholarship.",
         image: "/images/faculty/shuhaib.jpg",
-        email: "",
+        email: "shuaibvallapuzha@gmail.com",
       },
       {
-        name: "Bahauddin Hudawi",
+        name: "Bahauddeen Hudawi",
         position: "Language, Literature & Quranic Studies Lecturer",
         experience: "14 years experience",
         specialization:
@@ -59,7 +59,7 @@ export const facultyMembers = [
           "Expertise in Arabic language, classical grammar, and modern linguistic skills combined with strong knowledge in social sciences, including cultural studies, sociology, and contemporary social analysis.",
         bio: "A dedicated lecturer skilled in both Arabic language and social sciences, committed to helping students understand how language shapes culture, society, and human behavior. With a balanced approach connecting classical Arabic foundations to modern social studies, he guides learners to think critically, communicate effectively, and interpret the world around them through informed perspectives.",
         image: "/images/faculty/swalih.jpg",
-        email: "",
+        email: "Swalihjalal3@gmail.com",
       },
       {
         name: "Muhammed Shareef Hudawi",
@@ -113,7 +113,7 @@ export const facultyMembers = [
         email: "ajnasmohammedt@gmail.com",
       },
       {
-        name: "Dul Fuqar Ali Hudawi",
+        name: "Mohammed Dhul Phukhar Ali Hudawi",
         position: "Arabic Grammar & Philosophy lecturer",
         experience: "4 years experience",
         specialization:
@@ -133,16 +133,6 @@ export const facultyMembers = [
         email: "muvafaqponnani@gmail.com",
       },
 
-      {
-        name: "Muhammed Hassan Khan Hudawi",
-        position: "Urdu Language & Literature Lecturer",
-        experience: "3 years experience",
-        specialization:
-          "Expert in Urdu language, classical and modern Urdu literature, rhetoric, poetic forms, and linguistic analysis, with a strong command over translation, creative expression, and literary criticism.",
-        bio: "A dedicated Urdu language expert with a deep love for its poetry, prose, and rich linguistic heritage. With experience in teaching language structure, literary appreciation, and creative writing, he guides students to understand Urdu not just as a language, but as an art form. ",
-        image: "/images/faculty/hassan.jpg",
-        email: " ",
-      },
       {
         name: "Muhammed Abdul Rahoof Hudawi",
         position: "IT & Fiqh lecturer",
@@ -174,6 +164,16 @@ export const facultyMembers = [
         email: "murshiddhiu@gmail.com",
       },
       {
+        name: "Muhammed Hassan Khan Hudawi",
+        position: "Urdu Language & Literature Lecturer",
+        experience: "3 years experience",
+        specialization:
+          "Expert in Urdu language, classical and modern Urdu literature, rhetoric, poetic forms, and linguistic analysis, with a strong command over translation, creative expression, and literary criticism.",
+        bio: "A dedicated Urdu language expert with a deep love for its poetry, prose, and rich linguistic heritage. With experience in teaching language structure, literary appreciation, and creative writing, he guides students to understand Urdu not just as a language, but as an art form. ",
+        image: "/images/faculty/hassan.jpg",
+        email: "khanhassanmuhammad14887@gmail.com",
+      },
+      {
         name: "Zainudheen Hudawi",
         position: "Fiqh & Usul Al-Fiqh lecturer",
         experience: "4 years experience",
@@ -184,17 +184,17 @@ export const facultyMembers = [
         email: "zainuzain194@gmail.com",
       },
       {
-        name: "Musthafa Sir",
+        name: "Musthafa K.I",
         position: "Math, Science & Economics lecturer",
         experience: "10 years experience",
         specialization:
           "Expertise in mathematics, general science, and business accounting with strong understanding of economic principles, financial literacy, and analytical reasoning, along with broad knowledge across current affairs, world studies, and general knowledge domains.",
         bio: "A versatile lecturer skilled in mathematics, science, and business accounting, with a strong foundation in economics and practical financial concepts. He also brings broad general knowledge that helps students connect academic subjects to real-world events and everyday understanding. His teaching emphasizes analytical thinking, problem-solving, and practical application, empowering learners to approach numbers, scientific ideas, and economic principles with confidence and clarity.",
         image: "/images/faculty/musthafa.jpg",
-        email: " ",
+        email: "musthafabinibrahim@gmail.com",
       },
       {
-        name: "Salih Sir",
+        name: "Salih",
         position: "Maths & Science lecturer",
         experience: "3 years experience",
         specialization:

@@ -302,7 +302,7 @@ export default function Campus() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="https://www.youtube.com/embed/He7DpI_Olts?si=P5VgjeApr1W4qL5s"
+                    href="https://youtu.be/WWAg23gCeLQ?si=1D35ePXtg7VZk2iP"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-center"
@@ -315,7 +315,7 @@ export default function Campus() {
                 <div className="bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/20">
                   <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                     <iframe
-                      src="https://www.youtube.com/embed/He7DpI_Olts?si=P5VgjeApr1W4qL5s"
+                      src="https://www.youtube.com/embed/WWAg23gCeLQ?si=aulfuN4QEVhOq3Jk"
                       title="Campus Virtual Tour"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
