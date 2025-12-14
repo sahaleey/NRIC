@@ -5,7 +5,7 @@ export default function WelcomeIntro() {
   const verse = useVerseOfTheDay();
 
   return (
-    <section className="relative overflow-hidden bg-linear-to-b  dar:via-gray-500  py-20 md:py-28">
+    <section className="relative overflow-hidden bg-linear-to-b    py-20 md:py-28">
       {/* Islamic geometric pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div

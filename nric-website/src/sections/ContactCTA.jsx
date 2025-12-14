@@ -20,7 +20,7 @@ export default function ContactCTA() {
       icon: FiMapPin,
       label: "Location",
       value: "Chamakkala, Thrissur, Kerala, India",
-      link: "https://www.bing.com/maps/search?name=NAHJURRASHAD+ISLAMIC+COLLEGE&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=NAHJURRASHAD+ISLAMIC+COLLEGE&ss=id.ypid%3AYN4070x6951068502097621561&ppois=10.352326393127441_76.11244201660156_NAHJURRASHAD+ISLAMIC+COLLEGE&cp=10.352326%7E76.112442&lvl=16",
+      link: "https://www.google.com/maps/search/Nahjurrashad+Islamic+College+Chamakkala,+Thrissur",
     },
   ];
 

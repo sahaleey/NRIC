@@ -291,7 +291,7 @@ export default function HeroSection() {
               className="size-5 ml-2 transform group-hover:translate-x-1 transition-transform"
               fill="none"
               stroke="currentColor"
-              viewBox="0 24 24"
+              viewBox="0 0 24 24"
             >
               <path
                 strokeLinecap="round"
