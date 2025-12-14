@@ -7,33 +7,40 @@ export default function SEO({ title, description, image, article = false }) {
   const siteUrl = "https://nric-chamakkala.vercel.app";
 
   // Defaults
-  const defaultTitle = "NRIC - Nahjurrashad Islamic College Chamakkala";
+  const brandTitle = "Nahjurrashad Islamic College Chammakkala";
   const defaultDescription =
-    "Nahjurrashad Islamic College (NRIC) Chamakkala - Empowering Minds, Enriching Souls. Explore our academic programs, campus life, and community engagement.";
+    "Nahjurrashad Islamic College (NRIC), Chammakkala – Empowering Minds, Enriching Souls. Explore academic programs, campus life, and community engagement.";
   const defaultImage = `${siteUrl}/images/dji-hero-desktop.jpg`;
 
-  // Construction
+  // Title logic (this is the fix)
+  const isHome = !title || title.toLowerCase() === "home";
+
+  const finalTitle = isHome ? brandTitle : `${title} | NRIC Chammakkala`;
+
   const seo = {
-    title: title ? `${title} | NRIC` : defaultTitle,
+    title: finalTitle,
     description: description || defaultDescription,
     image: image ? `${siteUrl}${image}` : defaultImage,
     url: `${siteUrl}${pathname}`,
   };
 
   return (
-    <Helmet title={seo.title}>
-      {/* 1. Standard Metadata */}
+    <Helmet>
+      {/* Title */}
+      <title>{seo.title}</title>
+
+      {/* Standard Metadata */}
       <meta name="description" content={seo.description} />
       <link rel="canonical" href={seo.url} />
 
-      {/* 2. Open Graph / Facebook */}
+      {/* Open Graph */}
       <meta property="og:type" content={article ? "article" : "website"} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
 
-      {/* 3. Twitter */}
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:title" content={seo.title} />
