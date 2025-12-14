@@ -1,4 +1,4 @@
-import { useVerseOfTheDay } from "../data/useVerseOfTheDay";
+import { useVerseOfTheDay } from "../hooks/useVerseOfTheDay";
 import { motion } from "framer-motion";
 
 export default function WelcomeIntro() {
