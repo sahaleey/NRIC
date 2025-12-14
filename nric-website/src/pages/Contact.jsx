@@ -9,6 +9,8 @@ import {
   FiSend,
   FiClock,
 } from "react-icons/fi";
+// Assumes you have installed and configured react-toastify
+import { toast } from "react-toastify";
 import SEO from "../components/SEO";
 
 export default function Contact() {
@@ -20,38 +22,38 @@ export default function Contact() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    // 1. Show a loading state is handled by 'isSubmitting' in the hook-form
+    // ⚠️ SECURITY IMPROVEMENT: This hardcoded number should ideally be stored
+    // in an environment variable (e.g., import.meta.env.VITE_WHATSAPP_NUMBER)
+    // and prefixed with the country code '91' for India.
+    const phoneNumber = "919846902564";
+
+    // Construct the pre-filled message body with form data
+    const messageBody = `*NRIC Website Inquiry*%0A%0A*Name*: ${data.name}%0A*Email*: ${data.email}%0A*Subject*: ${data.subject}%0A*Message*: ${data.message}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      messageBody
+    )}`;
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          // ⚠️ IMPORTANT: Go to web3forms.com, enter your email, and get your OWN Access Key.
-          // The key below is just a placeholder/example.
-          access_key: "03e1bcc1-92a6-46a7-bdc6-712659d08a53",
-          from_name: "NRIC Website", // Optional: Customizes the "From" name in your inbox
-          subject: `New Inquiry: ${data.subject}`, // Custom subject line
-          ...data,
-        }),
-      });
+      // 1. Show a success/redirect message using Toast (much better UX than alert)
+      toast.info(
+        "✅ Preparing WhatsApp chat. You will be redirected shortly...",
+        {
+          autoClose: 4000,
+        }
+      );
 
-      const result = await response.json();
+      // 2. Open the WhatsApp chat link in a new tab/window
+      window.open(whatsappURL, "_blank");
 
-      // 2. Check if the email was actually sent
-      if (result.success) {
-        alert(
-          "✅ Message sent successfully! Our administration will contact you shortly."
-        );
-        reset(); // Clears the form only on success
-      } else {
-        alert("⚠️ Something went wrong: " + result.message);
-      }
+      // 3. Clear the form after redirection is initiated
+      reset();
     } catch (error) {
-      alert("❌ Connection error. Please try again later.");
-      console.error("Form Error:", error);
+      toast.error("❌ Failed to open WhatsApp. Check your browser settings.");
+      console.error("WhatsApp Redirect Error:", error);
     }
   };
+
   const contactMethods = [
     {
       icon: FiMapPin,
@@ -61,6 +63,7 @@ export default function Contact() {
       description:
         "Located in the serene surroundings of Chamakkala, easily accessible from Thrissur city",
       color: "emerald",
+      type: "address",
     },
     {
       icon: FiPhone,
@@ -69,6 +72,9 @@ export default function Contact() {
       description:
         "Available during office hours: 9:00 AM - 5:00 PM, Monday - Friday",
       color: "blue",
+      type: "phone",
+      // Adding a callable primary number here for the a11y link
+      primaryNumber: "+919846902564",
     },
     {
       icon: FiMail,
@@ -76,6 +82,7 @@ export default function Contact() {
       details: "nahjurrashad@gmail.com",
       description: "We typically respond within 24 hours during working days",
       color: "amber",
+      type: "email",
     },
   ];
 
@@ -161,7 +168,7 @@ export default function Contact() {
           </motion.p>
         </motion.div>
 
-        {/* Contact Methods Grid */}
+        {/* Contact Methods Grid (Improved with A11y Links) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -189,9 +196,27 @@ export default function Contact() {
                   {method.title}
                 </h3>
 
-                <p className="text-gray-900  font-semibold mb-2">
-                  {method.details}
-                </p>
+                {/* --- Start of A11y/UX Improvement --- */}
+                {method.type === "phone" ? (
+                  <a
+                    href={`tel:${method.primaryNumber}`}
+                    className={`text-gray-900 font-semibold mb-2 hover:${colors.text} transition block`}
+                  >
+                    {method.details}
+                  </a>
+                ) : method.type === "email" ? (
+                  <a
+                    href={`mailto:${method.details}`}
+                    className={`text-gray-900 font-semibold mb-2 hover:${colors.text} transition block`}
+                  >
+                    {method.details}
+                  </a>
+                ) : (
+                  <p className="text-gray-900  font-semibold mb-2">
+                    {method.details}
+                  </p>
+                )}
+                {/* --- End of A11y/UX Improvement --- */}
 
                 <p className="text-gray-600  text-sm leading-relaxed">
                   {method.description}
@@ -219,8 +244,9 @@ export default function Contact() {
                   <h2 className="font-serif text-2xl font-bold text-gray-900 ">
                     Send Us a Message
                   </h2>
+                  {/* Updated Text */}
                   <p className="text-gray-600  text-sm">
-                    We'll contact you via WhatsApp
+                    Your inquiry will be prepared in WhatsApp
                   </p>
                 </div>
               </div>
@@ -326,20 +352,22 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button (Updated Text) */}
                 <motion.button
                   type="submit"
+                  // isSubmitting will show "Preparing..." momentarily before redirect
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                 >
                   <FiSend className="size-5" />
-                  {isSubmitting ? "Sending..." : "Send via WhatsApp"}
+                  {isSubmitting ? "Preparing WhatsApp..." : "Send via WhatsApp"}
                 </motion.button>
 
+                {/* Updated supporting text */}
                 <p className="text-center text-gray-500  text-sm">
-                  📱 Your message will open in WhatsApp for final sending
+                  ✅ Your message will open in WhatsApp for final sending
                 </p>
               </form>
             </div>
