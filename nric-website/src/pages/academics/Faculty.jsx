@@ -337,7 +337,7 @@ export default function Faculty() {
               We're always looking for passionate educators and scholars.
             </p>
             <a
-              href="mailto:careers@nahjurrashad.edu"
+              href="mailto:nahjurrashad@gmail.com?subject=Faculty%20Opportunities%20at%20NRIC"
               className="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Look for Faculty Opportunities
