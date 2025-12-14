@@ -11,7 +11,7 @@ export const trustMembers = [
   },
   {
     name: "P.B Abdul Jabbar",
-    role: "Director",
+    role: "Vice Chairman",
     image: "/images/trustee/trustee13.jpg",
   },
   {
@@ -21,7 +21,7 @@ export const trustMembers = [
   },
   {
     name: "V.A Hasan",
-    role: "Chairman",
+    role: "Vice Chairman",
     image: "/images/trustee/trustee5.jpg",
   },
   {
@@ -43,10 +43,5 @@ export const trustMembers = [
     name: "A.K Mansoor",
     role: "Director",
     image: "/images/trustee/trustee9.jpg",
-  },
-  {
-    name: "C.K Majeed",
-    role: "Director",
-    image: "/images/trustee/trustee12.jpg",
   },
 ];
