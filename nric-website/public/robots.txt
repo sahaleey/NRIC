@@ -1,33 +1,16 @@
-# --- robots.txt for Nahjurrashad Islamic College (NRIC) ---
-# Date Generated: 2025-12-15 
-# (Always update this date when deploying major content changes)
-
-# Global Crawl Settings: Applies to all major search engine robots
 User-agent: *
 
-# Set a moderate crawl-delay to be a good netizen and reduce unnecessary load.
-# Note: Googlebot often uses its own internal logic for crawl rate.
 Crawl-delay: 3
 
-# Allow: All content is crawlable by default, but we use Disallow below for specifics.
 Allow: /
 
-# --- Disallowed Paths ---
-# Purpose: Block pages/paths that do not offer unique public content, are internal-only,
-# or can cause duplicate content/crawl issues (like unnecessary parameter URLs).
-
-# 1. Block internal/utility/development paths
 Disallow: /admin/
 Disallow: /search/
-Disallow: /sitemap # Disallow the HTML sitemap page (XML sitemap link is below)
+Disallow: /sitemap 
 
-# 2. Block asset folders (prevents cluttering image search results)
 Disallow: /assets/
 Disallow: /public/
 
-# 3. Block URLs with query parameters (e.g., /page?id=123)
 Disallow: /*?
 
-# --- Sitemap Location ---
-# This is crucial. It tells all bots where to find the detailed page list.
 Sitemap: https://nric-chamakkala.vercel.app/sitemap.xml
