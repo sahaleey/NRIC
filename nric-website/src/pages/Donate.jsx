@@ -49,7 +49,7 @@ export default function Donate() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-4xl md:text-5xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl font-bold text-gray-900  mb-6"
           >
             Invest in the <span className="text-emerald-600">Future</span>
           </motion.h1>
@@ -88,7 +88,7 @@ export default function Donate() {
               <div className="p-3 bg-emerald-50  rounded-xl">
                 <FiCreditCard className="size-6 text-emerald-600" />
               </div>
-              <h2 className="font-serif text-2xl font-bold text-gray-900 ">
+              <h2 className="font-primary text-2xl font-bold text-gray-900 ">
                 Bank Transfer
               </h2>
             </div>
@@ -171,7 +171,7 @@ export default function Donate() {
               <div className="p-3 bg-white/10 rounded-xl mb-6 backdrop-blur-sm">
                 <FiSmartphone className="size-6 text-white" />
               </div>
-              <h2 className="font-serif text-2xl font-bold mb-2">
+              <h2 className="font-primary text-2xl font-bold mb-2">
                 UPI Payment
               </h2>
               <p className="text-emerald-100 text-sm mb-8">

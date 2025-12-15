@@ -43,7 +43,7 @@ export default function Footer() {
                   <div className="absolute -inset-1 bg-emerald-500/10 rounded-2xl blur-sm"></div>
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-bold text-white bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
+                  <h3 className="font-primary text-2xl font-bold text-white bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
                     Nahjurrashad
                   </h3>
                   <p className="text-emerald-400 text-sm font-medium">

@@ -150,7 +150,7 @@ export default function AboutOverview() {
               About Our Institution
             </div>
 
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
+            <h1 className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Nahjurrashad
@@ -229,7 +229,7 @@ export default function AboutOverview() {
                         </div>
 
                         {/* Title and Description */}
-                        <h3 className="font-serif text-2xl lg:text-3xl font-bold text-gray-900  mb-4 leading-tight">
+                        <h3 className="font-primary text-2xl lg:text-3xl font-bold text-gray-900  mb-4 leading-tight">
                           {link.title}
                         </h3>
                         <p className="text-gray-600  leading-relaxed mb-6">

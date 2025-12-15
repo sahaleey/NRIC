@@ -150,7 +150,7 @@ export default function Contact() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Contact{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -192,7 +192,7 @@ export default function Contact() {
                   <IconComponent className="size-7 text-white" />
                 </div>
 
-                <h3 className="font-serif text-lg font-bold text-gray-900  mb-2">
+                <h3 className="font-primary text-lg font-bold text-gray-900  mb-2">
                   {method.title}
                 </h3>
 
@@ -241,7 +241,7 @@ export default function Contact() {
                   <FiSend className="size-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-gray-900 ">
+                  <h2 className="font-primary text-2xl font-bold text-gray-900 ">
                     Send Us a Message
                   </h2>
                   {/* Updated Text */}
@@ -383,7 +383,7 @@ export default function Contact() {
           >
             {/* Campus Information */}
             <div className="bg-white  rounded-2xl shadow-xl border border-gray-200  p-8">
-              <h3 className="font-serif text-2xl font-bold text-gray-900  mb-6">
+              <h3 className="font-primary text-2xl font-bold text-gray-900  mb-6">
                 Campus Information
               </h3>
 
@@ -423,7 +423,7 @@ export default function Contact() {
             {/* Google Maps Embed */}
             <div className="bg-white  rounded-2xl shadow-xl border border-gray-200  overflow-hidden">
               <div className="p-6 border-b border-gray-200 ">
-                <h3 className="font-serif text-xl font-bold text-gray-900  flex items-center gap-2">
+                <h3 className="font-primary text-xl font-bold text-gray-900  flex items-center gap-2">
                   <FiMapPin className="size-5 text-emerald-600" />
                   Find Our Campus
                 </h3>

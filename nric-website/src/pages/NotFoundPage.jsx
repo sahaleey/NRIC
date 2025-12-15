@@ -254,7 +254,7 @@ export default function NotFoundPage() {
 
           {/* Main Message */}
           <motion.div variants={itemVariants} className="mb-10">
-            <h2 className="font-serif text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="font-primary text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               Looks like this page skipped class.
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto">

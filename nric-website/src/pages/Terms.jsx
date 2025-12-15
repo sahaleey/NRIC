@@ -103,7 +103,7 @@ export default function Terms() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Terms of{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -161,7 +161,7 @@ export default function Terms() {
                     <IconComponent className="size-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-2">
+                    <h3 className="font-primary text-xl font-bold text-gray-900  mb-2">
                       {section.title}
                     </h3>
                     <p className="text-gray-600  leading-relaxed">
@@ -186,7 +186,7 @@ export default function Terms() {
             <div className="prose  lg:prose-lg max-w-none text-gray-700 ">
               {/* Introduction */}
               <div className="mb-8">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900  mb-4">
+                <h2 className="font-primary text-2xl md:text-3xl font-bold text-gray-900  mb-4">
                   Introduction
                 </h2>
                 <p className="leading-relaxed">
@@ -212,7 +212,7 @@ export default function Terms() {
 
               {/* Acceptance of Terms */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiUserCheck className="text-emerald-600" />
                   1. Acceptance of Terms
                 </h3>
@@ -227,7 +227,7 @@ export default function Terms() {
 
               {/* Use of the Site */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   2. Use of the Site
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -260,7 +260,7 @@ export default function Terms() {
 
               {/* Intellectual Property */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiShield className="text-amber-600" />
                   3. Intellectual Property Rights
                 </h3>
@@ -287,7 +287,7 @@ export default function Terms() {
 
               {/* User Conduct and Responsibilities */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiAlertTriangle className="text-red-600" />
                   4. User Conduct and Responsibilities
                 </h3>
@@ -327,7 +327,7 @@ export default function Terms() {
 
               {/* Disclaimers */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   5. Disclaimers and Limitations
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -354,7 +354,7 @@ export default function Terms() {
 
               {/* Limitation of Liability */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   6. Limitation of Liability
                 </h3>
                 <p className="leading-relaxed">
@@ -383,7 +383,7 @@ export default function Terms() {
 
               {/* Governing Law */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiGlobe className="text-blue-600" />
                   7. Governing Law and Jurisdiction
                 </h3>
@@ -398,7 +398,7 @@ export default function Terms() {
 
               {/* Changes to Terms */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   8. Changes to Terms
                 </h3>
                 <p className="leading-relaxed">
@@ -417,7 +417,7 @@ export default function Terms() {
 
               {/* Contact Information */}
               <div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   9. Contact Information
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -460,7 +460,7 @@ export default function Terms() {
           className="text-center mt-12"
         >
           <div className="bg-blue-50  rounded-2xl p-8 border border-blue-200 ">
-            <h3 className="font-serif text-xl font-bold text-gray-900  mb-4">
+            <h3 className="font-primary text-xl font-bold text-gray-900  mb-4">
               Agreement Confirmation
             </h3>
             <p className="text-gray-600  mb-6">

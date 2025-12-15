@@ -27,7 +27,7 @@ const MemberCard = ({ member }) => (
 
     {/* Name + Role Only */}
     <div className="absolute bottom-0 left-0 w-full p-5 bg-white ">
-      <h4 className="font-serif text-xl font-bold text-zinc-900  leading-tight">
+      <h4 className="font-primary text-xl font-bold text-zinc-900  leading-tight">
         {member.name.toUpperCase()}
       </h4>
 
@@ -99,7 +99,7 @@ export default function TrustMembersSlider() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 ">
+          <h3 className="text-4xl md:text-5xl font-primary font-bold text-zinc-900 ">
             Our <span className="text-emerald-600">Trustees</span>
           </h3>
           <p className="text-zinc-500  mt-2 max-w-lg">

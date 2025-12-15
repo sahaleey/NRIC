@@ -116,7 +116,7 @@ export default function EventsSection() {
                   </div>
 
                   {/* Title */}
-                  <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+                  <h2 className="font-primary text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
                     {latestEvents[currentIndex].title}
                   </h2>
 

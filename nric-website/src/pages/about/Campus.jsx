@@ -59,7 +59,7 @@ const campusFacilities = [
     title: "Sports Beach",
     description:
       "Modern sports facilities promoting physical fitness and team spirit among students.",
-    image: "/images/beach.png",
+    image: "/images/campus/beach.png",
     features: [
       "Volleyball Court",
       "Football Ground",
@@ -176,7 +176,7 @@ export default function Campus() {
           </motion.div>
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Explore Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -253,7 +253,7 @@ export default function Campus() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-3">
+                    <h3 className="font-primary text-xl font-bold text-gray-900  mb-3">
                       {facility.title}
                     </h3>
                     <p className="text-gray-600  leading-relaxed mb-4">
@@ -293,7 +293,7 @@ export default function Campus() {
             {/* ... (Your full virtual tour layout) ... */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="font-primary text-3xl md:text-4xl font-bold mb-4">
                   Experience Our Campus Virtually
                 </h2>
                 <p className="text-emerald-100 text-lg leading-relaxed mb-6">
@@ -343,7 +343,7 @@ export default function Campus() {
                 <FiUsers className="size-4" />
                 Student Life
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-6">
+              <h2 className="font-primary text-3xl md:text-4xl font-bold text-gray-900  mb-6">
                 Hisan: The Student Union
               </h2>
               <div className="space-y-4 text-gray-600  text-lg leading-relaxed">
@@ -391,7 +391,7 @@ export default function Campus() {
         >
           {/* ... (Your full location & map layout) ... */}
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-6">
+            <h2 className="font-primary text-3xl md:text-4xl font-bold text-gray-900  mb-6">
               Visit Our Campus
             </h2>
             <div className="space-y-4 text-gray-600 ">

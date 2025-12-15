@@ -6,12 +6,12 @@ export const trustMembers = [
   },
   {
     name: "Dr. P Muhammed Kasim",
-    role: "Director",
+    role: "Vice Chairman",
     image: "/images/trustee/trustee1.jpg",
   },
   {
     name: "P.B Abdul Jabbar",
-    role: "Vice Chairman",
+    role: "Director",
     image: "/images/trustee/trustee13.jpg",
   },
   {
@@ -23,6 +23,11 @@ export const trustMembers = [
     name: "V.A Hasan",
     role: "Vice Chairman",
     image: "/images/trustee/trustee5.jpg",
+  },
+  {
+    name: "P.I Safar Ali Ismail",
+    role: "Managing Trustee",
+    image: "/images/trustee/trustee2.jpg",
   },
   {
     name: "Abdurrahman Haji",

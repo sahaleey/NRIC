@@ -127,7 +127,7 @@ export default function Faculty() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
@@ -222,7 +222,7 @@ export default function Faculty() {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
                           <div className="absolute bottom-4 left-4 text-white">
-                            <h3 className="font-serif text-xl font-bold ">
+                            <h3 className="font-primary text-xl font-bold ">
                               {faculty.name.toUpperCase()}
                             </h3>
                             <p className="text-white/90 text-sm">
@@ -284,7 +284,7 @@ export default function Faculty() {
           <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="font-primary text-2xl md:text-3xl font-bold mb-4">
                   Our Teaching Philosophy
                 </h3>
                 <p className="text-amber-100 text-lg leading-relaxed mb-6">
@@ -330,7 +330,7 @@ export default function Faculty() {
           className="mt-12 text-center"
         >
           <div className="bg-white  rounded-2xl p-8 shadow-lg border border-gray-200 ">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900  mb-4">
+            <h3 className="font-primary text-2xl md:text-3xl font-bold text-gray-900  mb-4">
               Join Our Academic Team
             </h3>
             <p className="text-gray-600  text-lg mb-6 max-w-2xl mx-auto">

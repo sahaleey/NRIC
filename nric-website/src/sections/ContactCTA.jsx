@@ -102,7 +102,7 @@ export default function ContactCTA() {
               We're Here to Help
             </div>
 
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
+            <h2 className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
               Ready to{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Start Your Journey?

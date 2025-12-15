@@ -93,21 +93,19 @@ const DescriptionSection = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.2 }}
     transition={{ duration: 0.8 }}
-    className="mb-16 p-6 md:p-10 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
+    className="mb-16 p-6 md:p-10 bg-white rounded-xl shadow-lg border border-gray-200"
   >
     <div className="flex items-center gap-4 mb-4">
       <div
         className={`size-10 bg-${theme}-500/10 rounded-lg flex items-center justify-center`}
       >
-        <Icon className={`size-5 text-${theme}-600 dark:text-${theme}-400`} />
+        <Icon className={`size-5 text-${theme}-600`} />
       </div>
-      <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+      <h2 className="font-primary text-2xl md:text-3xl font-bold text-gray-900">
         {title}
       </h2>
     </div>
-    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-      {content}
-    </p>
+    <p className="text-gray-600 leading-relaxed text-lg">{content}</p>
   </motion.div>
 );
 
@@ -189,7 +187,7 @@ export default function Leadership() {
 
   return (
     <motion.div
-      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50"
+      className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50/50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -205,7 +203,7 @@ export default function Leadership() {
         >
           {/* ... (Existing badge and H1/P content) ... */}
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200 dark:border-emerald-700">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-200">
               <FiUsers className="size-4" />
               Meet Our Leadership
             </div>
@@ -213,7 +211,7 @@ export default function Leadership() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
             Guiding{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -223,7 +221,7 @@ export default function Leadership() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 leading-relaxed"
           >
             The success of Nahjurrashad is driven by a layered structure of
             visionary leaders, dedicated executive management, and a robust
@@ -258,7 +256,7 @@ export default function Leadership() {
                 className="group h-full"
               >
                 {/* ... (Existing Leadership Card JSX) ... */}
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 overflow-hidden transition-all duration-300 h-full flex flex-col">
                   {/* Profile Header */}
                   <div
                     className={`${colors.bg} p-6 text-white relative overflow-hidden`}
@@ -267,7 +265,7 @@ export default function Leadership() {
                       <GrBlockQuote className="size-16" />
                     </div>
                     <div className="relative z-10">
-                      <h3 className="font-serif text-xl font-bold mb-1 ">
+                      <h3 className="font-primary text-xl font-bold mb-1 ">
                         {leader.name.toUpperCase()}
                       </h3>
                       <p className="text-white/90 font-medium text-sm">
@@ -281,15 +279,15 @@ export default function Leadership() {
                     {/* Profile Image */}
                     <div className="flex justify-center -mt-16 mb-6">
                       <div className="relative">
-                        <div className="size-24 bg-white dark:bg-gray-800 rounded-full p-1 shadow-lg">
+                        <div className="size-24 bg-white rounded-full p-1 shadow-lg">
                           <img
                             src={leader.image}
                             alt={leader.name}
-                            className="size-full object-cover rounded-full border-4 border-white dark:border-gray-800"
+                            className="size-full object-cover rounded-full border-4 border-white"
                           />
                         </div>
                         <div
-                          className={`absolute -bottom-2 -right-2 size-8 ${colors.bg} rounded-full flex items-center justify-center border-2 border-white dark:border-gray-800`}
+                          className={`absolute -bottom-2 -right-2 size-8 ${colors.bg} rounded-full flex items-center justify-center border-2 border-white `}
                         >
                           <GrBlockQuote className="size-3 text-white" />
                         </div>
@@ -297,14 +295,14 @@ export default function Leadership() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed text-center mb-6 italic flex-grow">
+                    <blockquote className="text-gray-600 text-sm leading-relaxed text-center mb-6 italic flex-grow">
                       "{leader.quote}"
                     </blockquote>
 
                     {/* Role Badge */}
                     <div className="text-center mt-auto">
                       <span
-                        className={`inline-flex items-center gap-2 ${colors.text} bg-${leader.color}-50 dark:bg-${leader.color}-900/20 px-3 py-1.5 rounded-full text-xs font-semibold border ${colors.border}`}
+                        className={`inline-flex items-center gap-2 ${colors.text} bg-${leader.color}-50 px-3 py-1.5 rounded-full text-xs font-semibold border ${colors.border}`}
                       >
                         <div
                           className={`size-2 ${colors.bg} rounded-full`}
@@ -321,16 +319,16 @@ export default function Leadership() {
 
         {/* --- 2. Gulf Committee Description --- */}
         <DescriptionSection
-          title="International Support Committees (Gulf)"
-          content="Our Gulf Committee is instrumental in expanding NRIC's global outreach and securing crucial financial and advisory support. Composed of prominent alumni and patrons, they ensure our resources and vision meet international standards."
+          title="AL-USRA International Support Committee (Gulf)"
+          content="The AL-USRA Gulf Committee is a powerful international body of 40 distinguished members, led by a core leadership team of 5 senior figures. This committee drives NRIC’s global expansion, mobilizes strategic funding, and provides high-level guidance rooted in international standards. Their influence strengthens NRIC’s vision, credibility, and long-term global impact."
           icon={FiGlobe}
           theme="blue"
         />
 
         {/* --- 3. Local Committee Description --- */}
         <DescriptionSection
-          title="Local Managing Committee"
-          content="The Managing Committee oversees the immediate well-being and logistical needs of the college. They are the local operational backbone, ensuring campus facilities, student welfare, and day-to-day administration run seamlessly."
+          title="Managing Committee"
+          content="The Managing Committee is a focused team of 21 dedicated members, guided by 3 key leaders who ensure effective governance and execution. As the operational backbone of the institution, they oversee campus management, student welfare, and administrative continuity, translating vision into smooth, day-to-day functioning."
           icon={FiBriefcase}
           theme="amber"
         />
@@ -338,7 +336,7 @@ export default function Leadership() {
         {/* --- 4. Trust Description --- */}
         <DescriptionSection
           title="The NRIC Trust (Governance)"
-          content="The Trust is the apex governing body responsible for the strategic, legal, and financial integrity of the institution. They protect the college's founding principles and ensure long-term stability and compliance."
+          content="The NRIC Trust is the apex governing authority of the institution, holding ultimate responsibility for its strategic direction, legal standing, and financial integrity. As the guardian of NRIC’s founding vision, the Trust ensures disciplined governance, institutional continuity, and long-term stability."
           icon={FiTarget}
           theme="violet"
         />
@@ -356,7 +354,7 @@ export default function Leadership() {
         >
           <motion.h2
             variants={itemVariants}
-            className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-12"
+            className="font-primary text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12"
           >
             Our Shared Leadership Principles
           </motion.h2>
@@ -372,18 +370,18 @@ export default function Leadership() {
                   variants={cardVariants}
                   className="group text-center h-full"
                 >
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 h-full transition-all duration-300 hover:shadow-lg">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200 h-full transition-all duration-300 hover:shadow-lg">
                     <div
                       className={`inline-flex size-16 ${colors.bg} rounded-xl items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                     >
                       <IconComponent className="size-7 text-white" />
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-primary text-xl font-bold text-gray-900 mb-3">
                       {principle.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                    <p className="text-gray-600 leading-relaxed text-sm">
                       {principle.description}
                     </p>
                   </div>

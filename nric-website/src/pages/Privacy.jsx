@@ -104,7 +104,7 @@ export default function Privacy() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Privacy{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -162,7 +162,7 @@ export default function Privacy() {
                     <IconComponent className="size-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-2">
+                    <h3 className="font-primary text-xl font-bold text-gray-900  mb-2">
                       {section.title}
                     </h3>
                     <p className="text-gray-600  leading-relaxed">
@@ -187,7 +187,7 @@ export default function Privacy() {
             <div className="prose  lg:prose-lg max-w-none text-gray-700 ">
               {/* Introduction */}
               <div className="mb-8">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900  mb-4">
+                <h2 className="font-primary text-2xl md:text-3xl font-bold text-gray-900  mb-4">
                   Introduction
                 </h2>
                 <p className="leading-relaxed">
@@ -206,7 +206,7 @@ export default function Privacy() {
 
               {/* Information Collection and Use */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiUser className="text-emerald-600" />
                   1. Information Collection and Use
                 </h3>
@@ -232,7 +232,7 @@ export default function Privacy() {
 
               {/* Log Data */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   2. Log Data
                 </h3>
                 <p className="leading-relaxed">
@@ -248,7 +248,7 @@ export default function Privacy() {
 
               {/* How We Use Your Information */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiMail className="text-blue-600" />
                   3. How We Use Your Information
                 </h3>
@@ -280,7 +280,7 @@ export default function Privacy() {
 
               {/* Information Sharing */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4 flex items-center gap-3">
                   <FiLock className="text-violet-600" />
                   4. Information Sharing and Disclosure
                 </h3>
@@ -312,7 +312,7 @@ export default function Privacy() {
 
               {/* Security */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   5. Data Security
                 </h3>
                 <p className="leading-relaxed mb-4">
@@ -333,7 +333,7 @@ export default function Privacy() {
 
               {/* Changes to Policy */}
               <div className="mb-8">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   6. Changes to This Privacy Policy
                 </h3>
                 <p className="leading-relaxed">
@@ -354,7 +354,7 @@ export default function Privacy() {
 
               {/* Contact Information */}
               <div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-gray-900  mb-4">
+                <h3 className="font-primary text-xl md:text-2xl font-bold text-gray-900  mb-4">
                   7. Contact Us
                 </h3>
                 <p className="leading-relaxed mb-4">

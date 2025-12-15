@@ -84,7 +84,7 @@ export default function Sitemap() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Website{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -165,7 +165,7 @@ export default function Sitemap() {
                       >
                         <Icon className="size-6 text-white" />
                       </div>
-                      <h2 className="font-serif text-xl font-bold text-gray-900 ">
+                      <h2 className="font-primary text-xl font-bold text-gray-900 ">
                         {section.section}
                       </h2>
                     </div>
@@ -212,7 +212,7 @@ export default function Sitemap() {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="font-primary text-2xl md:text-3xl font-bold mb-4">
               Need Help Navigating?
             </h3>
             <p className="text-emerald-100 text-lg max-w-2xl mx-auto leading-relaxed mb-6">

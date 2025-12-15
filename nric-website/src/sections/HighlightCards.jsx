@@ -27,13 +27,14 @@ const cards = [
     color: "emerald",
   },
   {
-    title: "Alumni Network",
+    // --- UPDATED ALUMNI CARD ---
+    title: "NAFIA Alumni Network",
     description:
-      "Connect with our successful graduates making impacts worldwide across various industries.",
+      "Connect with NAFIA, the official network of our successful graduates making impacts worldwide.",
     link: "/alumni",
-    imageUrl: "/images/IMG_4094.jpg",
+    imageUrl: "/images/nafia_action.jpg",
     icon: FiAward,
-    stats: "500+ Graduates",
+    stats: "500+ NAFIA Members", // Updated text
     gradient: "from-amber-500/20 to-orange-600/20",
     color: "amber",
   },
@@ -98,7 +99,7 @@ export default function HighlightCards() {
             <FiStar className="size-4" />
             Explore Our Campus
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-4">
+          <h2 className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-4">
             Discover{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Nahjurrashad
@@ -165,7 +166,7 @@ export default function HighlightCards() {
                       </div>
 
                       <div className="space-y-4">
-                        <h3 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight">
+                        <h3 className="font-primary text-2xl lg:text-3xl font-bold text-white leading-tight">
                           {card.title}
                         </h3>
                         <p className="text-gray-200 text-lg leading-relaxed opacity-90">

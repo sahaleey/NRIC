@@ -19,7 +19,7 @@ export default function Academics() {
           />
         </div>
         <motion.h1
-          className="relative z-10 font-serif text-5xl md:text-6xl font-bold"
+          className="relative z-10 font-primary text-5xl md:text-6xl font-bold"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}

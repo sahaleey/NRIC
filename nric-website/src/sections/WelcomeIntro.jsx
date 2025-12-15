@@ -33,7 +33,7 @@ export default function WelcomeIntro() {
                 Verse of the Day
               </div>
 
-              <blockquote className="mt-6 font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 ">
+              <blockquote className="mt-6 font-secondary text-2xl md:text-3xl leading-relaxed text-gray-800 ">
                 “{verse.text}”
               </blockquote>
               <p className="text-right text-gray-500  mt-6 font-medium">
@@ -49,7 +49,7 @@ export default function WelcomeIntro() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900  mb-6">
+            <h2 className="font-primary text-4xl md:text-5xl font-bold text-gray-900  mb-6">
               Welcome to{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-400">
                 Nahjurrashad

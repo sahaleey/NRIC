@@ -148,7 +148,7 @@ export default function StatsBar() {
             </span>
           </motion.div>
 
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Excellence in{" "}
             <span className="text-amber-400">Islamic Education</span>
           </h2>
@@ -250,7 +250,7 @@ export default function StatsBar() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 + 1.0 }}
-                            className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-white"
+                            className="font-primary text-4xl lg:text-5xl xl:text-6xl font-bold text-white"
                           >
                             {stat.suffix}
                           </motion.span>

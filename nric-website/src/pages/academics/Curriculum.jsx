@@ -300,7 +300,7 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+        <h3 className="font-primary text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <FiGlobe className="size-5 text-emerald-600" />
           Language Foundation
         </h3>
@@ -330,7 +330,7 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+        <h3 className="font-primary text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <FiAward className="size-5 text-blue-600" />
           Islamic Sciences
         </h3>
@@ -360,7 +360,7 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">
+        <h3 className="font-primary text-xl font-bold text-gray-900 mb-4">
           Language Literature
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
@@ -389,7 +389,7 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">
+        <h3 className="font-primary text-xl font-bold text-gray-900 mb-4">
           Modern Education
         </h3>
         <div className="grid md:grid-cols-2 gap-4">
@@ -409,7 +409,7 @@ export default function Curriculum() {
 
     return (
       <div className="mb-8">
-        <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">
+        <h3 className="font-primary text-xl font-bold text-gray-900 mb-4">
           Specialization Tracks
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
@@ -436,7 +436,7 @@ export default function Curriculum() {
 
     return (
       <div>
-        <h3 className="font-serif text-xl flex justify-center font-bold text-gray-900 mb-6">
+        <h3 className="font-primary text-xl flex justify-center font-bold text-gray-900 mb-6">
           Specialization Department
         </h3>
         <div className="flex justify-center gap-8">
@@ -445,7 +445,7 @@ export default function Curriculum() {
               key={deptIndex}
               className="border-2 border-gray-200 rounded-xl p-6"
             >
-              <h4 className="font-serif text-lg font-bold text-gray-900 mb-4">
+              <h4 className="font-primary text-lg font-bold text-gray-900 mb-4">
                 {department.name}
               </h4>
 
@@ -500,7 +500,7 @@ export default function Curriculum() {
             <FiGlobe className="size-6 text-white" />
           </div>
           <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-bold">
+            <h2 className="font-primary text-2xl md:text-3xl font-bold">
               Global Language Electives
             </h2>
             <p className="text-white/80">
@@ -576,7 +576,7 @@ export default function Curriculum() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-green-500 to-green-300 bg-clip-text text-transparent">
@@ -620,7 +620,7 @@ export default function Curriculum() {
                       <IconComponent className="size-6 text-white" />
                     </div>
                     <div>
-                      <h2 className="font-serif text-2xl md:text-3xl font-bold">
+                      <h2 className="font-primary text-2xl md:text-3xl font-bold">
                         {phase.phase}
                       </h2>
                       <p className="text-white/90">
@@ -656,7 +656,7 @@ export default function Curriculum() {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-6">
+            <h3 className="font-primary text-2xl md:text-3xl font-bold mb-6">
               Comprehensive Educational Pathway
             </h3>
             <div className="grid md:grid-cols-3 gap-8 text-center">

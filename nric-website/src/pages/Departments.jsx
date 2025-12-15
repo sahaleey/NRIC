@@ -107,7 +107,7 @@ export default function Departments() {
             Academic Departments
           </div>
 
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
+          <h1 className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6">
             Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Departments
@@ -183,7 +183,7 @@ export default function Departments() {
                         {dept.icon}
                       </div>
                       <div>
-                        <h3 className="font-serif text-3xl font-bold">
+                        <h3 className="font-primary text-3xl font-bold">
                           {dept.name}
                         </h3>
                         <p className="text-white/90 flex items-center gap-2 mt-2 font-medium">
@@ -272,7 +272,7 @@ export default function Departments() {
                           </div>
                         </div>
                         <div>
-                          <h5 className="font-serif text-lg md:text-xl font-bold text-gray-900  leading-tight">
+                          <h5 className="font-primary text-lg md:text-xl font-bold text-gray-900  leading-tight">
                             {dept.hod.name}
                           </h5>
                           <p
@@ -285,7 +285,7 @@ export default function Departments() {
 
                       <div className="relative bg-white  p-5 rounded-xl shadow-sm border border-gray-100  italic text-gray-600  text-sm leading-relaxed">
                         {/* Watermark Quote Icon */}
-                        <span className="absolute -top-3 left-4 text-5xl text-gray-900/40  leading-none select-none font-serif">
+                        <span className="absolute -top-3 left-4 text-5xl text-gray-900/40  leading-none select-none font-primary">
                           "
                         </span>
                         <p className="relative z-10">{dept.hod.message}</p>
@@ -309,7 +309,7 @@ export default function Departments() {
             {/* Decorative Background Circle */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
 
-            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 relative z-10">
+            <h3 className="font-primary text-2xl md:text-3xl font-bold mb-4 relative z-10">
               Integrated Learning Approach
             </h3>
             <p className="text-emerald-100 text-lg max-w-3xl mx-auto leading-relaxed mb-6 relative z-10">

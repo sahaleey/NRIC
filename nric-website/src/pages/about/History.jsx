@@ -144,7 +144,7 @@ export default function History() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -173,7 +173,7 @@ export default function History() {
           >
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-8"
+              className="font-primary text-3xl md:text-4xl font-bold text-gray-900  mb-8"
             >
               Our Journey
             </motion.h2>
@@ -197,7 +197,7 @@ export default function History() {
 
                   {/* Content */}
                   <div className="flex-1 bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
-                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-2">
+                    <h3 className="font-primary text-xl font-bold text-gray-900  mb-2">
                       {event.title}
                     </h3>
                     <p className="text-gray-600  leading-relaxed">
@@ -218,7 +218,7 @@ export default function History() {
           >
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-3xl md:text-4xl font-bold text-gray-900  mb-8"
+              className="font-primary text-3xl md:text-4xl font-bold text-gray-900  mb-8"
             >
               Our Foundation
             </motion.h2>
@@ -265,7 +265,7 @@ export default function History() {
         >
           <motion.h2
             variants={itemVariants}
-            className="font-serif text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
+            className="font-primary text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
           >
             Our Guiding Principles
           </motion.h2>
@@ -290,7 +290,7 @@ export default function History() {
                       <IconComponent className="size-7 text-white" />
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-3">
+                    <h3 className="font-primary text-xl font-bold text-gray-900  mb-3">
                       {pillar.title}
                     </h3>
 
@@ -313,7 +313,7 @@ export default function History() {
           className="mt-20 text-center"
         >
           <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="font-primary text-2xl md:text-3xl font-bold mb-4">
               Proudly Affiliated with Darul Huda Islamic University
             </h3>
             <p className="text-emerald-100 text-lg max-w-2xl mx-auto leading-relaxed">

@@ -202,7 +202,7 @@ export default function Gallery() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-5xl md:text-6xl font-bold text-gray-900  mb-4"
+            className="font-primary text-5xl md:text-6xl font-bold text-gray-900  mb-4"
           >
             Campus <span className="text-emerald-600">Moments</span>
           </motion.h1>
@@ -273,7 +273,7 @@ export default function Gallery() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
                   <FiZoomIn className="size-8 mb-2 opacity-80" />
-                  <h3 className="font-serif text-lg font-bold text-center leading-tight">
+                  <h3 className="font-primary text-lg font-bold text-center leading-tight">
                     {image.title}
                   </h3>
                 </div>
@@ -382,7 +382,7 @@ export default function Gallery() {
                 {/* Info Header */}
                 <div className="p-6 border-b border-gray-100  flex-shrink-0">
                   <div className="flex justify-between items-start mb-1">
-                    <h2 className="text-2xl font-serif font-bold text-gray-900  line-clamp-2">
+                    <h2 className="text-2xl font-primary font-bold text-gray-900  line-clamp-2">
                       {selectedImage.title}
                     </h2>
                     <button

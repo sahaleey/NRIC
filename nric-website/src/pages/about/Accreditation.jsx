@@ -163,7 +163,7 @@ export default function Accreditation() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900  mb-6"
           >
             Accreditation &{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -213,7 +213,7 @@ export default function Accreditation() {
         >
           <motion.h2
             variants={itemVariants}
-            className="font-serif text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
+            className="font-primary text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
           >
             Our Prestigious Affiliations
           </motion.h2>
@@ -307,7 +307,7 @@ export default function Accreditation() {
         >
           <motion.h2
             variants={itemVariants}
-            className="font-serif text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
+            className="font-primary text-3xl md:text-4xl font-bold text-gray-900  text-center mb-12"
           >
             Why Our Accreditations Matter
           </motion.h2>
@@ -330,7 +330,7 @@ export default function Accreditation() {
                       <IconComponent className="size-7 text-white" />
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-gray-900  mb-3">
+                    <h3 className="font-primary text-xl font-bold text-gray-900  mb-3">
                       {feature.title}
                     </h3>
 
@@ -360,7 +360,7 @@ export default function Accreditation() {
                     <FiBook className="size-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-bold">
+                    <h3 className="font-primary text-2xl font-bold">
                       Darul Huda Islamic University
                     </h3>
                     <p className="text-emerald-100">Primary Academic Partner</p>
@@ -403,7 +403,7 @@ export default function Accreditation() {
           className="text-center"
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="font-primary text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Verify Our Credentials
             </h3>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
