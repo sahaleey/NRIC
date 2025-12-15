@@ -10,7 +10,7 @@ export default function SEO({ title, description, image, article = false }) {
   const brandTitle = "Nahjurrashad Islamic College Chammakkala";
   const defaultDescription =
     "Nahjurrashad Islamic College (NRIC), Chammakkala – Empowering Minds, Enriching Souls. Explore academic programs, campus life, and community engagement.";
-  const defaultImage = `${siteUrl}/images/dji-hero-desktop.jpg`;
+  const defaultImage = `${siteUrl}/images/logo.jpg`;
 
   // Title logic (this is the fix)
   const isHome = !title || title.toLowerCase() === "home";

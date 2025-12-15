@@ -15,7 +15,7 @@ export default function About() {
         <div className="absolute inset-0 bg-black/60 z-0">
           <img
             src="/images/dji-hero-desktop.jpg"
-            alt="NIC Campus"
+            alt="NRIC Campus"
             className="w-full h-full object-cover"
           />
         </div>
