@@ -89,7 +89,7 @@ const campusFacilities = [
 ];
 
 const campusStats = [
-  { value: "5", label: "Acres Campus", suffix: "+" }, // Note: Header says 25, stats say 5. I'll keep your data.
+  { value: "2", label: "Acres Campus", suffix: "+" }, // Note: Header says 25, stats say 5. I'll keep your data.
   { value: "10", label: "Classrooms", suffix: "+" },
   { value: "1", label: "Academic Blocks", suffix: "" },
   { value: "300", label: "Hostel Capacity", suffix: "+" },

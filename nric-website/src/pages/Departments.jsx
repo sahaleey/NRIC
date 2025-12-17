@@ -135,7 +135,7 @@ export default function Departments() {
         >
           <div className="text-center bg-white  rounded-2xl p-6 shadow-lg border border-gray-200 ">
             <div className="text-3xl font-bold text-emerald-600  mb-2">
-              Hadith & Science
+              Hadith & Related Science
             </div>
             <div className="text-gray-600  font-medium">
               Specialized Department
