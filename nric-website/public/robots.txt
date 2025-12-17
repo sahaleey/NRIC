@@ -13,4 +13,4 @@ Disallow: /public/
 
 Disallow: /*?
 
-Sitemap: https://nric-chamakkala.vercel.app/sitemap.xml
+Sitemap: https://www.nric.in/sitemap.xml

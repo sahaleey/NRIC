@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 export default function SEO({ title, description, image, article = false }) {
   const { pathname } = useLocation();
-  const siteUrl = "https://nric-chamakkala.vercel.app";
+  const siteUrl = "https://www.nric.in";
 
   // Defaults
   const brandTitle = "Nahjurrashad Islamic College Chammakkala";

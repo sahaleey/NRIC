@@ -81,10 +81,7 @@ export default function Privacy() {
           content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
         />
 
-        <link
-          rel="canonical"
-          href="https://nric-chamakkala.vercel.app/privacy"
-        />
+        <link rel="canonical" href="https://www.nric.in/privacy" />
       </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
