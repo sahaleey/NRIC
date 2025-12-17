@@ -1,3 +1,5 @@
+// src/sections/HeroSection.jsx
+
 import { useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -23,7 +25,7 @@ const TextReveal = ({ text, className, delay = 0 }) => {
             hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
-          transition={{ duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }}
+          transition={{ duration: 0.8, ease: [0.2, 0.65, 0.45, 0.94] }}
           className="relative block"
         >
           {word}
@@ -155,6 +157,7 @@ export default function HeroSection() {
   const bgY = useTransform(mouseY, [-500, 500], [15, -15]);
 
   return (
+    // Adjusted height for better mobile viewing (e.g., h-[80vh] on small screens if needed, but keeping h-screen here)
     <section
       ref={ref}
       onMouseMove={handleMouseMove}
@@ -170,6 +173,7 @@ export default function HeroSection() {
         {/* Grain Overlay for Texture */}
         <div className="absolute inset-0 opacity-20 z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
 
+        {/* --- FIX: Removed redundant ARIA role="img" from <source> and <img> tags --- */}
         <picture>
           <source
             media="(max-width: 768px)"

@@ -143,6 +143,7 @@ export default function HighlightCards() {
                       <img
                         src={card.imageUrl}
                         alt={card.title}
+                        role="img"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div
