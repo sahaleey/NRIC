@@ -108,7 +108,7 @@ export default function Alumni() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
             NAFIA{" "}
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
@@ -136,7 +136,7 @@ export default function Alumni() {
           viewport={{ once: true }}
           className="text-center mb-16 max-w-6xl mx-auto"
         >
-          <h2 className="font-serif text-3xl font-bold text-gray-900 mb-10">
+          <h2 className="font-primary text-3xl font-bold text-gray-900 mb-10">
             Core Pillars of NAFIA
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -155,7 +155,7 @@ export default function Alumni() {
                   >
                     <IconComponent className="size-6 text-white" />
                   </div>
-                  <h4 className="font-serif text-xl font-bold text-gray-900 mb-3">
+                  <h4 className="font-primary text-xl font-bold text-gray-900 mb-3">
                     {detail.title}
                   </h4>
                   <p className="text-gray-600 leading-relaxed text-md">

@@ -281,53 +281,6 @@ export default function Campus() {
           })}
         </motion.div>
 
-        {/* --- Virtual Tour Section (Your Code) --- */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
-            {/* ... (Your full virtual tour layout) ... */}
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="font-primary text-3xl md:text-4xl font-bold mb-4">
-                  Experience Our Campus Virtually
-                </h2>
-                <p className="text-emerald-100 text-lg leading-relaxed mb-6">
-                  Take a 360° virtual tour of our campus — explore classrooms,
-                  masjid, library, and outdoor spaces right from your screen.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="https://youtu.be/njHQ1_zqMxI?si=QFpdRP2w5YHlGH4D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-center"
-                  >
-                    Start Virtual Tour
-                  </a>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/20">
-                  <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-                    <iframe
-                      src="https://www.youtube.com/embed/njHQ1_zqMxI?si=0ABs7Mck5SaPIKal"
-                      title="Campus Virtual Tour"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* --- 3. HISAN SECTION (MERGED) --- */}
         <motion.div
           variants={containerVariants}
@@ -411,7 +364,7 @@ export default function Campus() {
                 <div className="flex items-center gap-3">
                   <FiMapPin className="size-5 text-emerald-600 flex-shrink-0" />
                   <span>
-                    5-acre campus with modern infrastructure and green spaces
+                    2-acre campus with modern infrastructure and green spaces
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
