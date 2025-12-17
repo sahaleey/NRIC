@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 export default function SEO({ title, description, image, article = false }) {
   const { pathname } = useLocation();
 
-  // ✅ ONE canonical domain. No www unless you commit to it.
+  // ✅ Keep this clean. No trailing slash.
   const siteUrl = "https://www.nric.in";
 
   const brandTitle = "Nahjurrashad Islamic College Chamakkala";
@@ -17,20 +17,26 @@ export default function SEO({ title, description, image, article = false }) {
   const isHome = !title || title.toLowerCase() === "home";
   const finalTitle = isHome ? brandTitle : `${title} | NRIC`;
 
-  // ✅ Safe image handling
-  const finalImage = image
-    ? image.startsWith("http")
-      ? image
-      : `${siteUrl}${image}`
-    : defaultImage;
+  const getFullImageUrl = (img) => {
+    if (!img) return defaultImage;
+    if (img.startsWith("http")) return img;
 
-  const seoUrl = `${siteUrl}${pathname}`;
+    const normalizedPath = img.startsWith("/") ? img : `/${img}`;
+    return `${siteUrl}${normalizedPath}`;
+  };
+
+  const finalImage = getFullImageUrl(image);
+
+  const cleanPathname = pathname === "/" ? "" : pathname;
+  const seoUrl = `${siteUrl}${cleanPathname}`;
 
   return (
     <Helmet>
       <title>{finalTitle}</title>
 
       <meta name="description" content={description || defaultDescription} />
+
+      {/* 🛠️ KEY FIX: Ensuring a clean canonical URL for Google */}
       <link rel="canonical" href={seoUrl} />
 
       <meta property="og:type" content={article ? "article" : "website"} />

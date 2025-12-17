@@ -1,10 +1,21 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://https://www.nric.in/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "nric.in"
+        }
+      ],
+      "destination": "https://www.nric.in/$1",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
