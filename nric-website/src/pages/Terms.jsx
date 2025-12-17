@@ -83,7 +83,7 @@ export default function Terms() {
           content="Official website of Nahjurrashad Islamic College (NRIC), Chamakkala. An institute blending Islamic scholarship with modern education and moral excellence."
         />
 
-        <link rel="canonical" href="https://www.nric.in/terms" />
+        <link rel="canonical" href="https://nric.in/terms" />
       </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}

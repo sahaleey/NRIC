@@ -8,7 +8,7 @@ export default function About() {
       <SEO
         title="About Us"
         description="Learn about NRIC's history, leadership, and mission to shape the future of Islamic education."
-        canonical="https://www.nric.in/about"
+        canonical="https://nric.in/about"
       />
 
       <section className="relative h-72 flex items-center justify-center text-center text-white">
