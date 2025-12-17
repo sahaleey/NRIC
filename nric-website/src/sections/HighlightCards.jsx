@@ -34,7 +34,7 @@ const cards = [
     link: "/alumni",
     imageUrl: "/images/nafia_action.jpg",
     icon: FiAward,
-    stats: "500+ NAFIA Members", // Updated text
+    stats: "150+ NAFIA Members", // Updated text
     gradient: "from-amber-500/20 to-orange-600/20",
     color: "amber",
   },
