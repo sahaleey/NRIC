@@ -10,16 +10,6 @@ export const trustMembers = [
     image: "/images/trustee/trustee1.jpg",
   },
   {
-    name: "P.B Abdul Jabbar",
-    role: "Director",
-    image: "/images/trustee/trustee13.jpg",
-  },
-  {
-    name: "Kareem T Abdulla",
-    role: "Director",
-    image: "/images/trustee/trustee4.png",
-  },
-  {
     name: "V.A Hasan",
     role: "Vice Chairman",
     image: "/images/trustee/trustee5.jpg",
@@ -30,14 +20,20 @@ export const trustMembers = [
     image: "/images/trustee/trustee2.jpg",
   },
   {
+    name: "P.B Abdul Jabbar",
+    role: "Director",
+    image: "/images/trustee/trustee13.jpg",
+  },
+  {
+    name: "Kareem T Abdulla",
+    role: "Director",
+    image: "/images/trustee/trustee4.png",
+  },
+
+  {
     name: "Abdurrahman Haji",
     role: "Director",
     image: "/images/trustee/trustee11.jpg",
-  },
-  {
-    name: "Salim M A",
-    role: "Director",
-    image: "/images/trustee/trustee3.jpg",
   },
   {
     name: "E.P Moosa Haji",
