@@ -1,16 +1,43 @@
-# React + Vite
+# 🎓 Nahjurrashad Islamic College (NRIC) Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Banner](public/images/logo.jpg)
 
-Currently, two official plugins are available:
+> The official institutional website for **Nahjurrashad Islamic College**, built to provide a modern digital presence for students, faculty, and the community.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-## React Compiler
+## 🚀 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is a Single Page Application (SPA) designed to showcase the college's academic programs, faculty details, gallery, and admission information. It focuses on performance, accessibility, and a smooth user experience using modern web technologies.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Core:** [React](https://react.dev/) (via Vite for fast build times)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Utility-first CSS framework)
+* **Animations:** [Framer Motion](https://www.framer.com/motion/) (Smooth transitions and entry effects)
+* **Routing:** React Router DOM
+* **Deployment:** Vercel
+
+## ✨ Key Features
+
+* **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
+* **Dynamic Content:** Includes an 'Announcements Ticker' and 'Verse of the Day' feature.
+* **Interactive UI:** Custom sliders for Trust Members and Faculty using Framer Motion.
+* **Optimized Assets:** Modern image formats (WebP/AVIF) for faster loading.
+* **SEO Friendly:** Includes basic SEO setup and sitemap generation.
+
+## 📦 Project Structure
+
+We follow a modular directory structure to keep things organized:
+
+```bash
+src/
+├── components/      # Reusable UI components (Navbar, Footer, Loaders)
+├── data/           # Static data files (Faculty lists, Gallery JSON, Verses)
+├── hooks/          # Custom React hooks (e.g., useVerseOfTheDay)
+├── pages/          # Individual page views (Home, About, Academics)
+├── sections/       # Page-specific sections (Hero, StatsBar, ContactCTA)
+└── assets/         # Source assets
