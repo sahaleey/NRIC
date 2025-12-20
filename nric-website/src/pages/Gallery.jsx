@@ -29,9 +29,16 @@ export default function Gallery() {
 
   // 1. Filter Logic
   const filteredImages = useMemo(() => {
-    return filter === "All"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === filter);
+    const list =
+      filter === "All"
+        ? galleryImages
+        : galleryImages.filter((img) => img.category === filter);
+
+    return [...list].sort((a, b) => {
+      if (!a.date) return 1; // items without date go last
+      if (!b.date) return -1;
+      return new Date(b.date) - new Date(a.date); // recent first
+    });
   }, [filter]);
 
   // 2. Visible Images (Infinite Scroll Chunking)

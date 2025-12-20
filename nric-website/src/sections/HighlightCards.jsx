@@ -124,7 +124,7 @@ export default function HighlightCards() {
             const colorClasses = {
               blue: "text-blue-600 ",
               emerald: "text-emerald-400 ",
-              amber: "text-amber-600 ",
+              amber: "text-amber-500 ",
             };
 
             return (

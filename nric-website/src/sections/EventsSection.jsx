@@ -109,9 +109,9 @@ export default function EventsSection() {
                     {new Date(
                       latestEvents[currentIndex].date
                     ).toLocaleDateString("en-US", {
+                      year: "numeric",
                       month: "long",
                       day: "numeric",
-                      year: "numeric",
                     })}
                   </div>
 

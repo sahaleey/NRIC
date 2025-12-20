@@ -1,3 +1,64 @@
+// Helper to generate gallery image sets safely
+const createGallerySet = (startId, numbers, data) =>
+  numbers.map((num, index) => ({
+    id: startId + index,
+    src: `/images/programmes/pro${num}.jpg`,
+    ...data,
+  }));
+
+// Spelling Bee (Main Day)
+const spellingBeeImages = createGallerySet(
+  31,
+  [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37],
+  {
+    category: "Events",
+    date: "2025-11-28",
+    title: "Spelling Bee",
+  }
+);
+
+// Madh Ravu
+const madhRavu = createGallerySet(
+  45,
+  [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53],
+  {
+    category: "Events",
+    date: "2025-12-19",
+    title: "Madh Ravu",
+  }
+);
+
+// Spelling Bee – Final Day
+const spellingBeeLast = createGallerySet(65, [57, 58, 59, 60, 61, 62, 63], {
+  category: "Events",
+  date: "2025-12-19",
+  title: "Spelling Bee – Final Day",
+});
+
+// UG Management & Principal Workshop
+const ugMeet = createGallerySet(
+  73,
+  [64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
+  {
+    category: "Campus",
+    date: "2025-12-17",
+    title: "UG Management & Principal Workshop",
+  }
+);
+// Snehadaram
+const snehadaram = createGallerySet(
+  90,
+  [
+    80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98,
+    99, 100, 101, 102, 103, 104, 105, 106,
+  ],
+  {
+    category: "Campus",
+    date: "2025-12-18",
+    title: "Snehadaram",
+  }
+);
+
 export const galleryImages = [
   {
     id: 1,
@@ -209,95 +270,30 @@ export const galleryImages = [
     date: "12/18/2025",
     title: "20TH Anniversary",
   },
+  ...spellingBeeImages,
+  ...madhRavu,
   {
-    id: 31,
-    src: "/images/programmes/pro25.jpg",
+    id: 62,
+    src: "/images/programmes/pro54.jpg",
     category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
+    date: "12/19/2025",
+    title: "Spelling Bee Champion",
   },
   {
-    id: 32,
-    src: "/images/programmes/pro26.jpg",
+    id: 63,
+    src: "/images/programmes/pro55.jpg",
     category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
+    date: "12/19/2025",
+    title: "Spelling Bee RunnerUp",
   },
   {
-    id: 33,
-    src: "/images/programmes/pro27.jpg",
+    id: 64,
+    src: "/images/programmes/pro56.jpg",
     category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
+    date: "12/19/2025",
+    title: "Spelling Bee 2nd RunnerUp",
   },
-  {
-    id: 34,
-    src: "/images/programmes/pro28.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 35,
-    src: "/images/programmes/pro29.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 36,
-    src: "/images/programmes/pro30.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 37,
-    src: "/images/programmes/pro31.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 38,
-    src: "/images/programmes/pro32.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 39,
-    src: "/images/programmes/pro33.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 40,
-    src: "/images/programmes/pro34.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 41,
-    src: "/images/programmes/pro35.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 42,
-    src: "/images/programmes/pro36.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
-  {
-    id: 43,
-    src: "/images/programmes/pro37.jpg",
-    category: "Events",
-    date: "11/28/2025",
-    title: "Spelling Bee",
-  },
+  ...spellingBeeLast,
+  ...ugMeet,
+  ...snehadaram,
 ];
