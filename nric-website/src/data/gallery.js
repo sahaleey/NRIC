@@ -22,7 +22,7 @@ const madhRavu = createGallerySet(
   45,
   [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53],
   {
-    category: "Events",
+    category: "Campus",
     date: "2025-12-19",
     title: "Madh Ravu",
   }
@@ -58,48 +58,57 @@ const snehadaram = createGallerySet(
     title: "Snehadaram",
   }
 );
-
+// Navodhana Sammelanam
+const navodhana = createGallerySet(
+  117,
+  [107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119],
+  {
+    category:"Campus",
+    date:"2025-12-20",
+    title: "Navodhana Sammelanam"
+  }
+)
 export const galleryImages = [
   {
     id: 1,
     src: "/images/campus/masjid.jpg",
     category: "Campus",
-    date: "",
+    date: null,
     title: "Grand Masjid",
   },
   {
     id: 2,
     src: "/images/campus/library.jpg",
     category: "Campus",
-    date: "",
+    date: null,
     title: "Central Library",
   },
   {
     id: 3,
     src: "/images/campus/academic.jpg",
     category: "Campus",
-    date: "",
+    date: null,
     title: "Academic Block",
   },
   {
     id: 4,
     src: "/images/dji-hero-desktop.jpg",
     category: "Campus",
-    date: "",
+    date: null,
     title: "Aerial View",
   },
   {
     id: 5,
     src: "/images/campus/digital.jpg",
     category: "Campus",
-    date: "",
+    date: null,
     title: "Digital Lab",
   },
   {
     id: 6,
     src: "/images/campus/hostel.jpg",
     category: "Campus",
-    date: "",
+    date: null,
     title: "Student Hostel",
   },
   {
@@ -296,4 +305,5 @@ export const galleryImages = [
   ...spellingBeeLast,
   ...ugMeet,
   ...snehadaram,
+  ...navodhana,
 ];

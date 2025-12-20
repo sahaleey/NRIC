@@ -12,7 +12,7 @@ import { galleryImages } from "../data/gallery";
 export default function EventsSection() {
   // 1. Get Latest 5 Events
   const latestEvents = galleryImages
-    .filter((img) => img.category === "Events")
+    .filter((img) => img.category === "Events" || "Campus")
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
 
