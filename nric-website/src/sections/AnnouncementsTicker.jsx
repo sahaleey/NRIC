@@ -1,55 +1,78 @@
 import { HiOutlineMegaphone } from "react-icons/hi2";
+import { useEffect, useState } from "react";
 
 const announcements = [
-  "🎓 Admissions for 2026–2027 are now open — apply early!",
+  "🎉 Nahjurrashad 20th Anniversary Final Celebration Ongoing!",
   "🗓️ Download the final exam schedule for Senior Secondary.",
-  "🏆 NRIC Munazara wins first prize at the inter-collegiate competition!",
+  "🏆 Spelling Bee Champions Announced!",
 ];
 
-export default function AnnouncementsTicker() {
-  return (
-    <div className="relative w-full overflow-hidden border-y border-gray-200  bg-gradient-to-r from-gray-50 via-white to-gray-50   ">
-      {/* Soft glow line */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent blur-sm" />
+export default function AnnouncementsTicker({ speed = 40 }) {
+  const [paused, setPaused] = useState(false);
 
-      {/* Internal Style for Keyframes (Keeps this component self-contained) */}
+  // Pause animation when tab is hidden
+  useEffect(() => {
+    const onVisibilityChange = () => {
+      setPaused(document.hidden);
+    };
+
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () =>
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+  }, []);
+
+  return (
+    <div className="relative w-full overflow-hidden border-y border-gray-200 bg-gradient-to-r from-gray-50 via-white to-gray-50">
+      {/* Top glow */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent blur-sm" />
+
+      {/* Component-scoped CSS */}
       <style>{`
         @keyframes ticker-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
         }
-        .animate-ticker {
-          animation: ticker-scroll 40s linear infinite;
-        }
-        .paused {
-          animation-play-state: paused;
+
+        @media (prefers-reduced-motion: reduce) {
+          .ticker-track {
+            animation: none !important;
+          }
         }
       `}</style>
 
       <div className="flex items-center h-10">
-        {/* Static Label */}
-        <div className="flex items-center gap-2 px-4 shrink-0 z-50  bg-white relative shadow-[5px_0_10px_rgba(255,255,255,1)] ">
+        {/* Label */}
+        <div className="flex items-center gap-2 px-4 shrink-0 bg-white z-10 shadow-[5px_0_10px_rgba(255,255,255,1)]">
           <div className="p-1.5 rounded-full bg-emerald-500/10 ring-1 ring-emerald-500/30">
             <HiOutlineMegaphone className="text-emerald-500 text-lg" />
           </div>
-          <span className="text-[0.8rem] tracking-wider font-semibold uppercase text-emerald-600 ">
+          <span className="text-[0.8rem] tracking-wider font-semibold uppercase text-emerald-600">
             Announcements
           </span>
         </div>
 
-        {/* Scrolling Content */}
-        {/* Logic: We duplicate the list. The animation moves -50% (the width of one list). 
-            When it hits -50%, it snaps back to 0% instantly, creating a seamless loop. 
-            'hover:paused' stops it immediately. */}
-        <div className="w-full overflow-hidden">
-          <div className="flex whitespace-nowrap animate-ticker hover:paused w-max">
-            {/* Render the list TWICE to create the seamless loop */}
+        {/* Ticker */}
+        <div
+          className="w-full overflow-hidden"
+          aria-live="polite"
+        >
+          <div
+            className="ticker-track flex whitespace-nowrap w-max"
+            style={{
+              animation: `ticker-scroll ${speed}s linear infinite`,
+              animationPlayState: paused ? "paused" : "running",
+            }}
+          >
             {[...announcements, ...announcements].map((text, i) => (
               <span
                 key={i}
-                className="mx-6 text-sm font-medium text-gray-700  hover:text-emerald-500 transition-colors duration-200 cursor-default inline-flex items-center"
+                aria-hidden={i >= announcements.length}
+                className="mx-6 text-sm font-medium text-gray-700 inline-flex items-center cursor-default hover:text-emerald-500 transition-colors"
               >
-                {/* Optional: Add a small dot separator between items for polish */}
                 {i % announcements.length !== 0 && (
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/30 mr-4 inline-block" />
                 )}

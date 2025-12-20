@@ -3,6 +3,7 @@
 @theme {
   --color-bg: #ffffff;
   --color-text: #111111;
+   --font-secondary: "secondary", sans-serif;
 }
 
 /* Font */
@@ -22,6 +23,4 @@
   font-display: swap;
 }
 
-@theme {
-  --font-secondary: "secondary", sans-serif;
-}
+ 
