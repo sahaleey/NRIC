@@ -95,7 +95,7 @@ export default function Navbar() {
           >
             {/* Logo Icon (Scaled for Mobile) */}
             <motion.img
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="NRIC Emblem"
               className="h-8 w-8 md:h-10 md:w-10 object-contain rounded-full"
               initial={{ opacity: 0, x: -60 }}
