@@ -1,6 +1,6 @@
 # 🎓 Nahjurrashad Islamic College (NRIC) Website
 
-![Project Banner](public/images/logo.jpg)
+![Project Banner](public/images/logo.png)
 
 > The official institutional website for **Nahjurrashad Islamic College**, built to provide a modern digital presence for students, faculty, and the community.
 

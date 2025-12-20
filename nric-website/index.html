@@ -28,7 +28,7 @@
       property="og:description"
       content="Empowering Minds, Enriching Souls. Join the premier Islamic institution in Chamakkala."
     />
-    <meta property="og:image" content="https://www.nric.in/images/logo.jpg" />
+    <meta property="og:image" content="https://www.nric.in/images/logo.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -41,7 +41,7 @@
       name="twitter:description"
       content="Empowering Minds, Enriching Souls. Join the premier Islamic institution in Chamakkala."
     />
-    <meta name="twitter:image" content="https://www.nric.in/images/logo.jpg" />
+    <meta name="twitter:image" content="https://www.nric.in/images/logo.png" />
 
     <!-- Icons & PWA -->
     <link rel="manifest" href="/images/manifest.json" />
@@ -63,23 +63,35 @@
       sizes="180x180"
       href="/images/apple-touch-icon.png"
     />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CollegeOrUniversity",
-        "name": "Nahjurrashad Islamic College",
-        "url": "https://www.nric.in/",
-        "logo": "https://www.nric.in/images/logo.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Chamakkala",
-          "addressLocality": "Thrissur",
-          "addressRegion": "Kerala",
-          "postalCode": "680687",
-          "addressCountry": "IN"
-        }
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Nahjurrashad Islamic College",
+      "url": "https://www.nric.in/",
+      "logo": "https://www.nric.in/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/nricchmkla",
+        "https://www.instagram.com/nahjurrashad"
+      ]
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Nahjurrashad Islamic College",
+      "url": "https://www.nric.in/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chamakkala",
+        "addressLocality": "Thrissur",
+        "addressRegion": "Kerala",
+        "postalCode": "680687",
+        "addressCountry": "IN"
       }
-    </script>
+    }
+  ]
+}
+
 
     <meta name="theme-color" content="#047857" />
   </head>

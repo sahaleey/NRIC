@@ -12,7 +12,7 @@ export default function SEO({ title, description, image, article = false }) {
   const defaultDescription =
     "Nahjurrashad Islamic College (NRIC), Chamakkala – Empowering Minds, Enriching Souls. Explore academic programs, campus life, and community engagement.";
 
-  const defaultImage = `${siteUrl}/images/logo.jpg`;
+  const defaultImage = `${siteUrl}/images/logo.png`;
 
   const isHome = !title || title.toLowerCase() === "home";
   const finalTitle = isHome ? brandTitle : `${title} | NRIC`;
