@@ -22,7 +22,7 @@ const madhRavu = createGallerySet(
   45,
   [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53],
   {
-    category: "Campus",
+    category: "Events",
     date: "2025-12-19",
     title: "Madh Ravu",
   }
@@ -40,7 +40,7 @@ const ugMeet = createGallerySet(
   73,
   [64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
   {
-    category: "Campus",
+    category: "Events",
     date: "2025-12-17",
     title: "UG Management & Principal Workshop",
   }
@@ -53,7 +53,7 @@ const snehadaram = createGallerySet(
     99, 100, 101, 102, 103, 104, 105, 106,
   ],
   {
-    category: "Campus",
+    category: "Events",
     date: "2025-12-18",
     title: "Snehadaram",
   }
@@ -63,7 +63,7 @@ const navodhana = createGallerySet(
   117,
   [107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119],
   {
-    category:"Campus",
+    category:"Events",
     date:"2025-12-20",
     title: "Navodhana Sammelanam"
   }
@@ -156,7 +156,7 @@ export const galleryImages = [
   {
     id: 13,
     src: "/images/programmes/pro7.jpg",
-    category: "Campus",
+    category: "Events",
     date: "10/09/2025",
     title: "Paythrika Sammelanam",
   },
@@ -170,35 +170,35 @@ export const galleryImages = [
   {
     id: 15,
     src: "/images/programmes/pro9.jpg",
-    category: "Campus",
+    category: "Events",
     date: "10/29/2025",
     title: "Paythrika Sammelanam",
   },
   {
     id: 16,
     src: "/images/programmes/pro10.jpg",
-    category: "Campus",
+    category: "Events",
     date: "09/29/2025",
     title: "Mulaqath",
   },
   {
     id: 17,
     src: "/images/programmes/pro11.jpg",
-    category: "Campus",
+    category: "Events",
     date: "09/29/2025",
     title: "Mulaqath",
   },
   {
     id: 18,
     src: "/images/programmes/pro12.jpg",
-    category: "Campus",
+    category: "Events",
     date: "10/26/2025",
     title: "Bodhana Sammelanam",
   },
   {
     id: 19,
     src: "/images/programmes/pro13.jpg",
-    category: "Campus",
+    category: "Events",
     date: "10/31/2025",
     title: "Smrithi Samgamam",
   },
@@ -233,7 +233,7 @@ export const galleryImages = [
   {
     id: 24,
     src: "/images/programmes/pro18.jpg",
-    category: "Campus",
+    category: "Events",
     date: "11/05/2025",
     title: "Inauguration Ceremony",
   },
@@ -248,6 +248,7 @@ export const galleryImages = [
     id: 26,
     src: "/images/programmes/pro20.jpg",
     category: "Students",
+    type: "Outings",
     date: "11/03/2025",
     title: "Theme song launch",
   },
@@ -269,13 +270,14 @@ export const galleryImages = [
     id: 29,
     src: "/images/programmes/pro23.jpg",
     category: "Students",
+    type: "Outings",
     date: "11/03/2025",
     title: "Othu Palli",
   },
   {
     id: 30,
     src: "/images/programmes/pro24.jpg",
-    category: "Campus",
+    category: "Events",
     date: "12/18/2025",
     title: "20TH Anniversary",
   },
@@ -291,7 +293,8 @@ export const galleryImages = [
   {
     id: 63,
     src: "/images/programmes/pro55.jpg",
-    category: "Events",
+    category: "Students",
+    type: "Achievements",
     date: "12/19/2025",
     title: "Spelling Bee RunnerUp",
   },

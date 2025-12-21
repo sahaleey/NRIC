@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import PageLoader from "./components/PageLoader";
 import ErrorBoundary from "./components/ErrorBoundary";
 
+
 // --- LAZY-LOADED PAGES ---
 
 const Home = React.lazy(() => import("./pages/Home"));
@@ -67,6 +68,7 @@ export default function App() {
             </Route>
           </Routes>
         </Suspense>
+       
       </ErrorBoundary>
     </>
   );

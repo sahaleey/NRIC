@@ -520,7 +520,7 @@ export default function Curriculum() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              name: "Spanish",
+              name: "German",
               focus: "Basic Conversation, Grammar, and Culture",
             },
             {
@@ -676,7 +676,7 @@ export default function Curriculum() {
                   Languages Taught
                 </div>
                 <p className="text-blue-200 text-sm mt-2">
-                  Including Spanish & French Electives
+                  Including German & French Electives
                 </p>
               </div>
               <div>

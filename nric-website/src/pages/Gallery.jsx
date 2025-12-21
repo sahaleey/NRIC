@@ -411,9 +411,18 @@ const breakpointColumnsObj = {
                       <FiX className="size-6 text-gray-500" />
                     </button>
                   </div>
-                  <span className="inline-block px-3 py-1 bg-emerald-50  text-emerald-600  text-xs font-bold uppercase tracking-wider rounded-full">
-                    {selectedImage.category}
-                  </span>
+               <div className="flex flex-wrap gap-2 mt-2">
+  <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-bold uppercase tracking-wider rounded-full">
+    {selectedImage.category}
+  </span>
+
+  {selectedImage.type && (
+    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
+      {selectedImage.type}
+    </span>
+  )}
+</div>
+
                 </div>
 
                 {/* Scrollable Suggestions Area */}
