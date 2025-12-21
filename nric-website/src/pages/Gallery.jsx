@@ -12,6 +12,8 @@ import {
 } from "react-icons/fi";
 import SEO from "../components/SEO";
 import { galleryImages } from "../data/gallery";
+import Masonry from "react-masonry-css";
+
 
 const categories = ["All", "Campus", "Events", "Students"];
 const ITEMS_PER_PAGE = 12;
@@ -159,6 +161,12 @@ export default function Gallery() {
       return () => window.removeEventListener("scroll", handleScroll);
     }
   }, [selectedImage]);
+const breakpointColumnsObj = {
+  default: 4,
+  1280: 3,
+  1024: 2,
+  640: 1,
+};
 
   // Scroll to Top
   const scrollToTop = () => {
@@ -257,37 +265,41 @@ export default function Gallery() {
         </div>
 
         {/* --- MASONRY GRID (Pinterest Style) --- */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5 space-y-5">
-          {visibleImages.map((image, index) => (
-            <motion.div
-              key={image.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.03 }}
-              className="break-inside-avoid mb-5"
-            >
-              <div
-                onClick={() => setSelectedImage(image)}
-                className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200  shadow-sm hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src={image.src}
-                  alt={image.title}
-                  loading="lazy"
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+   <Masonry
+  breakpointCols={breakpointColumnsObj}
+  className="flex gap-5"
+  columnClassName="flex flex-col gap-5"
+>
+  {visibleImages.map((image, index) => (
+    <motion.div
+      key={image.id}
+      layout
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.03 }}
+    >
+      <div
+        onClick={() => setSelectedImage(image)}
+        className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200 shadow-sm hover:shadow-xl transition-all duration-300"
+      >
+        <img
+          src={image.src}
+          alt={image.title}
+          loading="lazy"
+          className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+        />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
-                  <FiZoomIn className="size-8 mb-2 opacity-80" />
-                  <h3 className="font-primary text-lg font-bold text-center leading-tight">
-                    {image.title}
-                  </h3>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
+          <FiZoomIn className="size-8 mb-2 opacity-80" />
+          <h3 className="font-primary text-lg font-bold text-center leading-tight">
+            {image.title}
+          </h3>
         </div>
+      </div>
+    </motion.div>
+  ))}
+</Masonry>
+
 
         {/* --- Load More Spinner --- */}
         {visibleCount < filteredImages.length && (
