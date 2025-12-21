@@ -1,16 +1,9 @@
 User-agent: *
-
 Crawl-delay: 3
 
 Allow: /
 
 Disallow: /admin/
 Disallow: /search/
-Disallow: /sitemap 
-
-Disallow: /assets/
-Disallow: /public/
-
-Disallow: /*?
 
 Sitemap: https://www.nric.in/sitemap.xml
