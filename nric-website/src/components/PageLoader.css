@@ -19,7 +19,6 @@
 :root {
   --skeleton-base: #e0e0e0;
   --skeleton-highlight: #f8f8f8;
-  --dot-color: #ffffff;
 }
 
 .logo-container {
@@ -61,31 +60,7 @@
   }
 }
 
-/* Three-dot loader */
-.loading-dots {
-  display: flex;
-  gap: 8px;
-  margin-top: 18px;
-}
 
-.loading-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--dot-color);
-  border-radius: 50%;
-  opacity: 0.4;
-  animation: dotPulse 1.4s infinite ease-in-out;
-}
-
-.loading-dot:nth-child(1) {
-  animation-delay: 0s;
-}
-.loading-dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.loading-dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
 
 @keyframes dotPulse {
   0%,
