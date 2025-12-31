@@ -3,6 +3,8 @@ import React, { Suspense } from "react";
 import Layout from "./components/Layout";
 import PageLoader from "./components/PageLoader";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { useOnlineStatus } from "./hooks/useOnlineStatus";
+import OfflinePage from "./pages/OfflinePage";
 
 
 // --- LAZY-LOADED PAGES ---
@@ -18,6 +20,7 @@ const Alumni = React.lazy(() => import("./pages/Alumni"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
 const Donate = React.lazy(() => import("./pages/Donate"));
 
+
 // --- "About" pages ---
 const About = React.lazy(() => import("./pages/About"));
 const AboutOverview = React.lazy(() => import("./pages/about/AboutOverview"));
@@ -32,6 +35,15 @@ const Curriculum = React.lazy(() => import("./pages/academics/Curriculum"));
 const Faculty = React.lazy(() => import("./pages/academics/Faculty"));
 
 export default function App() {
+  const isOnline = useOnlineStatus();
+
+  if (!isOnline) {
+    return (
+     
+        <OfflinePage />
+      
+    );
+  }
   return (
     <>
       <ErrorBoundary>
