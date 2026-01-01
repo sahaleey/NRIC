@@ -273,7 +273,7 @@ export default function Footer() {
               <span>by</span>
               <a
                 href="https://sahaleey.me"
-                className="text-gray-400 hover:text-emerald-300 font-medium transition-all hover:underline"
+                className="text-gray-400 hover:text-emerald-300 font-medium transition-all underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

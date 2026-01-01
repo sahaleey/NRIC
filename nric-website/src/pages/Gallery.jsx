@@ -207,7 +207,7 @@ const breakpointColumnsObj = {
   return (
     <div className="min-h-screen bg-gray-50  py-20 md:py-28 transition-colors duration-300">
       <SEO
-        title="Gallery | Nahjurrashad Islamic College"
+        title="Gallery"
         description="Explore our campus moments through stunning photography of campus life, events, and student activities."
       />
 
