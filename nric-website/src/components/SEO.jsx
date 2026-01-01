@@ -2,60 +2,101 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-export default function SEO({ title, description, image, article = false }) {
+export default function SEO({
+  title,
+  description,
+  image,
+  article = false,
+}) {
   const { pathname } = useLocation();
 
-  // ✅ Keep this clean. No trailing slash.
-  const siteUrl = "https://www.nric.in";
+  /* =========================
+     SITE CONSTANTS
+  ========================== */
+  const SITE_URL = "https://www.nric.in";
+  const SITE_NAME = "Nahjurrashad Islamic College Chamakkala";
+  const SHORT_NAME = "NRIC";
 
-  const brandTitle = "Nahjurrashad Islamic College Chamakkala";
-  const defaultDescription =
-    "Nahjurrashad Islamic College (NRIC), Chamakkala – Empowering Minds, Enriching Souls. Explore academic programs, campus life, and community engagement.";
+  const DEFAULT_DESCRIPTION =
+    "Nahjurrashad Islamic College (NRIC), Chamakkala – Empowering Minds, Enriching Souls. Explore academics, campus life, events, and community engagement.";
 
-  const defaultImage = `${siteUrl}/images/logo.png`;
+  const DEFAULT_IMAGE = `${SITE_URL}/images/logo.png`;
 
-  const isHome = !title || title.toLowerCase() === "home";
-  const finalTitle = isHome ? brandTitle : `${title} | NRIC`;
+  /* =========================
+     URL NORMALIZATION
+  ========================== */
 
-  const getFullImageUrl = (img) => {
-    if (!img) return defaultImage;
-    if (img.startsWith("http")) return img;
-
-    const normalizedPath = img.startsWith("/") ? img : `/${img}`;
-    return `${siteUrl}${normalizedPath}`;
+  // Remove trailing slash except for homepage
+  const normalizePath = (path) => {
+    if (!path || path === "/") return "";
+    return path.endsWith("/") ? path.slice(0, -1) : path;
   };
 
-  const finalImage = getFullImageUrl(image);
+  const cleanPath = normalizePath(pathname);
+  const canonicalUrl = `${SITE_URL}${cleanPath}`;
 
-  const cleanPathname = pathname === "/" ? "" : pathname;
-  const seoUrl = `${siteUrl}${cleanPathname}`;
+  /* =========================
+     TITLE LOGIC
+  ========================== */
+
+  const finalTitle = title
+    ? `${title} | ${SHORT_NAME}`
+    : SITE_NAME;
+
+  /* =========================
+     IMAGE NORMALIZATION
+  ========================== */
+
+  const resolveImage = (img) => {
+    if (!img) return DEFAULT_IMAGE;
+    if (img.startsWith("http")) return img;
+    return `${SITE_URL}${img.startsWith("/") ? img : `/${img}`}`;
+  };
+
+  const finalImage = resolveImage(image);
+
+  /* =========================
+     META OUTPUT
+  ========================== */
 
   return (
     <Helmet>
+      {/* BASIC */}
+      <meta charSet="utf-8" />
       <title>{finalTitle}</title>
+      <meta
+        name="description"
+        content={description || DEFAULT_DESCRIPTION}
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <meta name="description" content={description || defaultDescription} />
+      {/* ROBOTS */}
+      <meta name="robots" content="index, follow" />
 
-      {/* 🛠️ KEY FIX: Ensuring a clean canonical URL for Google */}
-      <link rel="canonical" href={seoUrl} />
+      {/* CANONICAL (MOST IMPORTANT) */}
+      <link rel="canonical" href={canonicalUrl} />
 
+      {/* OPEN GRAPH */}
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:type" content={article ? "article" : "website"} />
-      <meta property="og:url" content={seoUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={finalTitle} />
       <meta
         property="og:description"
-        content={description || defaultDescription}
+        content={description || DEFAULT_DESCRIPTION}
       />
       <meta property="og:image" content={finalImage} />
+      <meta property="og:locale" content="en_IN" />
 
+      {/* TWITTER */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={seoUrl} />
       <meta name="twitter:title" content={finalTitle} />
       <meta
         name="twitter:description"
-        content={description || defaultDescription}
+        content={description || DEFAULT_DESCRIPTION}
       />
       <meta name="twitter:image" content={finalImage} />
+      <meta name="twitter:url" content={canonicalUrl} />
     </Helmet>
   );
 }
