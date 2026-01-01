@@ -21,8 +21,9 @@ export default function WelcomeIntro() {
               <iframe
                 src="https://www.youtube.com/embed/njHQ1_zqMxI?si=0ABs7Mck5SaPIKal"
                 title="NRIC Virtual Tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full"
               ></iframe>
             </div>

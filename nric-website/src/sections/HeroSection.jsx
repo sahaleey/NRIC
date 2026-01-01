@@ -242,12 +242,12 @@ export default function HeroSection() {
           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent mx-auto mb-1" />
 
           {/* Identity Line */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-gray-300 text-sm md:text-base tracking-wide">
-            <p className="mt-4 text-xs tracking-widest text-gray-200 uppercase">
-              <FaLocationDot className="inline-block mr-2 h-4 w-3 text-emerald-400" />
-              Thrissur · Kerala · India
-            </p>
-          </div>
+          
+             <p className="mt-4 text-center text-xs tracking-widest text-gray-200 uppercase">
+            <FaLocationDot className="inline-block mr-2 h-4 w-3 text-emerald-400" />
+            Thrissur · Kerala · India
+        </p>
+          
         </motion.div>
 
         {/* CTA Buttons */}

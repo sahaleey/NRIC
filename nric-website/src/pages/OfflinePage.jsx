@@ -80,7 +80,9 @@ const SignalSeekerAnimation = () => {
               />
             ))}
             <circle cx="200" cy="80" r="15" className="fill-red-500 shadow-lg" />
-            <FiWifiOff x="190" y="70" size="20" className="text-white" />
+<foreignObject x="190" y="70" width="20" height="20">
+            <FiWifiOff size="20" className="text-white" />
+           </foreignObject>
           </motion.g>
         </motion.g>
       </svg>

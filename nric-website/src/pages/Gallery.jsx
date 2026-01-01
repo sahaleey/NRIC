@@ -172,14 +172,9 @@ const breakpointColumnsObj = {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  useEffect(() => {
-    if (visibleCount === 0 && filteredImages.length > 0) {
-      setVisibleCount(ITEMS_PER_PAGE);
-    }
-  }, [filteredImages]);
-  useEffect(() => {
+ useEffect(() => {
     setVisibleCount(Math.min(ITEMS_PER_PAGE, filteredImages.length));
-  }, []);
+  }, [filteredImages.length]);
   useEffect(() => {
     requestAnimationFrame(() => {
       setObserverEnabled(true);
@@ -276,7 +271,7 @@ const breakpointColumnsObj = {
       layout
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.03 }}
+       transition={{ duration: 0.4, delay: (index % ITEMS_PER_PAGE) * 0.03 }}
     >
       <div
         onClick={() => setSelectedImage(image)}

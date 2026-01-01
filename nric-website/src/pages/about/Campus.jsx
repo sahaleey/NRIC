@@ -89,7 +89,7 @@ const campusFacilities = [
 ];
 
 const campusStats = [
-  { value: "2", label: "Acres Campus", suffix: "+" }, // Note: Header says 25, stats say 5. I'll keep your data.
+  { value: "2", label: "Acres Campus", suffix: "+" }, 
   { value: "10", label: "Classrooms", suffix: "+" },
   { value: "1", label: "Academic Blocks", suffix: "" },
   { value: "300", label: "Hostel Capacity", suffix: "+" },
@@ -188,7 +188,7 @@ export default function Campus() {
             className="text-lg md:text-xl text-gray-600  leading-relaxed"
           >
             {/* I updated this text to match your "5-acre" stat */}
-            Discover our sprawling 5-acre campus in Thrissur, designed to
+            Discover our sprawling 2-acre campus in Thrissur, designed to
             provide a perfect environment for learning, spiritual growth, and
             community living.
           </motion.p>

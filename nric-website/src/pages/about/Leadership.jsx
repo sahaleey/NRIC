@@ -11,9 +11,9 @@ import TrustMembersSlider from "../../sections/TrustMembersSlider";
 
 // --- 1. Data Definitions ---
 
-// Academic/Executive Leadership Team (Stays the same)
+// Academic/Executive Leadership Team 
 const leadershipTeam = [
-  // ... (President, Chairman, Principal, Vice Principal, General Manager added earlier)
+ 
   {
     role: "President",
     name: "Dr. Bahauddeen Muhammed Nadwi",
@@ -82,12 +82,33 @@ const leadershipPrinciples = [
 
 // --- 2. Descriptive Components ---
 
+const themeMap = {
+  emerald: {
+    iconBg: "bg-emerald-500/10",
+    iconText: "text-emerald-600",
+  },
+  blue: {
+    iconBg: "bg-blue-500/10",
+    iconText: "text-blue-600",
+  },
+  amber: {
+    iconBg: "bg-amber-500/10",
+    iconText: "text-amber-600",
+  },
+  violet: {
+    iconBg: "bg-violet-500/10",
+    iconText: "text-violet-600",
+  },
+};
+
 const DescriptionSection = ({
   title,
   content,
   icon: Icon,
   theme = "emerald",
-}) => (
+}) => {
+  const colors = themeMap[theme];
+  return (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -97,9 +118,9 @@ const DescriptionSection = ({
   >
     <div className="flex items-center gap-4 mb-4">
       <div
-        className={`size-10 bg-${theme}-500/10 rounded-lg flex items-center justify-center`}
+        className={`size-10 ${colors.iconBg} rounded-lg flex items-center justify-center`}
       >
-        <Icon className={`size-5 text-${theme}-600`} />
+        <Icon className={`size-5 ${colors.iconText}`} />
       </div>
       <h2 className="font-primary text-2xl md:text-3xl font-bold text-gray-900">
         {title}
@@ -108,6 +129,7 @@ const DescriptionSection = ({
     <p className="text-gray-600 leading-relaxed text-lg">{content}</p>
   </motion.div>
 );
+};
 
 // --- 3. Main Leadership Component ---
 

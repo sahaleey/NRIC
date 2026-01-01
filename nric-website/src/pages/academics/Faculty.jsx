@@ -80,7 +80,11 @@ export default function Faculty() {
         "@type": "Person",
         name: member.name,
         jobTitle: member.position || "Faculty Member",
-        image: `https://www.nric.in/${member.image}`,
+         image: member.image 
+          ? (member.image.startsWith('http') 
+              ? member.image 
+              : `https://www.nric.in/${member.image.replace(/^\/+/, '')}`)
+          : undefined,
         description: member.specialization || member.bio,
         affiliation: {
           "@type": "CollegeOrUniversity",
