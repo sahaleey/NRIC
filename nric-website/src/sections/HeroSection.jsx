@@ -1,7 +1,7 @@
 // src/sections/HeroSection.jsx
 
-import { useRef } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { motion, useMotionValue, useTransform, useReducedMotion  } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -21,7 +21,7 @@ const TextReveal = ({ text, className, delay = 0 }) => {
         <motion.span
           key={index}
           variants={{
-            hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
+            hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           transition={{ duration: 0.8, ease: [0.2, 0.65, 0.45, 0.94] }}
@@ -140,10 +140,27 @@ const itemVariant = {
 
 export default function HeroSection() {
   const ref = useRef(null);
+  
 
+ const prefersReducedMotion = useReducedMotion();
+  
+  
   // --- Parallax Mouse Effect Logic ---
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+// Disable Parallax on Mobile for Performance and Usability
+const [isFinePointer, setIsFinePointer] = useState(false);
+
+useEffect(() => {
+  const mq = window.matchMedia("(pointer: fine)");
+  setIsFinePointer(mq.matches);
+
+  const handler = (e) => setIsFinePointer(e.matches);
+  mq.addEventListener("change", handler);
+
+  return () => mq.removeEventListener("change", handler);
+}, []);
+
 
   const handleMouseMove = ({ clientX, clientY, currentTarget }) => {
     const { width, height, left, top } = currentTarget.getBoundingClientRect();
@@ -152,17 +169,21 @@ export default function HeroSection() {
   };
 
   // Background moves slightly OPPOSITE to mouse (Depth Effect)
-  const bgX = useTransform(mouseX, [-500, 500], [15, -15]);
-  const bgY = useTransform(mouseY, [-500, 500], [15, -15]);
+const PARALLAX_RANGE =
+  prefersReducedMotion || !isFinePointer ? 0 : 15;
+
+const bgX = useTransform(mouseX, [-500, 500], [PARALLAX_RANGE, -PARALLAX_RANGE]);
+const bgY = useTransform(mouseY, [-500, 500], [PARALLAX_RANGE, -PARALLAX_RANGE]);
 
   return (
     // Adjusted height for better mobile viewing (e.g., h-[80vh] on small screens if needed, but keeping h-screen here)
     <section
       ref={ref}
-      onMouseMove={handleMouseMove}
+      onMouseMove={isFinePointer ? handleMouseMove : undefined}
       className="relative h-screen flex items-center justify-center overflow-hidden bg-zinc-900 perspective-1000"
     >
       {/* --- LAYER 1: Alive Background (Parallax) --- */}
+       (
       <motion.div
         className="absolute inset-0 z-0 scale-110" // Scale up to prevent edges showing
         style={{ x: bgX, y: bgY }} // Mouse movement applied here
@@ -180,12 +201,17 @@ export default function HeroSection() {
             type="image/webp"
           />
           <source srcSet="/images/dji-hero-desktop.avif" type="image/avif" />
-          <img
-          decoding="async"
-            src="/images/dji-hero-desktop.jpg"
-            alt="Nahjurrashad Campus"
-            className="w-full h-full object-cover"
-          />
+        <img
+        src="/images/dji-hero-desktop.jpg"
+        width="1920"
+        height="1080"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        alt="Nahjurrashad Campus"
+        className="w-full h-full object-cover"
+      />
+
         </picture>
       </motion.div>
 
