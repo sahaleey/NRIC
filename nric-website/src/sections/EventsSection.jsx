@@ -86,6 +86,7 @@ export default function EventsSection() {
           >
             {/* Background Image */}
             <img
+decoding="async"
               src={latestEvents[currentIndex].src}
               alt={latestEvents[currentIndex].title}
               className="w-full h-full object-cover"

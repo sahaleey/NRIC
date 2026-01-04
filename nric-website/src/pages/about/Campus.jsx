@@ -239,6 +239,7 @@ export default function Campus() {
                   {/* ... (Your full card layout: Image, Content, Features) ... */}
                   <div className="relative h-48 overflow-hidden">
                     <img
+decoding="async"
                       src={facility.image}
                       alt={facility.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -325,6 +326,7 @@ export default function Campus() {
             <motion.div variants={itemVariants}>
               <div className="bg-gray-200  rounded-2xl aspect-video overflow-hidden shadow-lg">
                 <img
+decoding="async"
                   src="/images/hisan.jpg"
                   alt="Hisan Student Union Event"
                   className="w-full h-full object-cover"

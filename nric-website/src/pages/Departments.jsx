@@ -259,6 +259,7 @@ export default function Departments() {
                       <div className="flex items-center gap-4 mb-6">
                         <div className="relative">
                           <img
+decoding="async"
                             src={dept.hod.image}
                             alt={dept.hod.name}
                             className="size-16 md:size-20 rounded-full object-cover border-4 border-white  shadow-md"

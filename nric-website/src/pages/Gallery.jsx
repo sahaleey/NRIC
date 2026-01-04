@@ -278,6 +278,7 @@ const breakpointColumnsObj = {
         className="group relative rounded-2xl overflow-hidden cursor-pointer bg-gray-200 shadow-sm hover:shadow-xl transition-all duration-300"
       >
         <img
+decoding="async"
           src={image.src}
           alt={image.title}
           loading="lazy"
@@ -363,6 +364,7 @@ const breakpointColumnsObj = {
               {/* --- LEFT: Main Image --- */}
               <div className="lg:w-[65%] h-[50vh] lg:h-full bg-black relative flex items-center justify-center group">
                 <img
+decoding="async"
                   key={selectedImage.id}
                   src={selectedImage.src}
                   alt={selectedImage.title}
@@ -435,6 +437,7 @@ const breakpointColumnsObj = {
                           className="cursor-pointer group relative rounded-xl overflow-hidden aspect-square bg-gray-100 "
                         >
                           <img
+decoding="async"
                             src={image.src}
                             alt={image.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

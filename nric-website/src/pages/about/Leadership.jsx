@@ -303,6 +303,7 @@ export default function Leadership() {
                       <div className="relative">
                         <div className="size-24 bg-white rounded-full p-1 shadow-lg">
                           <img
+decoding="async"
                             src={leader.image}
                             alt={leader.name}
                             className="size-full object-cover rounded-full border-4 border-white"

@@ -172,7 +172,7 @@ export default function HeroSection() {
         {/* Grain Overlay for Texture */}
         <div className="absolute inset-0 opacity-20 z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
 
-        {/* --- FIX: Removed redundant ARIA role="img" from <source> and <img> tags --- */}
+       
         <picture>
           <source
             media="(max-width: 768px)"
@@ -181,6 +181,7 @@ export default function HeroSection() {
           />
           <source srcSet="/images/dji-hero-desktop.avif" type="image/avif" />
           <img
+          decoding="async"
             src="/images/dji-hero-desktop.jpg"
             alt="Nahjurrashad Campus"
             className="w-full h-full object-cover"

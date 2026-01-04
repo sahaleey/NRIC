@@ -113,6 +113,7 @@ export default function Navbar() {
               {/* 1. CALLIGRAPHY IMAGE */}
               {/* Adjusted Height: h-6 (24px) for mobile, h-9 (36px) for desktop */}
               <img
+decoding="async"
                 src="/images/logocal.png"
                 alt="Nahjurrashad Calligraphy"
                 className="h-5 sm:h-6 md:h-8 lg:h-9  object-contain mb-0.5 md:mb-1 self-start"

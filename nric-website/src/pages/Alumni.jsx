@@ -92,6 +92,7 @@ export default function Alumni() {
           {/* NAFIA Logo Slot */}
           <motion.div variants={itemVariants} className="mb-6">
             <img
+decoding="async"
               // Assuming 'nafia.jpg' is the correct logo path
               src="/images/nafia.jpg"
               alt="NAFIA Alumni Association Logo"

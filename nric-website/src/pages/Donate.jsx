@@ -182,6 +182,7 @@ export default function Donate() {
               <div className="bg-white p-4 rounded-2xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300">
                 {/* ⚠️ Make sure to upload the real QR code to public/images/qr-placeholder.png or update this path */}
                 <img
+decoding="async"
                   src="/images/qrcode.jpg"
                   alt="Donation QR Code"
                   className="w-48 h-48 object-contain"

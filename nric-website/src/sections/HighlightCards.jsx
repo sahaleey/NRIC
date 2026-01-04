@@ -141,6 +141,7 @@ export default function HighlightCards() {
                     {/* Background Image with Overlays */}
                     <div className="absolute inset-0">
                       <img
+decoding="async"
                         src={card.imageUrl}
                         alt={card.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

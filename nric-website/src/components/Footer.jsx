@@ -36,6 +36,7 @@ export default function Footer() {
               <div className="flex items-center gap-4 mb-4">
                 <div className="relative">
                   <img
+decoding="async"
                     src="/images/logo.png"
                     alt="NRIC LOGO"
                     className="h-16 w-16 rounded-2xl border-2 border-emerald-500/20 shadow-lg"

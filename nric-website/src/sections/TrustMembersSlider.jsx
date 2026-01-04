@@ -14,6 +14,7 @@ const MemberCard = ({ member }) => (
     <div className="h-[70%] w-full relative overflow-hidden bg-zinc-200 ">
       {member.image ? (
         <img
+decoding="async"
           src={member.image}
           alt={member.name}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"

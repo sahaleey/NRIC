@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import Layout from "./components/Layout";
 import PageLoader from "./components/PageLoader";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -9,30 +9,30 @@ import OfflinePage from "./pages/OfflinePage";
 
 // --- LAZY-LOADED PAGES ---
 
-const Home = React.lazy(() => import("./pages/Home"));
-const Departments = React.lazy(() => import("./pages/Departments"));
-const Contact = React.lazy(() => import("./pages/Contact"));
-const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
-const Sitemap = React.lazy(() => import("./pages/Sitemap"));
-const Privacy = React.lazy(() => import("./pages/Privacy"));
-const Terms = React.lazy(() => import("./pages/Terms"));
-const Alumni = React.lazy(() => import("./pages/Alumni"));
-const Gallery = React.lazy(() => import("./pages/Gallery"));
-const Donate = React.lazy(() => import("./pages/Donate"));
+const Home = lazy(() => import("./pages/Home"));
+const Departments = lazy(() => import("./pages/Departments"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
+const Sitemap = lazy(() => import("./pages/Sitemap"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Alumni = lazy(() => import("./pages/Alumni"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const Donate = lazy(() => import("./pages/Donate"));
 
 
 // --- "About" pages ---
-const About = React.lazy(() => import("./pages/About"));
-const AboutOverview = React.lazy(() => import("./pages/about/AboutOverview"));
-const History = React.lazy(() => import("./pages/about/History"));
-const Leadership = React.lazy(() => import("./pages/about/Leadership"));
-const Campus = React.lazy(() => import("./pages/about/Campus"));
-const Accreditation = React.lazy(() => import("./pages/about/Accreditation"));
+const About = lazy(() => import("./pages/About"));
+const AboutOverview = lazy(() => import("./pages/about/AboutOverview"));
+const History = lazy(() => import("./pages/about/History"));
+const Leadership = lazy(() => import("./pages/about/Leadership"));
+const Campus = lazy(() => import("./pages/about/Campus"));
+const Accreditation = lazy(() => import("./pages/about/Accreditation"));
 
 // --- "Academics" pages ---
-const Academics = React.lazy(() => import("./pages/Academics"));
-const Curriculum = React.lazy(() => import("./pages/academics/Curriculum"));
-const Faculty = React.lazy(() => import("./pages/academics/Faculty"));
+const Academics = lazy(() => import("./pages/Academics"));
+const Curriculum = lazy(() => import("./pages/academics/Curriculum"));
+const Faculty = lazy(() => import("./pages/academics/Faculty"));
 
 export default function App() {
   const isOnline = useOnlineStatus();

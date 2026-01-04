@@ -214,6 +214,7 @@ export default function Faculty() {
                           <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300   flex items-center justify-center">
                             {faculty.image ? (
                               <img
+decoding="async"
                                 src={faculty.image}
                                 alt={faculty.name}
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"

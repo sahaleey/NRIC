@@ -246,6 +246,7 @@ export default function NotFoundPage() {
           >
             {/* ⚠️ IMPORTANT: Upload your 404 graphic to public/images/404-graphic.png */}
             <img
+decoding="async"
               src="/images/notfound.png"
               alt="Page Not Found Error"
               className=" h-auto mx-auto w-50 max-w-[200px] object-contain"

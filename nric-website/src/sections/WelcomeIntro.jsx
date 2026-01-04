@@ -18,14 +18,16 @@ export default function WelcomeIntro() {
           >
             <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-emerald-100 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-zinc-900 border border-gray-100">
-              <iframe
-                src="https://www.youtube.com/embed/njHQ1_zqMxI?si=0ABs7Mck5SaPIKal"
-                title="NRIC Virtual Tour"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full"
-              ></iframe>
+           <iframe
+  src="https://www.youtube-nocookie.com/embed/njHQ1_zqMxI"
+  title="NRIC Virtual Tour"
+  loading="lazy"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  className="w-full h-full"
+/>
+
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg hidden md:block border border-gray-50">
               <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">
