@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
-import logo from "../assets/logo.png"; // Keeping your current logo import
 
 // --- 2. Text Reveal Component ---
 const TextReveal = ({ text, className, delay = 0 }) => {
@@ -191,25 +190,6 @@ export default function HeroSection() {
 
       {/* --- LAYER 3: Main Content --- */}
       <div className="relative z-30 px-6 text-center max-w-7xl mx-auto flex flex-col items-center mt-10">
-        {/* Floating Logo */}
-        <motion.div
-          variants={itemVariant}
-          initial="hidden"
-          animate="visible"
-          className="relative mb-6 group"
-        >
-          {/* Glow Effect */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-amber-400/20 rounded-full blur-[50px] group-hover:bg-amber-400/40 transition-colors duration-500"></div>
-
-          <motion.img
-            src={logo}
-            alt="Anniversary Logo"
-            className="relative w-32 md:w-52 lg:w-48 object-contain drop-shadow-2xl"
-            animate={{ y: [0, -10, 0] }} // Gentle float animation
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
-
         {/* Text Section */}
         <div className="mb-6 space-y-2">
           <TextReveal
