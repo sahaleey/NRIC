@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- BASIC META -->
+    <!-- ================= BASIC META ================= -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
-    <!-- FALLBACK TITLE (Helmet will override per page) -->
-    <title>Nahjurrashad Islamic College</title>
-
-    <!-- ROBOTS -->
+    <!-- ================= PRIMARY SEO ================= -->
+    <title>Nahjurrashad Islamic College | Chamakkala, Kerala</title>
+    <meta
+      name="description"
+      content="Nahjurrashad Islamic College (NRIC), Chamakkala, Kerala – a premier institution blending traditional Islamic scholarship with modern education."
+    />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nric.in/" />
 
-    <!-- THEME COLOR -->
+    <!-- ================= THEME / PWA ================= -->
     <meta name="theme-color" content="#047857" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- PWA / ICONS -->
-    <link rel="manifest" href="/images/manifest.json" />
-
+    <!-- ================= ICONS ================= -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link
       rel="icon"
@@ -34,23 +39,45 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      sizes="512x512"
-      href="/images/android-chrome-512x512.png"
+      href="/apple-touch-icon.png"
     />
 
-    <!-- FONTS (SAFE TO KEEP) -->
+    <!-- ================= OPEN GRAPH ================= -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nahjurrashad Islamic College" />
+    <meta property="og:title" content="Nahjurrashad Islamic College" />
+    <meta
+      property="og:description"
+      content="A premier Islamic college in Chamakkala, Kerala, nurturing knowledge, character, and leadership."
+    />
+    <meta property="og:url" content="https://nric.in/" />
+    <meta property="og:image" content="https://nric.in/images/logo.png" />
+
+    <!-- ================= TWITTER ================= -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nahjurrashad Islamic College" />
+    <meta
+      name="twitter:description"
+      content="Blending traditional Islamic scholarship with modern education."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nric.in/images/logo.png"
+    />
+
+    <!-- ================= PERFORMANCE ================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
   <body>
+    <noscript>
+      Nahjurrashad Islamic College website requires JavaScript to function properly.
+    </noscript>
+
     <div id="root"></div>
 
-    <!-- APP ENTRY -->
+    <!-- ================= APP ENTRY ================= -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
