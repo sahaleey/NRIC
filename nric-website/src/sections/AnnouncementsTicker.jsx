@@ -2,9 +2,8 @@ import { HiOutlineMegaphone } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 
 const announcements = [
-  "🎉 Nahjurrashad 20th Anniversary Final Celebration Ongoing!",
-  "🗓️ Download the final exam schedule for Senior Secondary.",
-  "🏆 Spelling Bee Champions Announced!",
+  "Welcome to the new semester! Check out our upcoming events.",
+  "Follow us on social media for the latest updates and behind-the-scenes content.",
 ];
 
 export default function AnnouncementsTicker({ speed = 40 }) {
