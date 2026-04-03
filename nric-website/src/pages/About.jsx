@@ -15,7 +15,7 @@ export default function About() {
         <div className="absolute inset-0 bg-black/60 z-0">
           <img
 decoding="async"
-            src="/images/dji-hero-desktop.jpg"
+            src="/images/Nahj.png"
             alt="NRIC Campus"
             className="w-full h-full object-cover"
           />
