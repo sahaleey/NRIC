@@ -9,7 +9,7 @@ const cards = [
     description:
       "Explore our comprehensive curriculum, specialized departments, and state-of-the-art learning resources.",
     link: "/academics",
-    imageUrl: "/images/Nahj.jpg",
+    imageUrl: "/images/Nahj.png",
     icon: FiBook,
     stats: "20+ Programs",
     gradient: "from-blue-500/20 to-purple-600/20",
@@ -20,7 +20,7 @@ const cards = [
     description:
       "Discover student clubs, hostel facilities, cultural events, and spiritual activities on campus.",
     link: "/about/campus",
-    imageUrl: "/images/dji-hero-desktop.jpg",
+    imageUrl: "/images/campus.jpeg",
     icon: FiUsers,
     stats: "15+ Clubs",
     gradient: "from-emerald-500/20 to-green-600/20",

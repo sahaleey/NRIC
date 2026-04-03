@@ -10,9 +10,20 @@ import {
 import { galleryImages } from "../data/gallery";
 
 export default function EventsSection() {
-  // 1. Get Latest 5 Events
+  // Calculate the date exactly 1 week (7 days) ago
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+  // 1. Get Latest 5 Events (Filtered to only include events from the last 7 days or future)
   const latestEvents = galleryImages
-    .filter((img) => img.category === "Events" && img.date !== null && img.date !== "")
+    .filter((img) => {
+      // Must be an event and have a valid date
+      if (img.category !== "Events" || !img.date) return false;
+      
+      // Check if the event date is newer than or equal to 1 week ago
+      const eventDate = new Date(img.date);
+      return eventDate >= oneWeekAgo;
+    })
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
 
@@ -20,6 +31,9 @@ export default function EventsSection() {
 
   // 2. Auto-Slide Logic (5 Seconds)
   useEffect(() => {
+    // If no events, don't set up the interval
+    if (latestEvents.length === 0) return;
+
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % latestEvents.length);
     }, 5000);
@@ -37,6 +51,7 @@ export default function EventsSection() {
     );
   };
 
+  // If there are no recent events within the last week, return null to hide the section
   if (latestEvents.length === 0) return null;
 
   return (
@@ -86,7 +101,7 @@ export default function EventsSection() {
           >
             {/* Background Image */}
             <img
-decoding="async"
+              decoding="async"
               src={latestEvents[currentIndex].src}
               alt={latestEvents[currentIndex].title}
               className="w-full h-full object-cover"

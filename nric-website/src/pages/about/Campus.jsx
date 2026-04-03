@@ -31,7 +31,7 @@ const campusFacilities = [
     title: "Students Hostel",
     description:
       "Comfortable accommodation with modern amenities, creating a home away from home for our students.",
-    image: "/images/campus/hostel.jpg",
+    image: "/images/campus/hostel.jpeg",
     features: [
       "Spacious Rooms",
       "Medical Facilities",

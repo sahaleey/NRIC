@@ -194,15 +194,9 @@ const bgY = useTransform(mouseY, [-500, 500], [PARALLAX_RANGE, -PARALLAX_RANGE])
         <div className="absolute inset-0 opacity-20 z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
 
        
-        <picture>
-          <source
-            media="(max-width: 768px)"
-            srcSet="/images/dji-hero-mobile.webp"
-            type="image/webp"
-          />
-          <source srcSet="/images/dji-hero-desktop.avif" type="image/avif" />
+       
         <img
-        src="/images/dji-hero-desktop.jpg"
+        src="/images/dji-hero-desktop.png"
         width="1920"
         height="1080"
         loading="eager"
@@ -212,7 +206,7 @@ const bgY = useTransform(mouseY, [-500, 500], [PARALLAX_RANGE, -PARALLAX_RANGE])
         className="w-full h-full object-cover"
       />
 
-        </picture>
+       
       </motion.div>
 
       {/* --- LAYER 3: Main Content --- */}
