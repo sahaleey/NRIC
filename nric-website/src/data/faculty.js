@@ -4,7 +4,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Shafi Hudawi",
         position: "Principal",
-        experience: "20+ years",
+        experience: "20+ years experience",
         specialization:
           "Expertise in Islamic jurisprudence (Fiqh), legal methodology, and foundational Deen studies, with strong understanding of classical scholarship, ethical principles, and practical religious guidance.",
         bio: "A dedicated scholar specializing in Islamic jurisprudence and core Deen studies, committed to guiding students through the principles, ethics, and legal frameworks of Islamic life. His teaching blends classical scholarship with practical understanding, helping learners connect religious knowledge to real-world application with clarity and confidence. He emphasizes disciplined reasoning, moral responsibility, and a balanced approach to understanding Islamic law and practice",
@@ -14,7 +14,7 @@ export const facultyMembers = [
       {
         name: "Anwer Muhyiddeen Hudawi",
         position: "Vice Principal",
-        experience: "19 years experience",
+        experience: "20 years experience",
         specialization:
           "Expertise in public speaking, rhetoric, and effective communication, combined with strong command over Quranic Tafseer, thematic interpretation, and classical linguistic analysis.",
         bio: "A skilled lecturer known for powerful public speaking and insightful Quranic Tafseer. He guides students in understanding the depth, meaning, and linguistic beauty of the Quran while also training them to communicate effectively and confidently. His teaching blends clarity, expression, and scholarly reflection, helping learners develop both eloquence and a deeper spiritual connection to Quranic interpretation.",
@@ -24,7 +24,7 @@ export const facultyMembers = [
       {
         name: "Shuaib Hudawi Vallapuzha",
         position: "HoD of Hadith and Related Science Department",
-        experience: "13 years experience",
+        experience: "14 years experience",
         specialization:
           "Expertise in Islamic jurisprudence (Fiqh), Quranic sciences, and Hadith studies, with strong command over legal methodology, thematic interpretation, and authentication of prophetic traditions.",
         bio: "A dedicated scholar with advanced knowledge in Islamic jurisprudence, Quranic sciences, and Hadith studies. He guides students through legal principles, textual interpretation, and the methodology of authenticating prophetic traditions. His teaching emphasizes clarity, disciplined reasoning, and deep reflection, helping learners approach Islamic knowledge with confidence, understanding, and a strong connection to classical scholarship.",
@@ -34,7 +34,7 @@ export const facultyMembers = [
       {
         name: "Bahauddeen Hudawi",
         position: "Language, Literature & Quranic Studies Lecturer",
-        experience: "14 years experience",
+        experience: "15 years experience",
         specialization:
           "Expertise in classical and modern language studies, literary analysis, and Quranic studies, with strong understanding of linguistic structure, thematic interpretation, and the stylistic beauty of Quranic expression.",
         bio: "A dedicated lecturer skilled in language, literature, and Quranic studies, committed to helping students appreciate the depth and eloquence found across classical texts and the Quran. His teaching blends linguistic precision, literary insight, and contextual understanding, guiding learners to explore language as both an academic field and a spiritual journey. He emphasizes clarity, reflection, and analytical thinking, enabling students to engage meaningfully with both literature and Quranic interpretation.",
@@ -44,7 +44,7 @@ export const facultyMembers = [
       {
         name: "Hassan Hudawi",
         position: "Language & Literature Lecturer",
-        experience: "12 years of experience",
+        experience: "13 years of experience",
         specialization:
           "Expertise in language and literature with strong command over stylistic analysis, linguistic structure, and classical texts, combined with a deep understanding of Islamic law, legal principles, and interpretive methodology.",
         bio: "A committed educator specializing in language and literature, integrating deep linguistic insight with a solid foundation in Islamic law. He helps students explore how language, expression, and legal thought interact across classical and contemporary texts. His teaching emphasizes clarity, analytical thinking, and meaningful interpretation, guiding learners to connect literary appreciation with disciplined understanding of Islamic jurisprudence.",
@@ -54,7 +54,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Swalih Hudawi",
         position: "Arabic Language & Social Science Lecturer",
-        experience: "8 years experience",
+        experience: "9 years experience",
         specialization:
           "Expertise in Arabic language, classical grammar, and modern linguistic skills combined with strong knowledge in social sciences, including cultural studies, sociology, and contemporary social analysis.",
         bio: "A dedicated lecturer skilled in both Arabic language and social sciences, committed to helping students understand how language shapes culture, society, and human behavior. With a balanced approach connecting classical Arabic foundations to modern social studies, he guides learners to think critically, communicate effectively, and interpret the world around them through informed perspectives.",
@@ -64,7 +64,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Shareef Hudawi",
         position: "Malayalam Language & Literature Lecturer",
-        experience: "8 years experience",
+        experience: "9 years experience",
         specialization:
           "Expertise in Malayalam language and literature, including classical and modern works, stylistic analysis, and linguistic structure, combined with strong involvement in social work, community development, and cultural education.",
         bio: "A dedicated lecturer with deep knowledge of Malayalam language and literature, committed to preserving its cultural richness and expressive power. Actively engaged in social work and community development, he integrates real-world perspectives into his teaching, helping students understand how language, culture, and society influence one another. His approach blends literary appreciation, social awareness, and practical engagement, inspiring learners to connect academic knowledge with meaningful community impact.",
@@ -74,7 +74,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Shafeeq Hudawi",
         position: "Hadith & Math lecturer",
-        experience: "10 Years Experience",
+        experience: "11 Years Experience",
         specialization:
           "Expertise in Hadith sciences, including authentication (Takhreej), classification, methodology of narration, and analytical study of classical Hadith texts with strong focus on precision, reliability, and scholarly interpretation.",
         bio: "A dedicated scholar with a strong foundation in the sciences of Hadith, committed to teaching students the principles of authentication, transmission, and critical analysis. He guides learners through classical texts with clarity and methodological discipline, helping them appreciate the depth, reliability, and scholarly rigor of the prophetic tradition.",
@@ -85,7 +85,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Riyas Hudawi",
         position: "Social Science & Literature lecturer",
-        experience: "1 year Experience",
+        experience: "2 year Experience",
         specialization:
           "Expertise in social progress studies, contemporary societal issues, and literary analysis, with strong understanding of how texts, culture, and human behavior influence social development and collective thinking.",
         bio: "A committed lecturer specializing in the intersection of social development and literary interpretation. He guides students in understanding how literature reflects and shapes societal change, encouraging critical thinking about culture, identity, and social challenges. His teaching blends analytical reading, research-based insight, and a focus on real-world social dynamics, helping learners connect stories and ideas to the evolving world around them.",
@@ -95,7 +95,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Shareef KP Hudawi",
         position: "Arabic Language & Literature Lecturer",
-        experience: "4 years Experience",
+        experience: "5 years Experience",
         specialization:
           "Advanced expertise in Arabic language, classical grammar (Nahw), morphology (Sarf), rhetoric (Balagha), and Quranic linguistics, with strong proficiency in literary analysis and academic translation.",
         bio: "A committed Arabic language scholar with a deep foundation in classical grammar, eloquence, and linguistic precision. Passionate about connecting students to the beauty of Arabic through its structure, logic, and expressive power, he focuses on building strong fundamental skills that open doors to Quranic studies, literature, and scholarly research.",
@@ -105,7 +105,7 @@ export const facultyMembers = [
       {
         name: "MUHAMMED AJNAS HUDAWI",
         position: "Multilingual Translator & Linguistics Lecturer",
-        experience: "1 year Experience",
+        experience: "2 year Experience",
         specialization:
           "Expert in multilingual translation and linguistic adaptation across English, Urdu, Arabic, and Malayalam, with strong focus on cultural context, literary nuance, and academic precision.",
         bio: "A passionate multilingual translator skilled in bridging languages and cultures. With mastery in English, Urdu, Arabic, and Malayalam, he is dedicated to delivering clear, context-rich translations that preserve meaning, emotion, and authenticity.",
@@ -114,18 +114,18 @@ export const facultyMembers = [
       },
       {
         name: "Al-Hafiz Muhammed Mubashir Hudawi",
-        position: "Hadith Lecturer",
+        position: "Quranic Studies & Hadith lecturer",
         experience: "1 year Experience",
         specialization:
           "Expertise in Quran memorization (Hifz), Quranic recitation (Tajweed), and Hadith studies, with strong proficiency in preserving, teaching, and interpreting Islamic texts while emphasizing accuracy, authenticity, and spiritual development.",
         bio: "A dedicated scholar with a strong foundation in the sciences of Hadith, committed to teaching students the principles of authentication, transmission, and critical analysis. He guides learners through classical texts with clarity and methodological discipline, helping them appreciate the depth, reliability, and scholarly rigor of the prophetic tradition.",
         image: "/images/faculty/mubashir.jpg",
-        email: "",
+        email: "hafizmubashir3196@gmail.com",
       },
       {
         name: "Muvaffaq Hudawi",
         position: "History & Social Science lecturer",
-        experience: "4 years experience",
+        experience: "5 years experience",
         specialization:
           "Expertise in Islamic civilization, historical analysis, and sociological studies, with strong understanding of cultural development, social structures, and the evolution of intellectual traditions across Muslim societies.",
         bio: "A dedicated lecturer specializing in the study of Islamic civilization, its historical progression, and the social forces that shaped different eras. He helps students explore the cultural, intellectual, and societal dynamics of the Muslim world, connecting past events with present realities. His teaching blends analytical depth, contextual understanding, and critical thinking, enabling learners to appreciate history as a guide to understanding contemporary society",
@@ -136,7 +136,7 @@ export const facultyMembers = [
       {
         name: "Murshid Hudawi",
         position: "Hadith, Arabic Grammar lecturer and Martial Arts Instructor",
-        experience: "3 years experience",
+        experience: "4 years experience",
         specialization:
           "Expertise in Hadith sciences, classical Arabic grammar (Nahw), and morphology (Sarf), combined with professional martial arts training in Shorin-ryu Karate, focusing on discipline, precision, and physical-mental development.",
         bio: "A dedicated lecturer with strong grounding in Hadith studies and Arabic grammar, committed to helping students understand Islamic sciences through clarity, accuracy, and practical application. Alongside his linguistic and religious scholarship, he is a trained Shorin-ryu Karate instructor who emphasizes discipline, focus, and character development. His unique blend of intellectual and physical training inspires learners to cultivate both knowledge and personal strength.",
@@ -146,7 +146,7 @@ export const facultyMembers = [
       {
         name: "Muhammed Hassan Khan Hudawi",
         position: "Urdu Language & Literature Lecturer",
-        experience: "3 years experience",
+        experience: "4 years experience",
         specialization:
           "Expert in Urdu language, classical and modern Urdu literature, rhetoric, poetic forms, and linguistic analysis, with a strong command over translation, creative expression, and literary criticism.",
         bio: "A dedicated Urdu language expert with a deep love for its poetry, prose, and rich linguistic heritage. With experience in teaching language structure, literary appreciation, and creative writing, he guides students to understand Urdu not just as a language, but as an art form. ",
@@ -156,7 +156,7 @@ export const facultyMembers = [
       {
         name: "Zainudheen Hudawi",
         position: "Fiqh & Usul Al-Fiqh lecturer",
-        experience: "4 years experience",
+        experience: "5 years experience",
         specialization:
           "Expertise in advanced Islamic jurisprudence (Fiqh) and legal theory (Usul al-Fiqh), with strong command over legal reasoning, jurisprudential principles, and the analytical methods used by classical and contemporary scholars.",
         bio: "A dedicated scholar of Islamic jurisprudence with deep expertise in Fiqh and Usul al-Fiqh. He focuses on guiding students through the principles, methodologies, and legal reasoning that shape Islamic law, helping them understand how classical frameworks connect with contemporary issues. His teaching blends precision, critical thinking, and practical insight, empowering learners to approach legal texts and rulings with clarity and confidence.",
@@ -166,7 +166,7 @@ export const facultyMembers = [
       {
         name: "Musthafa K.I",
         position: "Math, Science & Economics lecturer",
-        experience: "10 years experience",
+        experience: "11 years experience",
         specialization:
           "Expertise in mathematics, general science, and business accounting with strong understanding of economic principles, financial literacy, and analytical reasoning, along with broad knowledge across current affairs, world studies, and general knowledge domains.",
         bio: "A versatile lecturer skilled in mathematics, science, and business accounting, with a strong foundation in economics and practical financial concepts. He also brings broad general knowledge that helps students connect academic subjects to real-world events and everyday understanding. His teaching emphasizes analytical thinking, problem-solving, and practical application, empowering learners to approach numbers, scientific ideas, and economic principles with confidence and clarity.",
@@ -174,14 +174,24 @@ export const facultyMembers = [
         email: "musthafabinibrahim@gmail.com",
       },
       {
-        name: "Salih",
+        name: "Salih CS",
         position: "Maths & Science lecturer",
-        experience: "3 years experience",
+        experience: "4 years experience",
         specialization:
           "Expertise in foundational and applied mathematics, logical reasoning, and core scientific principles, with strong understanding of physics, chemistry, and biological concepts aimed at developing analytical and problem-solving skills.",
         bio: "A committed lecturer with a strong background in mathematics and general science, focused on building students’ logical thinking, scientific curiosity, and practical understanding of everyday concepts. His teaching emphasizes clarity, real-world application, and disciplined problem-solving, helping learners develop confidence in both numerical reasoning and scientific inquiry.",
         image: "/images/faculty/swalihsir.jpg",
         email: "salih21cs@gmail.com",
+      },
+      {
+        name: "Muhammed Rasheed Hudawi",
+        position: "Social Science & History lecturer",
+        experience: "1 years experience",
+        specialization:
+          "Expertise in social science, historical analysis, and contemporary societal issues, with strong understanding of cultural development, social structures, and the evolution of intellectual traditions across Muslim societies.",
+        bio: "A dedicated lecturer specializing in the study of Islamic civilization, its historical progression, and the social forces that shaped different eras. He helps students explore the cultural, intellectual, and societal dynamics of the Muslim world, connecting past events with present realities. His teaching blends analytical depth, contextual understanding, and critical thinking, enabling learners to appreciate history as a guide to understanding contemporary society.",
+        image: "/images/faculty/rasheed.jpg",
+        email: "rasheedthambanangadi@gmail.com",
       },
     ],
   },
