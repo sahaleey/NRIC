@@ -113,14 +113,14 @@ export const facultyMembers = [
         email: "ajnasmohammedt@gmail.com",
       },
       {
-        name: "Mohammed Dhul Phukhar Ali Hudawi",
-        position: "Arabic Grammar & Philosophy lecturer",
-        experience: "4 years experience",
+        name: "Al-Hafiz Muhammed Mubashir Hudawi",
+        position: "Hadith Lecturer",
+        experience: "1 year Experience",
         specialization:
-          "Advanced expertise in Arabic grammar (Nahw), morphology (Sarf), and linguistic logic, combined with a strong foundation in classical and modern philosophy, critical reasoning, and intellectual history.",
-        bio: "A passionate lecturer who unites the precision of Arabic grammar with the depth of philosophical inquiry. Skilled in guiding students through the structure and logic of the Arabic language while encouraging them to think critically about ideas, arguments, and concepts that shaped intellectual traditions. His teaching style blends analytical clarity, disciplined reasoning.",
-        image: "/images/faculty/dulfu.jpg",
-        email: "fukhar127@gmail.com",
+          "Expertise in Quran memorization (Hifz), Quranic recitation (Tajweed), and Hadith studies, with strong proficiency in preserving, teaching, and interpreting Islamic texts while emphasizing accuracy, authenticity, and spiritual development.",
+        bio: "A dedicated scholar with a strong foundation in the sciences of Hadith, committed to teaching students the principles of authentication, transmission, and critical analysis. He guides learners through classical texts with clarity and methodological discipline, helping them appreciate the depth, reliability, and scholarly rigor of the prophetic tradition.",
+        image: "/images/faculty/mubashir.jpg",
+        email: "",
       },
       {
         name: "Muvaffaq Hudawi",
@@ -133,26 +133,6 @@ export const facultyMembers = [
         email: "muvafaqponnani@gmail.com",
       },
 
-      {
-        name: "Muhammed Abdul Rahoof Hudawi",
-        position: "IT & Fiqh lecturer",
-        experience: "1 year Experience",
-        specialization:
-          "Expertise in advanced information technology, digital systems, and software proficiency, combined with strong grounding in Islamic jurisprudence (Fiqh), legal methodology, and contemporary ethical issues in technology.",
-        bio: "A versatile lecturer skilled in both modern technology and Islamic jurisprudence. He guides students through advanced IT concepts while connecting them to the ethical, legal, and societal dimensions of the digital world through Fiqh. His teaching emphasizes precision, problem-solving, and responsible use of technology, helping learners understand both technical systems and the moral frameworks that shape their application.",
-        image: "/images/faculty/rahoof.jpg",
-        email: "mohammedabdurahoof527@gmail.com",
-      },
-      {
-        name: "Ansarudeen Hudawi",
-        position: "English Language & Fiqh lecturer",
-        experience: "5 years experience",
-        specialization:
-          "Expertise in English language, academic writing, and communication skills, combined with strong knowledge of Islamic jurisprudence (Fiqh), legal theory, and applied religious rulings",
-        bio: "A committed lecturer skilled in both English language education and Islamic jurisprudence. He focuses on developing students’ communication abilities while guiding them through the principles, methodology, and practical applications of Fiqh. His teaching integrates clarity, reasoning, and discipline, helping learners think critically, express ideas effectively, and understand religious legal frameworks.",
-        image: "/images/faculty/answer.jpg",
-        email: "ansarmuhammed112233@gmail.com",
-      },
       {
         name: "Murshid Hudawi",
         position: "Hadith, Arabic Grammar lecturer and Martial Arts Instructor",
