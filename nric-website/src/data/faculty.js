@@ -123,6 +123,26 @@ export const facultyMembers = [
         email: "hafizmubashir3196@gmail.com",
       },
       {
+        name: "Muhammed Muhsin Al-Hadi Hudawi",
+        position: "Quranic Studies & English Language Lecturer",
+        experience: "3 year Experience",
+        specialization:
+          "Expertise in Quranic studies, including thematic interpretation and linguistic analysis, combined with strong command over English language, literature, and communication skills.",
+        bio: "A dedicated lecturer with a strong foundation in Quranic studies and English language, committed to helping students connect the depth of Quranic wisdom with the clarity and expression of English. He guides learners through thematic interpretation of the Quran while also building their proficiency in English communication, fostering both spiritual insight and practical language skills.",
+        image: "/images/faculty/muhsin.jpg",
+        email: "mehfilshanmuhsin@gmail.com",
+      },
+      {
+        name: "Muhammed Ya'qoob Hudawi",
+        position: "IT & Computer Science Lecturer",
+        experience: "1 year Experience",
+        specialization:
+          "Expertise in information technology, computer science, and digital literacy, with strong understanding of programming languages, software applications, and the role of technology in modern education and communication.",
+        bio: "A dedicated IT and computer science lecturer with a passion for technology and its role in education. He focuses on building students' digital literacy, programming skills, and understanding of how technology can enhance learning and communication in the modern world.",
+        image: "/images/faculty/yaqoob.jpg",
+        email: "yahkoobperuvalluratp@gmail.com",
+      },
+      {
         name: "Muvaffaq Hudawi",
         position: "History & Social Science lecturer",
         experience: "5 years experience",
